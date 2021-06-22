@@ -70,7 +70,7 @@ https://www.figma.com/file/bPOj7wsmeeFv1snToPGkhk/The-Foodie-s-Find
 
 ![image](https://user-images.githubusercontent.com/59977555/122935811-a4212200-d33e-11eb-966d-03cb541981ac.png) <br>
 
-![image](https://user-images.githubusercontent.com/59977555/122936619-4c36eb00-d33f-11eb-8adc-635f8500ec51.png) <br>
+![image](https://user-images.githubusercontent.com/59977555/122936868-80121080-d33f-11eb-84fb-70f6d07100ca.png) <br>
 
 ![image](https://user-images.githubusercontent.com/59977555/122935937-c31fb400-d33e-11eb-8a6d-1b7a6b17f7d9.png)
 

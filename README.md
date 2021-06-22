@@ -71,10 +71,9 @@ https://www.figma.com/file/bPOj7wsmeeFv1snToPGkhk/The-Foodie-s-Find
 
 ![image](https://user-images.githubusercontent.com/59977555/122935169-1e9d7200-d33e-11eb-9072-e19f6c6707b9.png)
 
-![image](https://user-images.githubusercontent.com/59977555/122934836-ded68a80-d33d-11eb-9445-fa9d4263dc43.png)
+![image](https://user-images.githubusercontent.com/59977555/122935274-35dc5f80-d33e-11eb-95b3-817d2bf9aab8.png)
 
-![image](https://user-images.githubusercontent.com/59977555/122934905-eeee6a00-d33d-11eb-85fe-094cfb885549.png)
-
+![image](https://user-images.githubusercontent.com/59977555/122935325-3f65c780-d33e-11eb-90a6-53161a3508c2.png)
 
 
 #### Component Tree

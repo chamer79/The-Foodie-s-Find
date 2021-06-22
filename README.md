@@ -55,7 +55,6 @@
 | :--------------: | :----------------------------------------- |
 |      React       | An open source front-end JavaScript library to build UI components. |
 |   React Router   | A library for navigatig through components in React. |
-|       CSS        | A style sheet language that is used to style the font end of an app / site. |
 |  Ruby on Rails   | A server side application that has a Model View Controller framework. |
 |    PostgreSQL    | An open source relational database management system.|
 
@@ -69,9 +68,9 @@
 
 https://www.figma.com/file/bPOj7wsmeeFv1snToPGkhk/The-Foodie-s-Find
 
-![image](https://user-images.githubusercontent.com/59977555/122935811-a4212200-d33e-11eb-966d-03cb541981ac.png)
+![image](https://user-images.githubusercontent.com/59977555/122935811-a4212200-d33e-11eb-966d-03cb541981ac.png) <br>
 
-![image](https://user-images.githubusercontent.com/59977555/122935891-b602c500-d33e-11eb-8991-61b3c7acc722.png)
+![image](https://user-images.githubusercontent.com/59977555/122936619-4c36eb00-d33f-11eb-8adc-635f8500ec51.png) <br>
 
 ![image](https://user-images.githubusercontent.com/59977555/122935937-c31fb400-d33e-11eb-8a6d-1b7a6b17f7d9.png)
 

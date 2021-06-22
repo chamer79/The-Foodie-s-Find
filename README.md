@@ -19,39 +19,45 @@
 
 ## Overview
 
-_**The Foodie's Find** is a full stack app.  Incorporating Ruby on Rails for the back-end and React, JavaScript, and CSS on the front-end.  The app had CRUD capabilities in which the user, upon signing in/ signing up, can create, update, and delete recipes.
-
-<br>
+_**The Foodie's Find** is a community app where foodies can share some of their favorite recipes without having to sift through a long winded novel. This full stack community app has Full CRUD capabilities in which the user can read recipes, and upon signing in/ signing up the user also has the choice to create, update, and/or delete recipes. The back-end of the app utilizes Ruby on Rails and PostgresSQL; while the fron-end utilizes React, JavaScript, and CSS.  
 
 ## MVP
+- Thoroughly developed README.md    <br>
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
+# Back-End:
+- Build Ruby on Rails server.     <br>
+- Build a database with at least 3 tables.     <br>
+- Define models for database interaction through Rails.     <br>
+- Full CRUD capability.  <br>
+- Back-end authentication.
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
-<br>
+# Front-End:
+- At least 8 seperate rendered components.    <br>
+- Rendedr data from Ruby on Rails API in designated components.    <br>
+- Utilize state & props efficently.    <br>
+- Utilize React Router for client side routing.
+- Utilize functional or class React components.   <br>
+- Full CRUD actions.    <br>
+- CSS with Flexbox or Grid    <br>
+- Responsive Design for three screens.    <br>
 
 ### Goals
-
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- The back-end fully operational in 1 day. <br>
+- The front-end fully operational within 2-3 days. <br>
+- Spend 2 days on CSS. <br>
+- On day 7, have a clean crisp tight fully operational (meaning no hiccups) app.
 
 <br>
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | An open source front-end JavaScript library to build UI components. |
+|   React Router   | A library for navigatig through components in React. |
+|       CSS        | A style sheet language that is used to style the font end of an app / site. |
+|  Ruby on Rails   | A server side application that has a Model View Controller framework. |
+|    PostgreSQL    | An open source relational database management system.|
 
 <br>
 
@@ -121,21 +127,20 @@ src
 
 #### Time Estimates
 
-| Task                 | Priority | Estimated Time | Time Invested | Actual Time |
-| -------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal Approval    |    MH    |     1 hrs      |      hrs      |      hrs    |
-| Back-End Setup       |    H     |     1 hrs      |      hrs      |      hrs    |
-| Back-End Auth        |    H     |    6.5 hrs     |      hrs      |      hrs    |
-| Seeding the Database |    H     |    2.5 hrs     |      hrs      |      hrs    |
-| Seeding the Database |    H     |    2.5 hrs     |      hrs      |      hrs    |
-| Front-End Setup      |    H     |     1 hrs      |      hrs      |      hrs    |
-| Front-End Setup      |    H     |     1 hrs      |      hrs      |      hrs    |
-| Front-End Auth       |    H     |     5 hrs      |      hrs      |      hrs    |
-| Front-End CRUD       |    H     |     5 hrs      |      hrs      |      hrs    |
-| Building Remaining 
-|  Components          |    H     |     6 hrs      |      hrs      |      hrs    |
-| CSS                  |    H     |    10 hrs      |      hrs      |      hrs    |
-| TOTAL                |          |     6 hrs      |      hrs      |      hrs    |
+| Task                       | Priority | Estimated Time | Time Invested | Actual Time |
+| --------------------       | :------: | :------------: | :-----------: | :---------: |
+| Proposal Approval          |    MH    |     1 hrs      |      hrs      |      hrs    |
+| Back-End Model Setup       |    H     |     3 hrs      |      hrs      |      hrs    |
+| Back-End Auth              |    H     |     4 hrs      |      hrs      |      hrs    |
+| Set & Clean Up Controllers |    H     |     4 hrs      |      hrs      |      hrs    |
+| Seeding the Database       |    H     |     4 hrs      |      hrs      |      hrs    |
+| CORS Set Up                |    H     |    .15 hrs     |      hrs      |      hrs    |
+| Front-End Inital Setup     |    H     |     1 hrs      |      hrs      |      hrs    |
+| Front-End Auth             |    H     |     6 hrs      |      hrs      |      hrs    |
+| Front-End CRUD             |    H     |     6 hrs      |      hrs      |      hrs    |
+| Build Remaining Components |    H     |     6 hrs      |      hrs      |      hrs    |
+| CSS                        |    H     |    11 hrs      |      hrs      |      hrs    |
+| TOTAL                      |          |   46.15 hrs    |      hrs      |      hrs    |
 
 
 <br>
@@ -151,14 +156,18 @@ https://app.diagrams.net/#G1VURrbqvj8uF0fdaRHs-p5umrYV3bJc6w
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+-Incoproate Testing In Both the Front & Back-End <br>
+-Sort By Option <br>
+-Search Bar <br>
+-Like/Dislike Rating <br>
+-Comment Section Incorporated Into The Recipe Detail Page <br>
 
 ***
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+TBD
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+TBD

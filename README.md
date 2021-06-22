@@ -1,4 +1,4 @@
-## The Foodie's Find
+# The Foodie's Find
 
 - [Overview](#overview)
 - [MVP](#mvp)

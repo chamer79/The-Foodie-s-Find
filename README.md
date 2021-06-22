@@ -69,12 +69,11 @@
 
 https://www.figma.com/file/bPOj7wsmeeFv1snToPGkhk/The-Foodie-s-Find
 
-![image](https://user-images.githubusercontent.com/59977555/122933829-fcefbb00-d33c-11eb-99e3-ec9c1e7b9a0b.png)
+![image](https://user-images.githubusercontent.com/59977555/122934780-d54d2280-d33d-11eb-86ed-1a5ef0ec0537.png)
 
-![image](https://user-images.githubusercontent.com/59977555/122934058-2dcff000-d33d-11eb-8e89-6adb04cc39dc.png)
+![image](https://user-images.githubusercontent.com/59977555/122934836-ded68a80-d33d-11eb-9445-fa9d4263dc43.png)
 
-![image](https://user-images.githubusercontent.com/59977555/122934264-61127f00-d33d-11eb-95da-7a7fc5f680d5.png)
-
+![image](https://user-images.githubusercontent.com/59977555/122934905-eeee6a00-d33d-11eb-85fe-094cfb885549.png)
 
 
 
@@ -82,8 +81,7 @@ https://www.figma.com/file/bPOj7wsmeeFv1snToPGkhk/The-Foodie-s-Find
 
 https://whimsical.com/the-foodie-s-find-component-tree-LWioSK9QaSEGYaMd4hSfPz@2Ux7TurymMo3c4j6dQpR
 
-![image](https://user-images.githubusercontent.com/59977555/122933111-55728880-d33c-11eb-9dad-7b471ec5588c.png)
-
+![image](https://user-images.githubusercontent.com/59977555/122935053-06c5ee00-d33e-11eb-8e1e-dee80c1b4c0c.png)
 
 
 #### Component Architecture
@@ -161,8 +159,7 @@ src
 
 https://app.diagrams.net/#G1VURrbqvj8uF0fdaRHs-p5umrYV3bJc6w
 <br>
-![image](https://user-images.githubusercontent.com/59977555/122933420-a4b8b900-d33c-11eb-9910-4998e181ffe9.png)
-
+![image](https://user-images.githubusercontent.com/59977555/122934992-fada2c00-d33d-11eb-891c-0c6b9c34bb95.png)
 
 ***
 

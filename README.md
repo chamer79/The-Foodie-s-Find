@@ -24,14 +24,14 @@ _**The Foodie's Find** is a community app where foodies can share some of their 
 ## MVP
 - Thoroughly developed README.md    <br>
 
-# Back-End:
+### Back-End:
 - Build Ruby on Rails server.     <br>
 - Build a database with at least 3 tables.     <br>
 - Define models for database interaction through Rails.     <br>
 - Full CRUD capability.  <br>
 - Back-end authentication.
 
-# Front-End:
+### Front-End:
 - At least 8 seperate rendered components.    <br>
 - Rendedr data from Ruby on Rails API in designated components.    <br>
 - Utilize state & props efficently.    <br>

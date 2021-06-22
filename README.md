@@ -19,7 +19,7 @@
 
 ## Overview
 
-_**The Foodie's Find** is a community app where foodies can share some of their favorite recipes without having to sift through a long winded novel. This full stack community app has Full CRUD capabilities in which the user can read recipes, and upon signing in/ signing up the user also has the choice to create, update, and/or delete recipes. The back-end of the app utilizes Ruby on Rails and PostgresSQL; while the fron-end utilizes React, JavaScript, and CSS.  
+**The Foodie's Find** is a community app where foodies can share some of their favorite recipes without having to sift through a long winded novel. This full stack community app has Full CRUD capabilities in which the user can read recipes, and upon signing in/ signing up the user also has the choice to create, update, and/or delete recipes. The back-end of the app utilizes Ruby on Rails and PostgresSQL; while the fron-end utilizes React, JavaScript, and CSS.  
 
 ## MVP
 - Thoroughly developed README.md    <br>

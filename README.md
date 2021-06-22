@@ -69,19 +69,17 @@
 
 https://www.figma.com/file/bPOj7wsmeeFv1snToPGkhk/The-Foodie-s-Find
 
-![image](https://user-images.githubusercontent.com/59977555/122935169-1e9d7200-d33e-11eb-9072-e19f6c6707b9.png)
+![image](https://user-images.githubusercontent.com/59977555/122935811-a4212200-d33e-11eb-966d-03cb541981ac.png)
 
-![image](https://user-images.githubusercontent.com/59977555/122935515-64f2d100-d33e-11eb-9a59-66b2be832eae.png)
+![image](https://user-images.githubusercontent.com/59977555/122935891-b602c500-d33e-11eb-8991-61b3c7acc722.png)
 
-![image](https://user-images.githubusercontent.com/59977555/122935325-3f65c780-d33e-11eb-90a6-53161a3508c2.png)
-
+![image](https://user-images.githubusercontent.com/59977555/122935937-c31fb400-d33e-11eb-8a6d-1b7a6b17f7d9.png)
 
 #### Component Tree
 
 https://whimsical.com/the-foodie-s-find-component-tree-LWioSK9QaSEGYaMd4hSfPz@2Ux7TurymMo3c4j6dQpR
 
-![image](https://user-images.githubusercontent.com/59977555/122935053-06c5ee00-d33e-11eb-8e1e-dee80c1b4c0c.png)
-
+![image](https://user-images.githubusercontent.com/59977555/122936472-2e698600-d33f-11eb-9f12-e35de18648d7.png)
 
 #### Component Architecture
 
@@ -158,8 +156,7 @@ src
 
 https://app.diagrams.net/#G1VURrbqvj8uF0fdaRHs-p5umrYV3bJc6w
 <br>
-![image](https://user-images.githubusercontent.com/59977555/122934992-fada2c00-d33d-11eb-891c-0c6b9c34bb95.png)
-
+![image](https://user-images.githubusercontent.com/59977555/122936328-1134b780-d33f-11eb-9f20-eb8655541b30.png)
 ***
 
 ## Post-MVP

@@ -33,7 +33,6 @@
 
 ### Front-End:
 - At least 8 seperate rendered components.    <br>
-- Rendedr data from Ruby on Rails API in designated components.    <br>
 - Utilize state & props efficently.    <br>
 - Utilize React Router for client side routing.
 - Utilize functional or class React components.   <br>
@@ -51,7 +50,7 @@
 
 ### Libraries and Dependencies
 
-|     Library      | Description                                |
+|   Technologies   |                Description                 |
 | :--------------: | :----------------------------------------- |
 |      React       | An open source front-end JavaScript library to build UI components. |
 |   React Router   | A library for navigatig through components in React. |
@@ -100,7 +99,7 @@ src
     |__Layout.jsx
     |__Layout.css
 |__ services/
-    |__apiCongig.js
+    |__apiConfig.js
     |__auth.js
     |__recipes.js
 |__ screens/
@@ -155,7 +154,8 @@ src
 
 https://app.diagrams.net/#G1VURrbqvj8uF0fdaRHs-p5umrYV3bJc6w
 <br>
-![image](https://user-images.githubusercontent.com/59977555/122936328-1134b780-d33f-11eb-9f20-eb8655541b30.png)
+![image](https://user-images.githubusercontent.com/59977555/122961212-2cf58900-d352-11eb-9b82-3a75fb95e8b4.png)
+
 ***
 
 ## Post-MVP

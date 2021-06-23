@@ -43,15 +43,14 @@ puts "#{Category.count} categories created"
   -Place dough in a lightly oiled covered bowl, and place in the fridge overnight.  This will make it easier to roll out and handle the dough.
   -On a we floured counter, roll out the dough to ¼ in thick.
   -With a 3-inch ring cutter, cut out the muffins and through away the scraps.
-  -Cook the muffins 4 minutes per side on a 350 degree electric griddle.
-  ', 
+  -Cook the muffins 4 minutes per side on a 350 degree electric griddle.', 
   ingredients: '1lb 12oz AP flour
   1/2oz salt
   1/4oz sugar
   1/4oz butter, room temperature
   1/4oz dry yeast
-  2 1/4c water, body temperature
-  ')
+  2 1/4c water, body temperature',
+  img_url: 'https://files.slack.com/files-pri/T0351JZQ0-F025YQCLQCR/60969162760__1492de72-e4f2-4784-a0b5-d868346675c7.jpg')
 @soup_dumpling = Recipe.create!(name: 'Pork Soup Dumplings', 
   prep_time: '1 day + 3 hours', 
   baking_cooking_time: '8-10 minutes', 
@@ -79,8 +78,7 @@ puts "#{Category.count} categories created"
   -Roll a piece of dough into a circle, about 1/8 thickness. Place filling into the wrapper and pinch shut.
   -Set the dumpling aside in a lightly floured area while continuing to make dumplings.
   -Cook the dumplings in a bamboo steamer for 8-10 minutes.
-  -Any uncooked dumplings can be frozen.
-  ', 
+  -Any uncooked dumplings can be frozen.', 
   ingredients: '250gr pork skin
   1 liter water
   1Tbsp Chinese cooking wine
@@ -96,8 +94,8 @@ puts "#{Category.count} categories created"
   4 1/2tsp oyster sauce
   1/2tsp salt
   1tsp sugar
-  1tsp sesame oil
-  ')
+  1tsp sesame oil',
+  img_url: 'https://files.slack.com/files-pri/T0351JZQ0-F026DCM1UUR/img_1222.jpg')
 @kalamata_martini = Recipe.create!(name: 'Kalamama Martini', 
   prep_time: '5 minutes', 
   baking_cooking_time: 'N/A', 
@@ -108,7 +106,8 @@ puts "#{Category.count} categories created"
   ingredients: '2 1/2oz gin
   1/2oz dry vermouth
   1/2oz kalamata olive brine
-  1/4oz lemon juice')
+  1/4oz lemon juice',
+  img_url: 'https://files.slack.com/files-pri/T0351JZQ0-F0255D9H05D/img_2292.jpg')
 @coffee_cake = Recipe.create!(name: 'Mum’s Coffee Cake ', 
   prep_time: '45 minutes', 
   baking_cooking_time: '1-1 1/2 hours', 
@@ -129,7 +128,8 @@ puts "#{Category.count} categories created"
   3 eggs, room temperature
   1 1/2c sour cream
   1/2c light brown sugar
-  1Tbsp ground cinnamon')
+  1Tbsp ground cinnamon',
+  img_url: 'https://files.slack.com/files-pri/T0351JZQ0-F0269RF3B88/img_2789.jpg')
 @croque = Recipe.create!(name: 'Croque Madame', 
   prep_time: '30-40 minutes', 
   baking_cooking_time: '5 minutes', 
@@ -161,7 +161,8 @@ puts "#{Category.count} categories created"
   2 Tbsp Dijon mustard, divide
   4 slices of Gruyere cheese, divide
   6 thin slices of Black Forest ham, divide
-  2 eggs')
+  2 eggs', 
+  img_url: 'https://files.slack.com/files-pri/T0351JZQ0-F0260UQF0KV/img_1453.jpg')
 @ricotta = Recipe.create!(name: 'Ricotta', 
   prep_time: '5 minutes ', 
   baking_cooking_time: '20-30 minutes', 
@@ -172,7 +173,8 @@ puts "#{Category.count} categories created"
   ingredients: '2qts whole milk
   1pt buttermilk
   1c heavy cream
-  1 1/2tsp salt')
+  1 1/2tsp salt',
+  img_url: 'https://files.slack.com/files-pri/T0351JZQ0-F025U0R5QVC/img_1385.jpg')
 @tonic = Recipe.create!(name: 'Honeydew-Basil G&T', 
   prep_time: '15 minutes', 
   baking_cooking_time: '30 minutes', 
@@ -196,7 +198,8 @@ puts "#{Category.count} categories created"
   4c sugar
   4c water
   3/4c apple cider vinegar
-  3/4c white vinegar')
+  3/4c white vinegar',
+  img_url: '')
 @cookie = Recipe.create!(name: 'Salty Chocolate Chippers', 
   prep_time: '30 minutes', 
   baking_cooking_time: '10-12 minutes', 
@@ -213,7 +216,8 @@ puts "#{Category.count} categories created"
   1/2c sugar
   2 eggs
   2tsp vanilla extract
-  1lb mini chocolate chips')
+  1lb mini chocolate chips',
+  img_url: 'https://files.slack.com/files-pri/T0351JZQ0-F025DCHQ5SA/img_0937.jpg')
 @beatrix = Recipe.create!(name: 'The Beatrix', 
   prep_time: '10 minutes', 
   baking_cooking_time: '2 hrs', 
@@ -235,7 +239,8 @@ puts "#{Category.count} categories created"
   Candied Kalamata Olive Syrup
   20oz sugar
   20oz water
-  1 1/2c kalamata olives, pitted' )
+  1 1/2c kalamata olives, pitted',
+  img_url: '')
 
 
 puts "#{Recipe.count} recipes created"

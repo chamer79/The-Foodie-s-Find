@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1
   def show
-    render json: @recipe, include: :categories
+    render json: @recipe, include: :category
   end
 
   # POST /recipes

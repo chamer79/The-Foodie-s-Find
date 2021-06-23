@@ -7,7 +7,7 @@ before_action :authorize_request, except: :login
     if @user.authenticate(login_params[:password])
       token = encode({id: @user.id})
       render json: {
-        user: @user.attributes.expect("password_digest"),
+        user: @user.attributes.except("password_digest"),
         token: token
       }, status: :ok
     else
@@ -17,7 +17,7 @@ before_action :authorize_request, except: :login
 
   #GET auth/verify
   def verify
-    renser json: @current_user.attributes.except("password_digest"), status: :ok
+    render json: @current_user.attributes.except("password_digest"), status: :ok
   end
 
   private

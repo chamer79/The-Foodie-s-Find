@@ -132,18 +132,18 @@ src
 
 | Task                       | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------       | :------: | :------------: | :-----------: | :---------: |
-| Proposal Approval          |    MH    |     1 hrs      |      hrs      |      hrs    |
-| Back-End Model Setup       |    H     |     3 hrs      |      hrs      |      hrs    |
-| Back-End Auth              |    H     |     4 hrs      |      hrs      |      hrs    |
-| Set & Clean Up Controllers |    H     |     4 hrs      |      hrs      |      hrs    |
-| Seeding the Database       |    H     |     4 hrs      |      hrs      |      hrs    |
+| Proposal Approval          |     H    |     1 hrs      |     2.5 hrs   |    2.5 hrs  |
+| Back-End Model Setup       |    H     |     3 hrs      |     2.5 hrs   |    2.5 hrs  |
+| Back-End Auth              |    H     |     4 hrs      |     1 hrs     |    1 hrs    |
+| Set & Clean Up Controllers |    H     |     4 hrs      |     1 hrs     |    1 hrs    |
+| Seeding the Database       |    H     |     4 hrs      |     1 hrs     |      hrs    |
 | CORS Set Up                |    H     |    .15 hrs     |      hrs      |      hrs    |
 | Front-End Inital Setup     |    H     |     1 hrs      |      hrs      |      hrs    |
 | Front-End Auth             |    H     |     6 hrs      |      hrs      |      hrs    |
 | Front-End CRUD             |    H     |     6 hrs      |      hrs      |      hrs    |
 | Build Remaining Components |    H     |     6 hrs      |      hrs      |      hrs    |
 | CSS                        |    H     |    11 hrs      |      hrs      |      hrs    |
-| TOTAL                      |          |   46.15 hrs    |      hrs      |      hrs    |
+| TOTAL                      |          |   46.15 hrs    |     8 hrs     |    7  hrs   |
 
 
 <br>

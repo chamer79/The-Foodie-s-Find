@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: [:show, :update, :destroy]
+  before_action :set_recipe, only: [:show, :update, :destroy, :add_category]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /recipes
   def index
@@ -10,12 +11,13 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1
   def show
-    render json: @recipe
+    render json: @recipe, include: :categories
   end
 
   # POST /recipes
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.user = @current_user
 
     if @recipe.save
       render json: @recipe, status: :created
@@ -24,7 +26,7 @@ class RecipesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /recipes/1
+  # PUT /recipes/1
   def update
     if @recipe.update(recipe_params)
       render json: @recipe
@@ -38,14 +40,19 @@ class RecipesController < ApplicationController
     @recipe.destroy
   end
 
+  def add_category
+    @category = Category.find(params[:category_id])
+    @category.recipes << @recipe
+
+    render json: @recipe, include: :categories
+  end
+
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_recipe
       @recipe = Recipe.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def recipe_params
-      params.require(:recipe).permit(:name, :type_id, :prep_time, :baking_cooking_time, :servings, :directions)
+      params.require(:recipe).permit(:name, :type_id, :prep_time, :baking_cooking_time, :servings, :ingredients, :directions)
     end
 end

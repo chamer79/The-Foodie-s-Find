@@ -102,25 +102,25 @@ src
     |__apiConfig.js
     |__auth.js
     |__recipes.js
-|__ screens/
-    |__ EditRecipe/
-        |__ EditRecipe.jsx
-        |__ EditRecipe.css
+|__ screens/ 
     |__ Landing/
         |__ Landing.jsx
         |__ Landing.css
-    |__ PostRecipe/
-        |__ PostRecipe.jsx
-        |__ PostRecipe.css
     |__ Recipes/
         |__ Recipes.jsx
-        |__ Recipes.css
-    |__ RecipeEdit/
-        |__ RecipeEdit.jsx
-        |__ RecipeEdit.css
-    |__ SignIn/
-        |__ SignIn.jsx
-        |__ SignIn.css
+        |__ Recipes.css    
+    |__ Recipe/
+        |__ Recipe.jsx
+        |__ Recipe.css
+    |__ PostRecipes/
+        |__ PostRecipes.jsx
+        |__ PostRecipes.css
+    |__ EditRecipe/
+        |__ EditRecipe.jsx
+        |__ EditRecipe.css
+    |__ Login/
+        |__ Login.jsx
+        |__ Login.css
     |__ SignUp/
         |__ SignUp.jsx
         |__ SignUp.css
@@ -132,18 +132,18 @@ src
 
 | Task                       | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------       | :------: | :------------: | :-----------: | :---------: |
-| Proposal Approval          |     H    |     1 hrs      |     2.5 hrs   |    2.5 hrs  |
+| Proposal Approval          |    H     |     1 hrs      |     2.5 hrs   |    2.5 hrs  |
 | Back-End Model Setup       |    H     |     3 hrs      |     2.5 hrs   |    2.5 hrs  |
-| Back-End Auth              |    H     |     4 hrs      |     1 hrs     |    1 hrs    |
+| Back-End Auth              |    H     |     4 hrs      |     3 hrs     |    3 hrs    |
 | Set & Clean Up Controllers |    H     |     4 hrs      |     1 hrs     |    1 hrs    |
-| Seeding the Database       |    H     |     4 hrs      |     1 hrs     |      hrs    |
-| CORS Set Up                |    H     |    .15 hrs     |      hrs      |      hrs    |
-| Front-End Inital Setup     |    H     |     1 hrs      |      hrs      |      hrs    |
+| Seeding the Database       |    H     |     4 hrs      |    5.5 hrs    |   5.5 hrs   |
+| CORS Set Up                |    H     |    .15 hrs     |    .15 hrs    |   .15 hrs   |
+| Front-End Inital Setup     |    H     |     1 hrs      |    .15 hrs    |   .15 hrs   |
 | Front-End Auth             |    H     |     6 hrs      |      hrs      |      hrs    |
 | Front-End CRUD             |    H     |     6 hrs      |      hrs      |      hrs    |
 | Build Remaining Components |    H     |     6 hrs      |      hrs      |      hrs    |
 | CSS                        |    H     |    11 hrs      |      hrs      |      hrs    |
-| TOTAL                      |          |   46.15 hrs    |     8 hrs     |    7  hrs   |
+| TOTAL                      |          |   46.15 hrs    |     15 hrs    |    15 hrs   |
 
 
 <br>

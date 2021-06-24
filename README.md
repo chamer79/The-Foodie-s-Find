@@ -109,9 +109,9 @@ src
     |__ Recipes/
         |__ Recipes.jsx
         |__ Recipes.css    
-    |__ Recipe/
-        |__ Recipe.jsx
-        |__ Recipe.css
+    |__ RecipeDetail/
+        |__ RecipeDetail.jsx
+        |__ RecipeDetail.css
     |__ PostRecipes/
         |__ PostRecipes.jsx
         |__ PostRecipes.css

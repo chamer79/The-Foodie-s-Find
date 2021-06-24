@@ -1,5 +1,6 @@
 import Layout from "./layouts/Layout.jsx";
 import Login from "./screens/Login/Login.jsx";
+import MainContainer from "./containers/MainContainer.jsx";
 import SignUp from "./screens/SignUp/SignUp.jsx";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -51,6 +52,9 @@ function App() {
           <Route path="/signup">
             <SignUp handleSignUp={handleSignUp} />
           </Route>
+          <Routes path="/">
+            <MainContainer />
+          </Routes>
         </Switch>
       </Layout>
     </div>

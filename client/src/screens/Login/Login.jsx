@@ -12,6 +12,7 @@ export default function Login(props) {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
+      [name]: value,
     }))
   }
   
@@ -31,7 +32,7 @@ export default function Login(props) {
         type="password"
         name="password"
         value={password}
-        placeholder="Email"
+        placeholder="Password"
         onChange={handleChange}
       />
       <button className="login-submit">Submit</button>

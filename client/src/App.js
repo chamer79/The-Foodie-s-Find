@@ -52,9 +52,9 @@ function App() {
           <Route path="/signup">
             <SignUp handleSignUp={handleSignUp} />
           </Route>
-          <Routes path="/">
+          <Route path="/">
             <MainContainer />
-          </Routes>
+          </Route>
         </Switch>
       </Layout>
     </div>

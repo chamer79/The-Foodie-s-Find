@@ -19,7 +19,7 @@ export default function Layout(props) {
         {
           currentUser &&
           <>
-            <Link to="/post-recipe">New Post</Link>
+            <Link to="/post">New Post</Link>
           </>
         }
       </header>

@@ -102,25 +102,25 @@ src
     |__apiConfig.js
     |__auth.js
     |__recipes.js
-|__ screens/
-    |__ EditRecipe/
-        |__ EditRecipe.jsx
-        |__ EditRecipe.css
+|__ screens/ 
     |__ Landing/
         |__ Landing.jsx
         |__ Landing.css
-    |__ PostRecipe/
-        |__ PostRecipe.jsx
-        |__ PostRecipe.css
     |__ Recipes/
         |__ Recipes.jsx
-        |__ Recipes.css
-    |__ RecipeEdit/
-        |__ RecipeEdit.jsx
-        |__ RecipeEdit.css
-    |__ SignIn/
-        |__ SignIn.jsx
-        |__ SignIn.css
+        |__ Recipes.css    
+    |__ RecipeDetail/
+        |__ RecipeDetail.jsx
+        |__ RecipeDetail.css
+    |__ PostRecipes/
+        |__ PostRecipes.jsx
+        |__ PostRecipes.css
+    |__ EditRecipe/
+        |__ EditRecipe.jsx
+        |__ EditRecipe.css
+    |__ Login/
+        |__ Login.jsx
+        |__ Login.css
     |__ SignUp/
         |__ SignUp.jsx
         |__ SignUp.css
@@ -132,18 +132,18 @@ src
 
 | Task                       | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------       | :------: | :------------: | :-----------: | :---------: |
-| Proposal Approval          |    MH    |     1 hrs      |      hrs      |      hrs    |
-| Back-End Model Setup       |    H     |     3 hrs      |      hrs      |      hrs    |
-| Back-End Auth              |    H     |     4 hrs      |      hrs      |      hrs    |
-| Set & Clean Up Controllers |    H     |     4 hrs      |      hrs      |      hrs    |
-| Seeding the Database       |    H     |     4 hrs      |      hrs      |      hrs    |
-| CORS Set Up                |    H     |    .15 hrs     |      hrs      |      hrs    |
-| Front-End Inital Setup     |    H     |     1 hrs      |      hrs      |      hrs    |
-| Front-End Auth             |    H     |     6 hrs      |      hrs      |      hrs    |
-| Front-End CRUD             |    H     |     6 hrs      |      hrs      |      hrs    |
+| Proposal Approval          |    H     |     1 hrs      |     2.5 hrs   |    2.5 hrs  |
+| Back-End Model Setup       |    H     |     3 hrs      |     2.5 hrs   |    2.5 hrs  |
+| Back-End Auth              |    H     |     4 hrs      |     3 hrs     |    3 hrs    |
+| Set & Clean Up Controllers |    H     |     4 hrs      |     1 hrs     |    1 hrs    |
+| Seeding the Database       |    H     |     4 hrs      |    5.5 hrs    |   5.5 hrs   |
+| CORS Set Up                |    H     |    .15 hrs     |    .15 hrs    |   .15 hrs   |
+| Front-End Inital Setup     |    H     |     1 hrs      |    .15 hrs    |   .15 hrs   |
+| Front-End Auth             |    H     |     6 hrs      |     3 hrs     |    3 hrs    |
+| Front-End CRUD             |    H     |     6 hrs      |    7.15 hrs   |      hrs    |
 | Build Remaining Components |    H     |     6 hrs      |      hrs      |      hrs    |
 | CSS                        |    H     |    11 hrs      |      hrs      |      hrs    |
-| TOTAL                      |          |   46.15 hrs    |      hrs      |      hrs    |
+| TOTAL                      |          |   46.15 hrs    |     15 hrs    |    15 hrs   |
 
 
 <br>
@@ -154,7 +154,7 @@ src
 
 https://app.diagrams.net/#G1VURrbqvj8uF0fdaRHs-p5umrYV3bJc6w
 <br>
-![image](https://user-images.githubusercontent.com/59977555/122974541-6f25c700-d360-11eb-9b5a-5f7c2e8849da.png)
+![image](https://user-images.githubusercontent.com/59977555/122994428-735cdf00-d376-11eb-920c-de9075d8e4fa.png)
 ***
 
 ## Post-MVP

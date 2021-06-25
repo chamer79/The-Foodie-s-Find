@@ -139,8 +139,8 @@ src
 | Seeding the Database       |    H     |     4 hrs      |    5.5 hrs    |   5.5 hrs   |
 | CORS Set Up                |    H     |    .15 hrs     |    .15 hrs    |   .15 hrs   |
 | Front-End Inital Setup     |    H     |     1 hrs      |    .15 hrs    |   .15 hrs   |
-| Front-End Auth             |    H     |     6 hrs      |      hrs      |      hrs    |
-| Front-End CRUD             |    H     |     6 hrs      |      hrs      |      hrs    |
+| Front-End Auth             |    H     |     6 hrs      |     3 hrs     |    3 hrs    |
+| Front-End CRUD             |    H     |     6 hrs      |    7.15 hrs   |      hrs    |
 | Build Remaining Components |    H     |     6 hrs      |      hrs      |      hrs    |
 | CSS                        |    H     |    11 hrs      |      hrs      |      hrs    |
 | TOTAL                      |          |   46.15 hrs    |     15 hrs    |    15 hrs   |

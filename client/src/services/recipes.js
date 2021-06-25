@@ -1,28 +1,48 @@
 import api from "./apiConfig.js"
 
 export const getAllRecipes = async () => {
-  const resp = await api.get("/recipes")
-  return resp.data;
+  try {
+    const resp = await api.get("/recipes")
+    return resp.data;
+  }catch (error) {
+    throw error;
+  }
 }
 
 export const getOneRecipe = async (id) => {
-  const resp = await api.get(`/recipes/${id}`);
-  return resp.data;
+  try {
+    const resp = await api.get(`/recipes/${id}`);
+    return resp.data;
+  }catch (error) {
+    throw error;
+  }
 }
 
 export const postRecipe = async (recipeData) => {
-  const resp = await api.post("/recipes/", { recipe: recipeData })
-  return resp.data;
+  try {
+    const resp = await api.post("/recipes/", { recipe: recipeData })
+    return resp.data;
+  }catch (error) {
+    throw error;
+  }
 }
 
 export const putRecipe = async (id, recipeData) => {
-  const resp = await api.put(`/recipes/${id}`, { recipe: recipeData });
-  return resp.data;
+  try {
+    const resp = await api.put(`/recipes/${id}`, { recipe: recipeData });
+    return resp.data;
+  }catch (error) {
+    throw error;
+  }
 }
 
 export const deleteRecipe = async (id) => {
-  const resp = await api.delete(`/recipes/${id}`);
-  return resp;
+  try {
+    const resp = await api.delete(`/recipes/${id}`);
+    return resp;
+  }catch (error) {
+    throw error;
+  }
 }
 
 //==================

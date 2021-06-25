@@ -53,46 +53,50 @@ export default function EditRecipe(props) {
   };
 
   return (
-    <div className="edit-container">
+    <div className="post-edit-container">
       <form
-        className="edit-form"
+        className="post-edit-form"
         onSumbit={(e) => {
           e.preventDefault();
           handleUpdate(id, formData);
         }}
       >
-        <input type="text" name="name" value={name} onChange={handleChange} />
-        <input
+        <input className="recipe-name"
+          type="text"
+          name="name"
+          value={name}
+          onChange={handleChange} />
+        <input className="prep-time"
           type="text"
           name="prep_time"
           value={prep_time}
           onChange={handleChange}
         />
-        <input
+        <input className="bake-cook-time"
           type="text"
           name="baking_cooking_time"
           value={baking_cooking_time}
           onChange={handleChange}
         />
-        <input
+        <input clasName="servings"
           type="text"
           name="servings"
           value={servings}
           onChange={handleChange}
         />
-        <input
+        <input className="ingredients"
           type="text"
           name="ingredients"
           value={ingredients}
           onChange={handleChange}
         />
-        <input
+        <input className="directions"
           type="text"
           name="directions"
           value={directions}
           onChange={handleChange}
         />
-        <input
+        <input className="img_url"
           type="text"
           name="img_url"
           value={img_url}

@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   resources :users
   resources :recipes
+  resources :categories, only: :index
 end

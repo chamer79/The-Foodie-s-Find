@@ -1,13 +1,18 @@
 import "./Recipes.css"
 import { Link } from "react-router-dom";
-import React from 'react'
+import RecipeCards from "../../components/RecipeCards/RecipeCards.jsx";
 
-export default function Recipes() {
+
+export default function Recipes({recipes}) {
   return (
-    <div>
-      <Link to="recipes/1">
-        <h3>Recipes Page</h3>
-      </Link> 
+    <div className="recipes">
+   
+      <RecipeCards recipes={recipes} />  
+      
+        <Link to="recipes/1">
+          <h3>Recipes Page</h3>
+        </Link>
+     
     </div>
   )
 }

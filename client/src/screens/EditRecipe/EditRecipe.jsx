@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export default function EditRecipe(props) {
+  // const { update, user } = props;
+  // console.log("update", update);
   const [formData, setFormData] = useState({
     name: "",
     prep_time: "",
@@ -25,7 +27,7 @@ export default function EditRecipe(props) {
 
   useEffect(() => {
     const prefilledFormData = () => {
-      const singleRecipe = racipes.find((recipe) => recipe.id === Number(id));
+      const singleRecipe = recipes.find((recipe) => recipe.id === Number(id));
       setFormData({
         name: singleRecipe.name,
         prep_time: singleRecipe.prep_time,
@@ -36,13 +38,13 @@ export default function EditRecipe(props) {
         img_url: singleRecipe.img_url,
       });
     };
-    if (recipe.length) {
+    if (recipes?.length) {
       prefilledFormData();
     }
   }, [recipes]);
 
   const handleChange = (e) => {
-    const { name, value } = e.taget;
+    const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,

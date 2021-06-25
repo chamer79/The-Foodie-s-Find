@@ -55,8 +55,8 @@ function App() {
           <Route path="/signup">
             <SignUp handleSignUp={handleSignUp} />
           </Route>
-          <Route path="/recipes">
-            <MainContainer />
+          <Route path="/">
+            <MainContainer currentUser={currentUser} />
           </Route>
         </Layout>
       </Switch>

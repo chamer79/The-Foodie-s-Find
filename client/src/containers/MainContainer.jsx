@@ -12,20 +12,22 @@ import {
   postRecipe,
   putRecipe,
 } from "../services/recipes";
-import { verifyUser } from "../services/auth";
+// import { verifyUser } from "../services/auth";
 
-export default function MainContainer() {
+export default function MainContainer(props) {
   const [recipes, setRecipes] = useState([]);
-  const [user, setUser] = useState(null);
+  // const [cser, setUser] = useState(null);
+  const { currentUser } = props
+  console.log("currentuser", currentUser)
   const history = useHistory();
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      const user = await verifyUser();
-      user ? setUser(user) : setUser(null);
-    };
-    fetchUser();
-  }, []);
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     const user = await verifyUser();
+  //     user ? setUser(user) : setUser(null);
+  //   };
+  //   fetchUser();
+  // }, []);
 
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -60,29 +62,27 @@ export default function MainContainer() {
   return (
     <div>
       <Switch>
-        <Route exact path="/recipes">
-          <Recipes recipes={recipes} />
-        </Route>
-        <Route exact path="/recipes/:id">
-          <RecipeDetail recipes={recipes} />
-        </Route>
-        <Route exact path="/post-recipe">
-          {user ? (
-            <PostRecipe user={user} handleCreate={handleCreate} />
-          ) : (
+        <Route path="/post-recipe">
+          {/* {currentUser ? ( */}
+            <PostRecipe user={currentUser} handleCreate={handleCreate} />
+          {/* ) : (
             <Redirect to="/signup" />
-          )}
+          )} */}
         </Route>
-        <Route exact path="/recipes/:id/update">
-          {user ? (
-            <EditRecipe user={user} handleUpdate={handleUpdate} />
-          ) : (
+        <Route path="/recipes/:id/update">
+          {/* {currentUser ? ( */}
+            <EditRecipe user={currentUser} handleUpdate={handleUpdate} />
+          {/* ) : (
             <Redirect to="/signup" />
-          )}
+          )} */}
         </Route>
-        <Route exact path="/recipes/:id">
-          <Recipes recipes={recipes} handleDelete={handleDelete} />
+        <Route path="/recipes/:id">
+          <RecipeDetail recipes={recipes} handleDelete={handleDelete} />
         </Route>
+       
+          <Route path="/recipes">
+            <Recipes recipes={recipes} />
+          </Route>
       </Switch>
     </div>
   );

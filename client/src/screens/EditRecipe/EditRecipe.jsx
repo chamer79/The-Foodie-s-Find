@@ -12,7 +12,7 @@ export default function EditRecipe(props) {
     ingredients: "",
     directions: "",
     img_url: "",
-  })
+  });
 
   const {
     name,
@@ -21,7 +21,8 @@ export default function EditRecipe(props) {
     servings,
     ingredients,
     directions,
-    img_url } = formData;
+    img_url,
+  } = formData;
   const { recipes, handleUpdate } = props;
   const { id } = useParams();
 
@@ -51,61 +52,54 @@ export default function EditRecipe(props) {
     }));
   };
 
-
   return (
-    <div>
-      <h3>Edit Page</h3>
-      <div>
-        <form className="edit-form" onSumbit={(e) => {
+    <div className="edit-container">
+      <form
+        className="edit-form"
+        onSumbit={(e) => {
           e.preventDefault();
           handleUpdate(id, formData);
         }}
-        >
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="prep_time"
-            value={prep_time}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="baking_cooking_time"
-            value={baking_cooking_time}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="servings"
-            value={servings}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="ingredients"
-            value={ingredients}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="directions"
-            value={directions}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="img_url"
-            value={img_url}
-            onChange={handleChange}
-          />
-          <button className="edit-post-button">Submit</button>
-        </form>
-      </div>
+      >
+        <input type="text" name="name" value={name} onChange={handleChange} />
+        <input
+          type="text"
+          name="prep_time"
+          value={prep_time}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="baking_cooking_time"
+          value={baking_cooking_time}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="servings"
+          value={servings}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="ingredients"
+          value={ingredients}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="directions"
+          value={directions}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="img_url"
+          value={img_url}
+          onChange={handleChange}
+        />
+        <button className="edit-post-button">Submit</button>
+      </form>
     </div>
-  )
+  );
 }

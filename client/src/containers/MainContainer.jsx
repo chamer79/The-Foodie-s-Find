@@ -12,22 +12,12 @@ import {
   postRecipe,
   putRecipe,
 } from "../services/recipes";
-// import { verifyUser } from "../services/auth";
 
 export default function MainContainer(props) {
   const [recipes, setRecipes] = useState([]);
-  // const [cser, setUser] = useState(null);
-  const { currentUser } = props
-  console.log("currentuser", currentUser)
-  const history = useHistory();
 
-  // useEffect(() => {
-  //   const fetchUser = async () => {
-  //     const user = await verifyUser();
-  //     user ? setUser(user) : setUser(null);
-  //   };
-  //   fetchUser();
-  // }, []);
+  const { currentUser } = props;
+  const history = useHistory();
 
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -63,26 +53,18 @@ export default function MainContainer(props) {
     <div>
       <Switch>
         <Route path="/post-recipe">
-          {/* {currentUser ? ( */}
-            <PostRecipe user={currentUser} handleCreate={handleCreate} />
-          {/* ) : (
-            <Redirect to="/signup" />
-          )} */}
+          <PostRecipe user={currentUser} handleCreate={handleCreate} />
         </Route>
         <Route path="/recipes/:id/update">
-          {/* {currentUser ? ( */}
-            <EditRecipe user={currentUser} handleUpdate={handleUpdate} />
-          {/* ) : (
-            <Redirect to="/signup" />
-          )} */}
+          <EditRecipe user={currentUser} handleUpdate={handleUpdate} />
         </Route>
         <Route path="/recipes/:id">
           <RecipeDetail recipes={recipes} handleDelete={handleDelete} />
         </Route>
-       
-          <Route path="/recipes">
-            <Recipes recipes={recipes} />
-          </Route>
+
+        <Route path="/recipes">
+          <Recipes recipes={recipes} />
+        </Route>
       </Switch>
     </div>
   );

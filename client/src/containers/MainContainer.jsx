@@ -7,7 +7,12 @@ import RecipeDetail from "../screens/RecipeDetail/RecipeDetail.jsx";
 import PostRecipe from "../screens/PostRecipe/PostRecipe.jsx";
 import EditRecipe from "../screens/EditRecipe/EditRecipe.jsx";
 
-import { deleteRecipe, getAllRecipes, postRecipe, putRecipe } from "../services/recipes";
+import {
+  deleteRecipe,
+  getAllRecipes,
+  postRecipe,
+  putRecipe,
+} from "../services/recipes";
 import { verifyUser } from "../services/auth";
 
 export default function MainContainer() {
@@ -18,16 +23,16 @@ export default function MainContainer() {
   useEffect(() => {
     const fetchUser = async () => {
       const user = await verifyUser();
-      user ? setUser(user) : setUser(null)
-    }
-    fetchUser()
-  }, [])
-  
+      user ? setUser(user) : setUser(null);
+    };
+    fetchUser();
+  }, []);
+
   useEffect(() => {
     const fetchRecipes = async () => {
       const recipeList = await getAllRecipes();
       setRecipes(recipeList);
-    }
+    };
     fetchRecipes();
   }, []);
 
@@ -36,7 +41,7 @@ export default function MainContainer() {
     setRecipes((prevState) => [...prevState, recipeItem]);
     history.push("/recipes");
   };
-  
+
   const handleUpdate = async (id, formData) => {
     const recipeItem = await putRecipe(id, formData);
     setRecipes((prevState) =>
@@ -45,35 +50,40 @@ export default function MainContainer() {
       })
     );
     history.push("/recipes");
-  }
+  };
 
   const handleDelete = async (id) => {
     await deleteRecipe(id);
-    setRecipes((prevState) => prevState.filter((recipe) => recipe.id !== id))
+    setRecipes((prevState) => prevState.filter((recipe) => recipe.id !== id));
   };
 
   return (
     <div>
       <Switch>
-        <Route exact path="/">
-          <Landing user={user} />
-        </Route>
         <Route exact path="/recipes">
-          <Recipes recipes={recipes}/>
+          <Recipes recipes={recipes} />
         </Route>
         <Route exact path="/recipes/:id">
           <RecipeDetail recipes={recipes} />
         </Route>
-        <Route exact path="/recipes/post">
-          {user ? <PostRecipe user={user} handleCreate={handleCreate} /> : <Redirect to="/signup" />}
+        <Route exact path="/post-recipe">
+          {user ? (
+            <PostRecipe user={user} handleCreate={handleCreate} />
+          ) : (
+            <Redirect to="/signup" />
+          )}
         </Route>
         <Route exact path="/recipes/:id/update">
-          {user ? <EditRecipe user={user} handleUpdate={handleUpdate} /> : <Redirect to="/signup" />}
+          {user ? (
+            <EditRecipe user={user} handleUpdate={handleUpdate} />
+          ) : (
+            <Redirect to="/signup" />
+          )}
         </Route>
         <Route exact path="/recipes/:id">
           <Recipes recipes={recipes} handleDelete={handleDelete} />
         </Route>
       </Switch>
     </div>
-  )
+  );
 }

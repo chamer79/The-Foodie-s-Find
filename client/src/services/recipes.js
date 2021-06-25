@@ -11,7 +11,7 @@ export const getOneRecipe = async (id) => {
 }
 
 export const postRecipe = async (recipeData) => {
-  const resp = await api.post("/recipes", { recipe: recipeData })
+  const resp = await api.post("/recipes/", { recipe: recipeData })
   return resp.data;
 }
 

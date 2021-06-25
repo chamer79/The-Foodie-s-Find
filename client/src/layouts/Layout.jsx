@@ -7,7 +7,7 @@ export default function Layout(props) {
       <header>
         {currentUser ? (
           <>
-            <p>{currentUser.username}</p>
+            <p>Welcome {currentUser.username}</p>
             <button className="logout" onClick={handleLogout}>Logout</button>
           </>
         ) : (

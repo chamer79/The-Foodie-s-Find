@@ -33,7 +33,7 @@ function App() {
   const handleSignUp = async (formData) => {
     const userData = await signUpUser(formData);
     setCurrentUser(userData);
-    history.push("/");
+    history.push("/recipes");
   };
 
   const handleLogout = () => {

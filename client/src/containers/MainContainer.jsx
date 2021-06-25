@@ -1,7 +1,6 @@
 import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import Landing from "../screens/Landing/Landing.jsx";
 import Recipes from "../screens/Recipes/Recipes.jsx";
 import RecipeDetail from "../screens/RecipeDetail/RecipeDetail.jsx";
 import PostRecipe from "../screens/PostRecipe/PostRecipe.jsx";
@@ -55,6 +54,7 @@ export default function MainContainer() {
   const handleDelete = async (id) => {
     await deleteRecipe(id);
     setRecipes((prevState) => prevState.filter((recipe) => recipe.id !== id));
+    history.push("/recipes");
   };
 
   return (

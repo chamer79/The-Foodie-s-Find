@@ -50,7 +50,11 @@ puts "#{Category.count} categories created"
   1/4oz butter, room temperature
   1/4oz dry yeast
   2 1/4c water, body temperature',
-  img_url: 'http://i.imgur.com/fbuKviG.jpg')
+  img_url: 'http://i.imgur.com/fbuKviG.jpg',
+  category: @baking,
+  user: @user,
+)
+
 @soup_dumpling = Recipe.create!(name: 'Pork Soup Dumplings', 
   prep_time: '1 day + 3 hours', 
   baking_cooking_time: '8-10 minutes', 
@@ -95,7 +99,11 @@ puts "#{Category.count} categories created"
   1/2tsp salt
   1tsp sugar
   1tsp sesame oil',
-  img_url: 'http://i.imgur.com/AfDD4I1.jpg')
+  img_url: 'http://i.imgur.com/AfDD4I1.jpg',
+  category: @savory,
+  user: @user,
+)
+
 @kalamata_martini = Recipe.create!(name: 'Kalamama Martini', 
   prep_time: '5 minutes', 
   baking_cooking_time: 'N/A', 
@@ -107,7 +115,11 @@ puts "#{Category.count} categories created"
   1/2oz dry vermouth
   1/2oz kalamata olive brine
   1/4oz lemon juice',
-  img_url: 'http://i.imgur.com/5ilGh6j.jpg')
+  img_url: 'http://i.imgur.com/5ilGh6j.jpg',
+  category: @cocktails,
+  user: @user,
+)
+
 @coffee_cake = Recipe.create!(name: 'Mum’s Coffee Cake ', 
   prep_time: '45 minutes', 
   baking_cooking_time: '1-1 1/2 hours', 
@@ -129,7 +141,11 @@ puts "#{Category.count} categories created"
   1 1/2c sour cream
   1/2c light brown sugar
   1Tbsp ground cinnamon',
-  img_url: 'http://i.imgur.com/3QYJ5Lw.jpg')
+  img_url: 'http://i.imgur.com/3QYJ5Lw.jpg',
+  category: @baking,
+  user: @user,
+)
+
 @croque = Recipe.create!(name: 'Croque Madame', 
   prep_time: '30-40 minutes', 
   baking_cooking_time: '5 minutes', 
@@ -162,7 +178,11 @@ puts "#{Category.count} categories created"
   4 slices of Gruyere cheese, divide
   6 thin slices of Black Forest ham, divide
   2 eggs', 
-  img_url: 'http://i.imgur.com/w7Wr7zk.jpg')
+  img_url: 'http://i.imgur.com/w7Wr7zk.jpg',
+  category: @savory,
+  user: @user,
+)
+
 @ricotta = Recipe.create!(name: 'Ricotta', 
   prep_time: '5 minutes ', 
   baking_cooking_time: '20-30 minutes', 
@@ -174,7 +194,11 @@ puts "#{Category.count} categories created"
   1pt buttermilk
   1c heavy cream
   1 1/2tsp salt',
-  img_url: 'http://i.imgur.com/hNQPuk8.jpg')
+  img_url: 'http://i.imgur.com/hNQPuk8.jpg',
+  category: @savory,
+  user: @user,
+)
+
 @tonic = Recipe.create!(name: 'Honeydew-Basil G&T', 
   prep_time: '15 minutes', 
   baking_cooking_time: '30 minutes', 
@@ -199,7 +223,11 @@ puts "#{Category.count} categories created"
   4c water
   3/4c apple cider vinegar
   3/4c white vinegar',
-  img_url: '')
+  img_url: '',
+  category: @cocktails,
+  user: @user,
+)
+
 @cookie = Recipe.create!(name: 'Salty Chocolate Chippers', 
   prep_time: '30 minutes', 
   baking_cooking_time: '10-12 minutes', 
@@ -217,7 +245,11 @@ puts "#{Category.count} categories created"
   2 eggs
   2tsp vanilla extract
   1lb mini chocolate chips',
-  img_url: 'http://i.imgur.com/TKaNnlA.jpg')
+  img_url: 'http://i.imgur.com/TKaNnlA.jpg',
+  category: @baking,
+  user: @user,
+)
+
 @beatrix = Recipe.create!(name: 'The Beatrix', 
   prep_time: '10 minutes', 
   baking_cooking_time: '2 hrs', 
@@ -240,7 +272,10 @@ puts "#{Category.count} categories created"
   20oz sugar
   20oz water
   1 1/2c kalamata olives, pitted',
-  img_url: '')
+  img_url: '',
+  category: @cocktails,
+  user: @user,
+)
 
 
 puts "#{Recipe.count} recipes created"

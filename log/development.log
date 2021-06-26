@@ -12868,3 +12868,1461 @@ Processing by AuthenticationController#verify as HTML
 Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 740)
 
 
+Started GET "/recipes" for ::1 at 2021-06-26 15:50:09 -0400
+Processing by RecipesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-26 15:50:09 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (1.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 8.3ms | Allocations: 6288)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 12.2ms | Allocations: 6559)
+
+
+Started GET "/recipes/8" for ::1 at 2021-06-26 15:51:57 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"8"}
+Started GET "/recipes" for ::1 at 2021-06-26 15:51:57 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 15:51:57 -0400
+  [1m[36mRecipe Load (2.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Processing by RecipesController#index as HTML
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 2.0ms | Allocations: 1721)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.6ms | Allocations: 2739)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 7.0ms | Allocations: 4882)
+
+
+Started GET "/recipes/8" for ::1 at 2021-06-26 15:52:12 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 733)
+
+
+Started GET "/recipes/8" for ::1 at 2021-06-26 15:52:13 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 15:52:13 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"8"}
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Started GET "/auth/verify" for ::1 at 2021-06-26 15:52:13 -0400
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 1.8ms | Allocations: 1266)
+
+
+  [1m[36mRecipe Load (2.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 2.0ms | Allocations: 2854)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 787)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 15:59:40 -0400
+Processing by RecipesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-26 15:59:40 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 6.3ms | Allocations: 6516)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 7.9ms | Allocations: 6554)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:10:10 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 5.6ms | Allocations: 3903)
+
+
+Started GET "/recipes/1" for ::1 at 2021-06-26 16:10:20 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 756)
+
+
+Started POST "/auth/login" for ::1 at 2021-06-26 16:10:39 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"meep", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "meep"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 192ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/recipes/5" for ::1 at 2021-06-26 16:10:48 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 729)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:11:31 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 2134)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:11:31 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 743)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:11:54 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:11:54 -0400
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 1.2ms | Allocations: 2374)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:12:23 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:14:08 -0400
+Started GET "/recipes/5" for ::1 at 2021-06-26 16:14:08 -0400
+Processing by RecipesController#show as HTML
+Processing by RecipesController#index as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 2258)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:14:08 -0400
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 6.1ms | Allocations: 5279)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 743)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:14:46 -0400
+Processing by RecipesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:14:46 -0400
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.9ms | Allocations: 2391)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 787)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:18:24 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 16:18:24 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1321)
+
+
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 2608)
+
+
+Started GET "/recipes/5" for ::1 at 2021-06-26 16:19:44 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 16:19:44 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:19:44 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mRecipe Load (2.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 1.8ms | Allocations: 1593)
+
+
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 2.2ms | Allocations: 3381)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 23ms (Views: 0.5ms | ActiveRecord: 5.8ms | Allocations: 5404)
+
+
+Started GET "/recipes/5" for ::1 at 2021-06-26 16:19:51 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 0.9ms | Allocations: 1069)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:19:51 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:19:51 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 1077)
+
+
+  [1m[36mRecipe Load (1.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 1.5ms | Allocations: 2827)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:22:34 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:22:36 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:22:38 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 1.4ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:22:39 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.5ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:22:43 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.7ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:22:43 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.6ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:24:23 -0400
+Processing by RecipesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:24:23 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.8ms | Allocations: 2324)
+
+
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.8ms | ActiveRecord: 9.9ms | Allocations: 2798)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:24:23 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.5ms | Allocations: 1975)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:24:23 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 741)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:24:30 -0400
+Processing by RecipesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:24:30 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+  [1m[36mRecipe Load (1.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 1.8ms | Allocations: 3384)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:26:59 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 1976)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:27:00 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:27:18 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (33.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 45ms (Views: 11.1ms | ActiveRecord: 33.0ms | Allocations: 2111)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:27:18 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:27:18 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.6ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:27:18 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.7ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:27:22 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.5ms | Allocations: 2102)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:27:22 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:28:15 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 1975)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:28:15 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:28:16 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:28:16 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1314)
+
+
+Completed 200 OK in 16ms (Views: 9.2ms | ActiveRecord: 0.5ms | Allocations: 2621)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:28:17 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:28:17 -0400
+Processing by RecipesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.8ms | Allocations: 2475)
+
+
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 2640)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:28:19 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.5ms | Allocations: 1975)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:28:19 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:28:20 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 16:28:20 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 1318)
+
+
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.5ms | Allocations: 2609)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:28:20 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.6ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:28:21 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.5ms | Allocations: 1978)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:28:21 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 740)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:28:22 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 1975)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:28:22 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 740)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:28:24 -0400
+Processing by RecipesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:28:24 -0400
+  [1m[36mRecipe Load (2.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 2.0ms | Allocations: 2562)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 979)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:34:04 -0400
+Processing by RecipesController#index as HTML
+Started GET "/categories" for ::1 at 2021-06-26 16:34:04 -0400
+Processing by CategoriesController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:34:04 -0400
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 427)
+
+
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 153ms (Views: 152.3ms | ActiveRecord: 119.9ms | Allocations: 6724)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 29ms (Views: 0.5ms | ActiveRecord: 15.9ms | Allocations: 2756)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:34:05 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.9ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:34:05 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:34:06 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.7ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:34:07 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.7ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:34:09 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.5ms | Allocations: 1975)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 16:34:11 -0400
+Started GET "/categories" for ::1 at 2021-06-26 16:34:11 -0400
+Processing by RecipesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mRecipe Load (1.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 1.5ms | Allocations: 2321)
+
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 10.3ms | ActiveRecord: 12.9ms | Allocations: 5620)
+
+
+Started GET "/categories" for ::1 at 2021-06-26 16:38:27 -0400
+Processing by CategoriesController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 188)
+
+
+Started GET "/auth/login" for ::1 at 2021-06-26 16:40:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+Started GET "/auth/login" for ::1 at 2021-06-26 16:40:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+Started GET "/auth/login" for ::1 at 2021-06-26 16:41:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+Started GET "/auth/login" for ::1 at 2021-06-26 16:41:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/auth/login"):
+  
+Started POST "/auth/login" for ::1 at 2021-06-26 16:42:15 -0400
+Processing by AuthenticationController#login as */*
+  Parameters: {"authentication"=>{"username"=>"meep", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "meep"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 308ms (Views: 0.3ms | ActiveRecord: 25.2ms | Allocations: 5114)
+
+
+Started GET "/categories" for ::1 at 2021-06-26 16:43:51 -0400
+Processing by CategoriesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 13.9ms | ActiveRecord: 6.9ms | Allocations: 5038)
+
+
+Started POST "/auth/login" for ::1 at 2021-06-26 16:44:31 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"meep", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "meep"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 197ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 820)
+
+
+Started GET "/recipes/1" for ::1 at 2021-06-26 16:45:53 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 200 OK in 52ms (Views: 10.5ms | ActiveRecord: 6.4ms | Allocations: 6781)
+
+
+Started GET "/categories" for ::1 at 2021-06-26 16:50:12 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 16:50:12 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:50:12 -0400
+Processing by RecipesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 45ms (Views: 30.0ms | ActiveRecord: 11.9ms | Allocations: 12852)
+
+
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 79ms (Views: 29.1ms | ActiveRecord: 45.7ms | Allocations: 15373)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 106ms (Views: 0.7ms | ActiveRecord: 61.8ms | Allocations: 20011)
+
+
+Started GET "/categories" for ::1 at 2021-06-26 16:51:20 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 16:51:20 -0400
+Processing by RecipesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:51:21 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mRecipe Load (4.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+Completed 200 OK in 40ms (Views: 22.6ms | ActiveRecord: 12.1ms | Allocations: 9880)
+
+
+Completed 200 OK in 39ms (Views: 11.3ms | ActiveRecord: 24.7ms | Allocations: 10677)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 45ms (Views: 0.6ms | ActiveRecord: 9.1ms | Allocations: 4954)
+
+
+Started GET "/recipes/1" for ::1 at 2021-06-26 16:51:53 -0400
+Started GET "/categories" for ::1 at 2021-06-26 16:51:53 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 16:51:53 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 16:51:53 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (3.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 1306)
+
+
+Processing by RecipesController#show as HTML
+Processing by RecipesController#index as HTML
+Completed 200 OK in 39ms (Views: 20.1ms | ActiveRecord: 16.2ms | Allocations: 5890)
+
+
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (1.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 59ms (Views: 48.9ms | ActiveRecord: 4.5ms | Allocations: 8200)
+
+
+  [1m[36mRecipe Load (4.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 200 OK in 69ms (Views: 7.5ms | ActiveRecord: 8.2ms | Allocations: 8292)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (109.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "The_Foodies_Find_development"[0m
+  [1m[35m (107.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "The_Foodies_Find_test"[0m
+  [1m[35m (269.8ms)[0m  [1m[35mCREATE DATABASE "The_Foodies_Find_development" ENCODING = 'unicode'[0m
+  [1m[35m (270.9ms)[0m  [1m[35mCREATE DATABASE "The_Foodies_Find_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "prep_time" character varying, "baking_cooking_time" character varying, "servings" character varying, "directions" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "ingredients" character varying, "user_id" bigint, "img_url" character varying, "category_id" bigint)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE INDEX "index_recipes_on_category_id" ON "recipes" ("category_id")[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE INDEX "index_recipes_on_user_id" ON "recipes" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (7.4ms)[0m  [1m[35mALTER TABLE "recipes" ADD CONSTRAINT "fk_rails_22f4e84158"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "recipes" ADD CONSTRAINT "fk_rails_9606fce865"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210626005427)[0m
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210622195329),
+(20210622195410),
+(20210622195450),
+(20210623000544),
+(20210623022542),
+(20210623141357),
+(20210623230810);
+
+[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-26 21:01:50.553624"], ["updated_at", "2021-06-26 21:01:50.553624"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "89c4a66b7861deb332c753cd1c1ca68345750a95"], ["created_at", "2021-06-26 21:01:50.563376"], ["updated_at", "2021-06-26 21:01:50.563376"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "prep_time" character varying, "baking_cooking_time" character varying, "servings" character varying, "directions" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "ingredients" character varying, "user_id" bigint, "img_url" character varying, "category_id" bigint)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE INDEX "index_recipes_on_category_id" ON "recipes" ("category_id")[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE INDEX "index_recipes_on_user_id" ON "recipes" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "recipes" ADD CONSTRAINT "fk_rails_22f4e84158"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "recipes" ADD CONSTRAINT "fk_rails_9606fce865"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210626005427)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210622195329),
+(20210622195410),
+(20210622195450),
+(20210623000544),
+(20210623022542),
+(20210623141357),
+(20210623230810);
+
+[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-26 21:01:50.657600"], ["updated_at", "2021-06-26 21:01:50.657600"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-06-26 21:01:50.666144"], ["key", "environment"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "89c4a66b7861deb332c753cd1c1ca68345750a95"], ["created_at", "2021-06-26 21:01:50.673691"], ["updated_at", "2021-06-26 21:01:50.673691"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "meep"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "meep@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "meep"], ["email", "meep@email.com"], ["password_digest", "$2a$12$K1ukDyTXlSps3WrCstwMd.s9J6fpxZxzF.WjrpaHY0ndOUIBEKeoy"], ["created_at", "2021-06-26 21:01:50.924449"], ["updated_at", "2021-06-26 21:01:50.924449"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baking"], ["created_at", "2021-06-26 21:01:50.937355"], ["updated_at", "2021-06-26 21:01:50.937355"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Savory"], ["created_at", "2021-06-26 21:01:50.943179"], ["updated_at", "2021-06-26 21:01:50.943179"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cocktails"], ["created_at", "2021-06-26 21:01:50.948106"], ["updated_at", "2021-06-26 21:01:50.948106"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (2.2ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "English Muffins"], ["prep_time", "30 minutes + 1 day"], ["baking_cooking_time", "4 minutes per side of muffin"], ["servings", "12-16 English Muffins"], ["directions", "-In a mixing bowl, combine the yeast, sugar, and water; stir with a whisk.\n  -Let the mixture sit for 5 minutes to allow the yeast to bloom.\n  -Add, in order, flour, butter, and salt.\n  -With a hook attachment, mix on low speed till the ingredients are incorporated. Mix on medium speed for 3-5 minutes.\n  -Place dough in a lightly oiled covered bowl, and place in the fridge overnight.  This will make it easier to roll out and handle the dough.\n  -On a we floured counter, roll out the dough to ¼ in thick.\n  -With a 3-inch ring cutter, cut out the muffins and through away the scraps.\n  -Cook the muffins 4 minutes per side on a 350 degree electric griddle."], ["created_at", "2021-06-26 21:01:50.963361"], ["updated_at", "2021-06-26 21:01:50.963361"], ["ingredients", "1lb 12oz AP flour\n  1/2oz salt\n  1/4oz sugar\n  1/4oz butter, room temperature\n  1/4oz dry yeast\n  2 1/4c water, body temperature"], ["user_id", 1], ["img_url", "http://i.imgur.com/fbuKviG.jpg"], ["category_id", 1]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (1.7ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Pork Soup Dumplings"], ["prep_time", "1 day + 3 hours"], ["baking_cooking_time", "8-10 minutes"], ["servings", "24 dumplings"], ["directions", "Pork Jelly: \n  -Bring a pot of water to a boil. Place pork skin in the boiling water and cook for 1 minute.\n  -Turn the heat off and allow contents to cool for 10-15 minutes.\n  -Remove the pork skin from the pot and dump the water. While still warm, scrap off excess fat and hair from the skin. Cut the skin into thin strips.\n  -Place 1 liter of water in the pot and bring to a boil. Place the pork skin, 2 scallions, sliced ginger, and Chinese cooking wine into the boiling water. Cover and allow to simmer for 20 minutes.\n  -Turn off heat and allow contents to cool for 10-15 minutes. Remove the scallions and ginger.\n  -In a blender, blend the pork skin and water for 2 minutes. Strain into a container.  Cover the container and place in the fridge overnight.\n  \n  Dumpling Dough:\n  -In a bowl, combine the flour and 100ml of water till the ingredients are combines.\n  -Transfer the dough to the counter and knead for 10-15 minutes.\n  -Cover the dough and set aside while making the filling.\n  \n  Pork Filling: \n  -In a blow, mix ground pork, ginger, scallions, oyster sauce, white pepper, salt, sugar, and sesame oil for 3 minutes or until all ingredients are fully combined.\n  -Add the pork jelly and stir until fully incorporated.\n  \n  Assembly:\n  -Roll the dough out into a 1-inch diameter strip.\n  -Cut the strip into about 1 ½ inch pieces. Cover the pieces with a clean kitchen towel to prevent the dough from drying out.\n  -Roll a piece of dough into a circle, about 1/8 thickness. Place filling into the wrapper and pinch shut.\n  -Set the dumpling aside in a lightly floured area while continuing to make dumplings.\n  -Cook the dumplings in a bamboo steamer for 8-10 minutes.\n  -Any uncooked dumplings can be frozen."], ["created_at", "2021-06-26 21:01:50.974938"], ["updated_at", "2021-06-26 21:01:50.974938"], ["ingredients", "250gr pork skin\n  1 liter water\n  1Tbsp Chinese cooking wine\n  5gr ginger, sliced\n  2 scallion, cut ends\n  200gr AP flour\n  100ml water\n  1lb ground pork \n  160gr pork jelly, small cubes\n  9gr scallions, sliced thin\n  9gr ginger, diced\n  1/8tsp white pepper\n  4 1/2tsp oyster sauce\n  1/2tsp salt\n  1tsp sugar\n  1tsp sesame oil"], ["user_id", 1], ["img_url", "http://i.imgur.com/AfDD4I1.jpg"], ["category_id", 2]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Kalamama Martini"], ["prep_time", "5 minutes"], ["baking_cooking_time", "N/A"], ["servings", "1"], ["directions", "-Add all ingredients into a mixing glass with ice. Stir until well-chilled.\n  -Strain contents into a chilled martini, Nick & Nora, or desired cocktail glass.\n  -Garnish with a 2-3 kalamata olives."], ["created_at", "2021-06-26 21:01:50.985588"], ["updated_at", "2021-06-26 21:01:50.985588"], ["ingredients", "2 1/2oz gin\n  1/2oz dry vermouth\n  1/2oz kalamata olive brine\n  1/4oz lemon juice"], ["user_id", 1], ["img_url", "http://i.imgur.com/5ilGh6j.jpg"], ["category_id", 3]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Mum’s Coffee Cake "], ["prep_time", "45 minutes"], ["baking_cooking_time", "1-1 1/2 hours"], ["servings", "1 loaf"], ["directions", "-Combine the flour, baking powder, baking soda, and salt together and set aside.\n  -Combine the light brown sugar and cinnamon together and set aside.\n  -In a bowl, mix the sugar and butter until light in color and fluffy.\n  -Add the eggs and vanilla extract. Mix till all ingredients are fully combined.\n  -Add the flour mixture and sour cream in parts to the egg mixture alternating between the two, starting with dry and ending with dry. Dry -> sour cream – > dry – > sour cream –> dry.  \n  -In a loaf pan, place ¾ of the batter and spread evenly. Add ½ of the light brown sugar mix evenly on top of the batter.  Add remaining batter and spread evenly.  Add remaining light brown sugar mix on top.\n  -Bake at a 375 degree oven for 1 1 ½ hours."], ["created_at", "2021-06-26 21:01:50.993313"], ["updated_at", "2021-06-26 21:01:50.993313"], ["ingredients", "3c AP flour\n  1 1/2tsp baking powder\n  1 1/2tsp baking soda\n  3/4tsp salt\n  6oz butter, room temperature\n  1 1/2tsp vanilla extract\n  3 eggs, room temperature\n  1 1/2c sour cream\n  1/2c light brown sugar\n  1Tbsp ground cinnamon"], ["user_id", 1], ["img_url", "http://i.imgur.com/3QYJ5Lw.jpg"], ["category_id", 1]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.9ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Croque Madame"], ["prep_time", "30-40 minutes"], ["baking_cooking_time", "5 minutes"], ["servings", "2 sandwiches"], ["directions", "Bechamel: \n  -Add 2 Tbsp of butter to a pot and melt till it begins to bubble.\n  -Add the flour and, whit a whisk, combine the two ingredients together. Continue to whisk for 2 minutes, not allowing the flour mixture to turn brown.\n  -Slowly add the milk, while whisking, making sure that there are no lump. Add the herbs and spices. Cook for 10-15 minutes till mixture thickens and starts to bubble, while occasionally stirring.  \n  \n  -Preheat the oven to 425 degress.\n  -Spread the Dijon mustard to 2 slices of bread.  Add 3 slices of ham and 1 slice of Gruyere on top of the mustard. Place the bare slice of bread on top of the cheese.\n  -With the remaining butter, cook the sandwich as you would a grilled cheese sandwich.\n  -Place both grilled ham and cheese sandwiches on an aluminum lined sheet tray.  Generously spread the bechamel on top of each sandwich and place a slice of Gruyere over the bechamel.\n  -Place sheet tray in the oven for 5 minutes.\n  -While the sandwiches are in the oven, cook a sunny-up egg.\n  -Remove the sandwiches from the oven and place them on a plate. \n  -Very gingerly, place the sunny-up bird on top of the sandwich."], ["created_at", "2021-06-26 21:01:51.002137"], ["updated_at", "2021-06-26 21:01:51.002137"], ["ingredients", "1 1/2 cups milk\n  5 Tbsp unsalted butter, divided\n  2 Tbsp AP flour\n  1/2 tsp salt\n  1 pinch nutmeg\n  1 bay leaf\n  1 tsp thyme\n  ¼ tsp rosemary\n  ¼ tsp marjoram \n  1 Tbsp grated Parmesan cheese\n  4 slices sourdough bread\n  2 Tbsp Dijon mustard, divide\n  4 slices of Gruyere cheese, divide\n  6 thin slices of Black Forest ham, divide\n  2 eggs"], ["user_id", 1], ["img_url", "http://i.imgur.com/w7Wr7zk.jpg"], ["category_id", 2]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Ricotta"], ["prep_time", "5 minutes "], ["baking_cooking_time", "20-30 minutes"], ["servings", "1 1/2qt"], ["directions", "- Line a large colander or sieve with 4 layers of cheesecloth. Set aside.\n  - Heat milk, buttermilk, heavy cream, and salt in a large, heavy saucepan over medium-low heat. Stir occasionally for the first 10 minutes. Continue heating, without stirring, until the temperature reaches 190 degrees. Remove from heat and let stand for 1 hour. The mixture will be separated into white curds and clear whey.\n  -Using a slotted spoon, ladle approximately 1/4 of the curds into the cheesecloth-lined colander. Gather up the corners of the top cheesecloth and secure closed with a zip tie. Repeat the process till you there are no more curds remaining in the whey. (Save the whey for future cooking endeavors.) Suspend the cheeses over a large wooden spoon over a large bowl, place in the fridge, and let drain overnight."], ["created_at", "2021-06-26 21:01:51.009615"], ["updated_at", "2021-06-26 21:01:51.009615"], ["ingredients", "2qts whole milk\n  1pt buttermilk\n  1c heavy cream\n  1 1/2tsp salt"], ["user_id", 1], ["img_url", "http://i.imgur.com/hNQPuk8.jpg"], ["category_id", 2]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Honeydew-Basil G&T"], ["prep_time", "15 minutes"], ["baking_cooking_time", "30 minutes"], ["servings", "1 drink + 1 gallon of shrub"], ["directions", "\n  G&T\n  -Fill a rocks glass ¾ of the way with ice.\n  -Add all ingredients into the rocks glass. Stir. Sip.\n\n  Honeydew-Basil Shrub\n  -Blend honeydew and basil until smooth.\n  -Place all ingredients into a pot; cook on low heat until the sugar is fully dissolved.\n  -Strain and chill."], ["created_at", "2021-06-26 21:01:51.015712"], ["updated_at", "2021-06-26 21:01:51.015712"], ["ingredients", "2 1/2oz gin\n  1 1/2oz tonic\n  1 1/2oz honeydew-basil shrub\n  \n  Honeydew-Basil Shrub\n  1 honeydew\n  1c basil\n  4c sugar\n  4c water\n  3/4c apple cider vinegar\n  3/4c white vinegar"], ["user_id", 1], ["img_url", ""], ["category_id", 3]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Salty Chocolate Chippers"], ["prep_time", "30 minutes"], ["baking_cooking_time", "10-12 minutes"], ["servings", "4 dozen"], ["directions", "-In a large bowl, whisk together the flour, salt, and baking soda. Set aside.\n  -Beat together the butter and sugars until light in color and fluffy. Scrape down the bowl and add in the eggs and vanilla until completely incorporated. \n  -Add in half of the flour, mix for 15 seconds on high speed, then add in the rest of the flour gradually. Add the chocolate chips at the end. Cover the bowl and chill in the refrigerator for at least 6 hours.\n  -Pre-heat the oven to 375 degrees F. Line two baking sheets. Scoop out the cookie dough, or roll the dough into a ball the size of 2 tablespoons. Place them on the prepared baking sheets about 1 inch apart and press down just slightly with your palm. Bake for 10-12 minutes, rotating the pans halfway through baking, until the edges of the cookies are golden brown, and the tops just start to darken."], ["created_at", "2021-06-26 21:01:51.020942"], ["updated_at", "2021-06-26 21:01:51.020942"], ["ingredients", "2 1/4c AP flour\n  1Tbsp salt\n  1tsp baking soda\n  8oz butter\n  1c dark brown sugar\n  1/2c sugar\n  2 eggs\n  2tsp vanilla extract\n  1lb mini chocolate chips"], ["user_id", 1], ["img_url", "http://i.imgur.com/TKaNnlA.jpg"], ["category_id", 1]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.7ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "The Beatrix"], ["prep_time", "10 minutes"], ["baking_cooking_time", "2 hrs"], ["servings", "1 drink + 1qt candied kalamata olives with syrup"], ["directions", "-In a shaker, add the ice, tequila, orange liquor, lime juice, grapefruit juice, and kalamata syrup and shake.\n  -Strain contents into a Tom Collins glass.  Add ice and a splash of club soda.\n  -Garnish with 2 candied kalamata olives.\n  \n  Candied Kalamata Olive Syrup\n  -In a pot, bring the sugar and water to a simmer.\n  -Add the olives (with some brine) and turn the heat to low.  Let the contents simmer for 2 hours or until the olives become prune-like. Add more water if the liquid becomes too thick."], ["created_at", "2021-06-26 21:01:51.026805"], ["updated_at", "2021-06-26 21:01:51.026805"], ["ingredients", "2oz blanco tequila\n  1/2oz Pierre Ferrand Dry Curacao, or any smokey orange liquor\n  1oz lime juice\n  1/2oz grapefruit juice\n  3/4oz candied kalamata syrup\n  Splash club soda\n  \n  Candied Kalamata Olive Syrup\n  20oz sugar\n  20oz water\n  1 1/2c kalamata olives, pitted"], ["user_id", 1], ["img_url", ""], ["category_id", 3]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes"[0m
+Started POST "/auth/login" for ::1 at 2021-06-26 17:02:14 -0400
+Processing by AuthenticationController#login as */*
+  Parameters: {"authentication"=>{"username"=>"meep", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "meep"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 292ms (Views: 0.3ms | ActiveRecord: 14.4ms | Allocations: 6837)
+
+
+Started GET "/categories" for ::1 at 2021-06-26 17:02:38 -0400
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 3303)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 17:02:49 -0400
+Processing by RecipesController#index as */*
+  Parameters: {"id"=>3, "name"=>"THE Kalamama Martini", "prep_time"=>"15 minutes", "baking_cooking_time"=>"N/A", "servings"=>"1", "directions"=>"-Add all ingredients into a mixing glass with ice. Stir until well-chilled.\n  -Strain contents into a chilled martini, Nick & Nora, or desired cocktail glass.\n  -Garnish with a 2-3 kalamata olives.", "created_at"=>"2021-06-23T23:42:30.060Z", "updated_at"=>"2021-06-23T23:42:30.060Z", "ingredients"=>"2 1/2oz gin\n  1/2oz dry vermouth\n  1/2oz kalamata olive brine\n  1/4oz lemon juice", "user_id"=>nil, "img_url"=>"https://files.slack.com/files-pri/T0351JZQ0-F0255D9H05D/img_2292.jpg", "recipe"=>{"id"=>3, "name"=>"THE Kalamama Martini", "prep_time"=>"15 minutes", "baking_cooking_time"=>"N/A", "servings"=>"1", "directions"=>"-Add all ingredients into a mixing glass with ice. Stir until well-chilled.\n  -Strain contents into a chilled martini, Nick & Nora, or desired cocktail glass.\n  -Garnish with a 2-3 kalamata olives.", "created_at"=>"2021-06-23T23:42:30.060Z", "updated_at"=>"2021-06-23T23:42:30.060Z", "ingredients"=>"2 1/2oz gin\n  1/2oz dry vermouth\n  1/2oz kalamata olive brine\n  1/4oz lemon juice", "user_id"=>nil, "img_url"=>"https://files.slack.com/files-pri/T0351JZQ0-F0255D9H05D/img_2292.jpg"}}
+  [1m[36mRecipe Load (1.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 2.7ms | Allocations: 14613)
+
+
+Started GET "/categories" for ::1 at 2021-06-26 17:04:02 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 17:04:02 -0400
+Processing by CategoriesController#index as HTML
+Processing by RecipesController#index as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms | Allocations: 1165)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 17:04:02 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 14ms (Views: 0.9ms | ActiveRecord: 0.7ms | Allocations: 921)
+
+
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (7.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 111ms (Views: 77.9ms | ActiveRecord: 32.7ms | Allocations: 13438)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 17:04:39 -0400
+Started GET "/recipes/1" for ::1 at 2021-06-26 17:04:39 -0400
+Started GET "/categories" for ::1 at 2021-06-26 17:04:39 -0400
+Processing by RecipesController#index as HTML
+Processing by RecipesController#show as HTML
+Processing by CategoriesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (2.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+Started GET "/auth/verify" for ::1 at 2021-06-26 17:04:39 -0400
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (4.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 1.4ms | Allocations: 2289)
+
+
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mRecipe Load (6.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 130ms (Views: 119.0ms | ActiveRecord: 10.7ms | Allocations: 15264)
+
+
+Completed 200 OK in 117ms (Views: 0.6ms | ActiveRecord: 68.0ms | Allocations: 13286)
+
+
+  [1m[36mCategory Load (3.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14:in `show'
+Completed 200 OK in 138ms (Views: 10.4ms | ActiveRecord: 79.2ms | Allocations: 16580)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 17:05:13 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+Started GET "/categories" for ::1 at 2021-06-26 17:05:13 -0400
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 1.7ms | Allocations: 1810)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 17:05:13 -0400
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (9.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 0.4ms | ActiveRecord: 9.3ms | Allocations: 3672)
+
+
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 132ms (Views: 125.9ms | ActiveRecord: 6.0ms | Allocations: 12157)
+
+
+Started GET "/categories" for ::1 at 2021-06-26 17:07:32 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 17:07:32 -0400
+Processing by CategoriesController#index as HTML
+Processing by RecipesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 1423)
+
+
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 77ms (Views: 73.8ms | ActiveRecord: 3.0ms | Allocations: 9746)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 17:07:34 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (2.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Started GET "/categories" for ::1 at 2021-06-26 17:07:34 -0400
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 1.1ms | Allocations: 2310)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 187ms (Views: 182.6ms | ActiveRecord: 4.3ms | Allocations: 10522)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 17:07:36 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Started GET "/categories" for ::1 at 2021-06-26 17:07:36 -0400
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (3.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (4.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/auth/verify" for ::1 at 2021-06-26 17:07:36 -0400
+  [1m[36mCategory Load (5.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 33.8ms | ActiveRecord: 4.5ms | Allocations: 4204)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 1.7ms | ActiveRecord: 11.3ms | Allocations: 3514)
+
+
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 112ms (Views: 98.4ms | ActiveRecord: 12.5ms | Allocations: 12150)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 17:07:48 -0400
+Processing by AuthenticationController#verify as HTML
+Started GET "/recipes" for ::1 at 2021-06-26 17:07:48 -0400
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Processing by RecipesController#index as HTML
+Completed 200 OK in 12ms (Views: 1.4ms | ActiveRecord: 1.3ms | Allocations: 1282)
+
+
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 72ms (Views: 66.7ms | ActiveRecord: 4.8ms | Allocations: 9124)
+
+
+Started GET "/categories" for ::1 at 2021-06-26 17:07:48 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 842)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 17:08:57 -0400
+Started GET "/categories" for ::1 at 2021-06-26 17:08:57 -0400
+Processing by RecipesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/auth/verify" for ::1 at 2021-06-26 17:08:57 -0400
+  [1m[36mCategory Load (6.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 1.3ms | Allocations: 2876)
+
+
+  [1m[36mCategory Load (2.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (9.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 40ms (Views: 0.5ms | ActiveRecord: 3.9ms | Allocations: 2888)
+
+
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 108ms (Views: 86.8ms | ActiveRecord: 20.4ms | Allocations: 11596)
+
+
+Started PUT "/categories//recipes/1" for ::1 at 2021-06-26 17:09:06 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/categories/recipes/1"):
+  
+Started GET "/categories" for ::1 at 2021-06-26 17:11:04 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 17:11:04 -0400
+Processing by RecipesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 1720)
+
+
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 58ms (Views: 52.9ms | ActiveRecord: 4.8ms | Allocations: 9822)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 17:11:05 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Started GET "/categories" for ::1 at 2021-06-26 17:11:05 -0400
+  [1m[36mCategory Load (3.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.8ms | Allocations: 2103)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 70ms (Views: 63.5ms | ActiveRecord: 6.1ms | Allocations: 10398)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 17:14:56 -0400
+Processing by RecipesController#index as HTML
+Started GET "/categories" for ::1 at 2021-06-26 17:14:56 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mRecipe Load (2.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (9.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 6.4ms | ActiveRecord: 9.2ms | Allocations: 1685)
+
+
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/auth/verify" for ::1 at 2021-06-26 17:14:56 -0400
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 19ms (Views: 0.9ms | ActiveRecord: 9.1ms | Allocations: 2202)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 90ms (Views: 84.1ms | ActiveRecord: 5.5ms | Allocations: 11802)
+
+
+Started PUT "/recipes/1" for ::1 at 2021-06-26 17:15:05 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"recipe"=>"", "id"=>"1"}
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 400 Bad Request in 8ms (ActiveRecord: 1.4ms | Allocations: 1147)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: recipe
+Did you mean?  recipe
+               action
+               controller
+               id):
+  
+app/controllers/recipes_controller.rb:56:in `recipe_params'
+app/controllers/recipes_controller.rb:31:in `update'
+Started PUT "/recipes/1" for ::1 at 2021-06-26 17:15:09 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"recipe"=>"", "id"=>"1"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.8ms | Allocations: 1118)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: recipe
+Did you mean?  recipe
+               action
+               controller
+               id):
+  
+app/controllers/recipes_controller.rb:56:in `recipe_params'
+app/controllers/recipes_controller.rb:31:in `update'
+Started GET "/recipes/1" for ::1 at 2021-06-26 17:15:13 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14:in `show'
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 1.4ms | Allocations: 1466)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 17:16:45 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (7.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/auth/verify" for ::1 at 2021-06-26 17:16:45 -0400
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+Started GET "/categories" for ::1 at 2021-06-26 17:16:45 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (18.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 28ms (Views: 1.0ms | ActiveRecord: 4.0ms | Allocations: 2988)
+
+
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 359ms (Views: 343.9ms | ActiveRecord: 14.7ms | Allocations: 5676)
+
+
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 454ms (Views: 425.9ms | ActiveRecord: 27.8ms | Allocations: 14161)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 17:18:55 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Started GET "/categories" for ::1 at 2021-06-26 17:18:55 -0400
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 1.8ms | Allocations: 1871)
+
+
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 74ms (Views: 69.4ms | ActiveRecord: 3.4ms | Allocations: 10544)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 17:18:55 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 740)
+
+
+Started PUT "/recipes/1" for ::1 at 2021-06-26 17:19:08 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"recipe"=>"", "id"=>"1"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 400 Bad Request in 6ms (ActiveRecord: 1.2ms | Allocations: 1119)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: recipe
+Did you mean?  recipe
+               action
+               controller
+               id):
+  
+app/controllers/recipes_controller.rb:56:in `recipe_params'
+app/controllers/recipes_controller.rb:31:in `update'
+Started GET "/recipes/1" for ::1 at 2021-06-26 17:19:12 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14:in `show'
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.8ms | Allocations: 1467)
+
+
+Started GET "/recipes/1" for ::1 at 2021-06-26 17:19:16 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14:in `show'
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 1.1ms | Allocations: 1467)
+
+

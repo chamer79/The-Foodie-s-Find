@@ -12,10 +12,11 @@ import {
   postRecipe,
   putRecipe,
 } from "../services/recipes";
+import { getAllCategories } from "../services/categories";
 
 export default function MainContainer(props) {
   const [recipes, setRecipes] = useState([]);
-
+  const [categories, setCategories] = useState([]);
   const { currentUser } = props;
   const history = useHistory();
 
@@ -27,7 +28,16 @@ export default function MainContainer(props) {
     fetchRecipes();
   }, []);
 
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const categoryList = await getAllCategories();
+      setCategories(categoryList);
+    }
+    fetchCategories();
+  }, [])
+
   const handleCreate = async (formData) => {
+    debugger
     const recipeItem = await postRecipe(formData);
     setRecipes((prevState) => [...prevState, recipeItem]);
     history.push("/recipes");
@@ -53,10 +63,10 @@ export default function MainContainer(props) {
     <div>
       <Switch>
         <Route path="/post-recipe">
-          <PostRecipe currentUser={currentUser} handleCreate={handleCreate} />
+          <PostRecipe currentUser={currentUser} recipes={recipes} categories={categories} handleCreate={handleCreate} />
         </Route>
         <Route path="/recipes/:id/update">
-          <EditRecipe currentUser={currentUser} handleUpdate={handleUpdate} />
+          <EditRecipe currentUser={currentUser} recipes={recipes} categories={categories} handleUpdate={handleUpdate} />
         </Route>
         <Route path="/recipes/:id">
           <RecipeDetail currentUser={currentUser} recipes={recipes} handleDelete={handleDelete} />

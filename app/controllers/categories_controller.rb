@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-  before_action :authorize_request, only: [:index]
 
   # GET /categories
   def index
@@ -7,6 +6,4 @@ class CategoriesController < ApplicationController
 
     render json: @categories
   end
-
-
 end

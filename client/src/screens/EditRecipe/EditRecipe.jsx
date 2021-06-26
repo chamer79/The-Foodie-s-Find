@@ -1,9 +1,11 @@
 import "./EditRecipe.css"
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { putRecipe } from "../../services/recipes";
+
 
 export default function EditRecipe(props) {
-  const [recipeItem, setRecipeItem] = useState(null);
+  const [recipeItem, setRecipeItem] = useState();
 	const [categoryId, setCategoryId] = useState('');
   
   const [formData, setFormData] = useState({
@@ -14,6 +16,7 @@ export default function EditRecipe(props) {
     ingredients: "",
     directions: "",
     img_url: "",
+    category: "",
   });
   
   const {
@@ -24,6 +27,7 @@ export default function EditRecipe(props) {
     ingredients,
     directions,
     img_url,
+    category,
   } = formData;
   
  
@@ -42,6 +46,7 @@ export default function EditRecipe(props) {
         ingredients: singleRecipe?.ingredients,
         directions: singleRecipe?.directions,
         img_url: singleRecipe?.img_url,
+        category: singleRecipe?.category
       });
     };
     if (recipes?.length) {
@@ -51,7 +56,7 @@ export default function EditRecipe(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const recipeItem = await addCategory(id, categoryId);
+    const recipeItem = await putRecipe(id, categoryId);
     setRecipeItem(recipeItem)
 }
 
@@ -71,19 +76,19 @@ export default function EditRecipe(props) {
               -- Select a Category --
             </option>
             {categories?.map((category) => (
-              <option value={category.id} key={category.id}>
-                {category.name}
+              <option value={category?.id} key={category?.id}>
+                {category?.name}
               </option>
             ))}
           </select>
-        </form>
+        {/* </form>
       <form
         className="post-edit-form"
         onSumbit={(e) => {
           e.preventDefault();
           handleUpdate(id, formData);
         }}
-      >
+      > */}
         
         <input className="recipe-name"
           type="text"

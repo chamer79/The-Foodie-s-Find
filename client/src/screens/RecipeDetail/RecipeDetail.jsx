@@ -1,12 +1,14 @@
 import "./RecipeDetail.css";
 import { useEffect, useState } from "react";
-import { useParams, useHistory, Link } from "react-router";
-import { getOneRecipe, deleteRecipe } from "../../services/recipes";
+import { useParams, useHistory, Link } from "react-router-dom";
+import { getOneRecipe } from "../../services/recipes";
 
 export default function RecipeDetail(props) {
   const [recipeItem, setRecipeItem] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
+  const { handleDelete} = props
+
 
   useEffect(() => {
     const fetchRecipe = async () => {
@@ -25,8 +27,14 @@ export default function RecipeDetail(props) {
 
 
   return (
-    <div className="receipe-card-container">
-      <h3>Recipe Detail Page</h3>
+    <> 
+      <div className="put-delete-buttons">
+        <Link to={`/recipes/${recipeItem?.id}/update`}>
+          <button className="edit-button">UPDATE</button>
+        </Link>
+        <button onClick={() =>handleDelete(recipeItem?.id)} className="delete-button">DELETE</button>
+     </div>
+    <section className="receipe-card-container">
   
       <div className="img-container">
         <img className="recipe-img" src={`/recieps/:id/${recipeItem?.img_url}`} />
@@ -48,6 +56,7 @@ export default function RecipeDetail(props) {
         </div>
       </div>
 
-    </div>
+      </section>
+      </> 
   )
 }

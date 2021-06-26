@@ -53,13 +53,13 @@ export default function MainContainer(props) {
     <div>
       <Switch>
         <Route path="/post-recipe">
-          <PostRecipe user={currentUser} handleCreate={handleCreate} />
+          <PostRecipe currentUser={currentUser} handleCreate={handleCreate} />
         </Route>
         <Route path="/recipes/:id/update">
-          <EditRecipe user={currentUser} handleUpdate={handleUpdate} />
+          <EditRecipe currentUser={currentUser} handleUpdate={handleUpdate} />
         </Route>
         <Route path="/recipes/:id">
-          <RecipeDetail recipes={recipes} handleDelete={handleDelete} />
+          <RecipeDetail currentUser={currentUser} recipes={recipes} handleDelete={handleDelete} />
         </Route>
         <Route path="/recipes">
           <Recipes recipes={recipes} />

@@ -1,3 +1,4 @@
+import "./PostRecipe.css"
 import { useState } from "react";
 
 export default function PostRecipe(props) {
@@ -21,6 +22,7 @@ export default function PostRecipe(props) {
     directions,
     img_url } = formData;
   const { handleCreate } = props;
+  
   
   const handleChange = (e) => {
     const { name, value } = e.target;

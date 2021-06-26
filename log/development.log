@@ -5090,3 +5090,171 @@ Processing by RecipesController#index as HTML
 Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 20.5ms | Allocations: 4063)
 
 
+Started GET "/recipes" for ::1 at 2021-06-25 22:34:03 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-25 22:34:03 -0400
+Processing by RecipesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (7.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 272ms (Views: 253.9ms | ActiveRecord: 94.5ms | Allocations: 6473)
+
+
+Completed 200 OK in 230ms (Views: 2.0ms | ActiveRecord: 88.3ms | Allocations: 6482)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-25 22:43:12 -0400
+Started GET "/recipes" for ::1 at 2021-06-25 22:43:12 -0400
+Processing by RecipesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (7.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 293ms (Views: 277.2ms | ActiveRecord: 52.5ms | Allocations: 6449)
+
+
+Completed 200 OK in 243ms (Views: 1.6ms | ActiveRecord: 104.6ms | Allocations: 6481)
+
+
+Started GET "/recipes" for ::1 at 2021-06-25 22:43:48 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-25 22:43:48 -0400
+Processing by RecipesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.6ms | Allocations: 2635)
+
+
+Completed 200 OK in 20ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 2800)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-25 22:50:23 -0400
+Started GET "/recipes" for ::1 at 2021-06-25 22:50:23 -0400
+Processing by RecipesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (14.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 965ms (Views: 866.3ms | ActiveRecord: 330.0ms | Allocations: 6115)
+
+
+  [1m[36mUser Load (94.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 818ms (Views: 7.1ms | ActiveRecord: 385.5ms | Allocations: 6764)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-25 22:51:28 -0400
+Started GET "/recipes" for ::1 at 2021-06-25 22:51:28 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 0.7ms | ActiveRecord: 2.0ms | Allocations: 1488)
+
+
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.6ms | Allocations: 2748)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-25 23:09:09 -0400
+Started GET "/recipes" for ::1 at 2021-06-25 23:09:09 -0400
+Processing by RecipesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (8.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 352ms (Views: 316.9ms | ActiveRecord: 109.6ms | Allocations: 6451)
+
+
+Completed 200 OK in 276ms (Views: 0.7ms | ActiveRecord: 90.1ms | Allocations: 6483)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-25 23:12:21 -0400
+Started GET "/recipes" for ::1 at 2021-06-25 23:12:21 -0400
+Processing by RecipesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-25 23:12:21 -0400
+Started GET "/recipes" for ::1 at 2021-06-25 23:12:21 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (80.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (38.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 399ms (Views: 261.0ms | ActiveRecord: 80.6ms | Allocations: 4788)
+
+
+Completed 200 OK in 301ms (Views: 0.8ms | ActiveRecord: 49.0ms | Allocations: 4809)
+
+
+  [1m[36mRecipe Load (361.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 511ms (Views: 94.4ms | ActiveRecord: 402.9ms | Allocations: 8430)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 628ms (Views: 1.2ms | ActiveRecord: 462.5ms | Allocations: 10134)
+
+
+Started GET "/recipes" for ::1 at 2021-06-25 23:28:32 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-25 23:28:32 -0400
+Processing by RecipesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (6.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 328ms (Views: 309.2ms | ActiveRecord: 106.1ms | Allocations: 6491)
+
+
+Completed 200 OK in 270ms (Views: 1.5ms | ActiveRecord: 83.8ms | Allocations: 6483)
+
+
+Started GET "/recipes" for ::1 at 2021-06-25 23:30:31 -0400
+Processing by RecipesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-25 23:30:31 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (12.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 126ms (Views: 109.4ms | ActiveRecord: 12.7ms | Allocations: 3071)
+
+
+Completed 200 OK in 122ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 2767)
+
+
+Started GET "/recipes" for ::1 at 2021-06-25 23:31:50 -0400
+Processing by RecipesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-25 23:31:50 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 1.0ms | Allocations: 2701)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 2988)
+
+
+Started GET "/recipes" for ::1 at 2021-06-25 23:33:02 -0400
+Processing by RecipesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-25 23:33:02 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mRecipe Load (5.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 40ms (Views: 34.2ms | ActiveRecord: 5.2ms | Allocations: 2663)
+
+
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 84ms (Views: 1.3ms | ActiveRecord: 47.3ms | Allocations: 3065)
+
+

@@ -1,6 +1,6 @@
 import "./RecipeDetail.css";
 import { useEffect, useState } from "react";
-import { useParams, useHistory, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getOneRecipe } from "../../services/recipes";
 
 export default function RecipeDetail(props) {
@@ -8,6 +8,7 @@ export default function RecipeDetail(props) {
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
   const { currentUser, handleDelete } = props;
+ 
 
   useEffect(() => {
     const fetchRecipe = async () => {
@@ -21,26 +22,6 @@ export default function RecipeDetail(props) {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-
-  // const authenticatedOptions = (
-  //   <>
-  //     {currentUser && (
-  //       <div className="put-delete-buttons">
-  //         <Link to={`/recipes/${recipeItem?.id}/update`}>
-  //           <button className="edit-button">UPDATE</button>
-  //         </Link>
-  //         <button
-  //           className="delete-button"
-  //           onClick={() => handleDelete(recipeItem?.id)}
-  //         >
-  //           DELETE
-  //         </button>
-  //       </div>
-  //     )}
-  //   </>
-  // );
-
-  // const unauthenticatedOptions = <></>;
 
   return (
     <>
@@ -59,11 +40,6 @@ export default function RecipeDetail(props) {
           </>
         ) : ( <></>)
         }
-        
-        
-        {/* {currentUser !== null
-          ? authenticatedOptions
-          : unauthenticatedOptions} */}
           </div>
       <section className="receipe-card-container">
         <div className="img-container">

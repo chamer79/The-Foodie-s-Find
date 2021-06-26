@@ -2,8 +2,7 @@ import "./PostRecipe.css"
 import { useState } from "react";
 
 export default function PostRecipe(props) {
-  console.log(props)
-  const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({
     name: "",
     prep_time: "",
     baking_cooking_time: "",

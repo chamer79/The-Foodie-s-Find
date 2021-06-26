@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export default function EditRecipe(props) {
-  // const { update, user } = props;
-  // console.log("update", update);
+  const [recipeItem, setRecipeItem] = useState(null);
+	const [categoryId, setCategoryId] = useState('');
+  
   const [formData, setFormData] = useState({
     name: "",
     prep_time: "",
@@ -14,7 +15,7 @@ export default function EditRecipe(props) {
     directions: "",
     img_url: "",
   });
-
+  
   const {
     name,
     prep_time,
@@ -24,26 +25,35 @@ export default function EditRecipe(props) {
     directions,
     img_url,
   } = formData;
-  const { recipes, handleUpdate } = props;
+  
+ 
+  const { recipes, categories, handleUpdate } = props;
   const { id } = useParams();
+
 
   useEffect(() => {
     const prefilledFormData = () => {
-      const singleRecipe = recipes.find((recipe) => recipe.id === Number(id));
+      const singleRecipe = recipes?.find((recipe) => recipe?.id === Number(id));
       setFormData({
-        name: singleRecipe.name,
-        prep_time: singleRecipe.prep_time,
-        baking_cooking_time: singleRecipe.baking_cooking_time,
-        servings: singleRecipe.servings,
-        ingredients: singleRecipe.ingredients,
-        directions: singleRecipe.directions,
-        img_url: singleRecipe.img_url,
+        name: singleRecipe?.name,
+        prep_time: singleRecipe?.prep_time,
+        baking_cooking_time: singleRecipe?.baking_cooking_time,
+        servings: singleRecipe?.servings,
+        ingredients: singleRecipe?.ingredients,
+        directions: singleRecipe?.directions,
+        img_url: singleRecipe?.img_url,
       });
     };
     if (recipes?.length) {
       prefilledFormData();
     }
   }, [recipes]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const recipeItem = await addCategory(id, categoryId);
+    setRecipeItem(recipeItem)
+}
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -55,6 +65,18 @@ export default function EditRecipe(props) {
 
   return (
     <div className="post-edit-container">
+        <form className="drop-down" onSubmit={handleSubmit}>
+          <select defaultValue="default" onChange={handleChange}>
+            <option disabled value="default">
+              -- Select a Category --
+            </option>
+            {categories?.map((category) => (
+              <option value={category.id} key={category.id}>
+                {category.name}
+              </option>
+            ))}
+          </select>
+        </form>
       <form
         className="post-edit-form"
         onSumbit={(e) => {
@@ -62,6 +84,7 @@ export default function EditRecipe(props) {
           handleUpdate(id, formData);
         }}
       >
+        
         <input className="recipe-name"
           type="text"
           name="name"

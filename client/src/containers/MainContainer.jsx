@@ -39,8 +39,8 @@ export default function MainContainer(props) {
       prevState.map((recipe) => {
         return recipe.id === Number(id) ? recipeItem : recipe;
       })
-    );
-    history.push("/recipes");
+      );
+      history.push("/recipes");
   };
 
   const handleDelete = async (id) => {

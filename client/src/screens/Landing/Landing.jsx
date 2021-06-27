@@ -10,9 +10,22 @@ export default function Landing() {
           <img className="logo" src="http://i.imgur.com/LaPp5S9.png"
             alt="logo"
           />
-          <h3><span>S</span>WEET <span>S</span>AVORY <span>L</span>IBATIONS</h3>
-          <p>Here, at The Foodie's Find, we cut the fat. Whatr does that mean?
-            We cut out the long novel-like descriptions just t</p>
+          <ul className="branding">
+            <li>
+              <h3><span>S</span>WEET</h3>
+            </li>
+            <li>
+            <span>S</span>AVORY
+            </li>
+            <li>
+            <span>L</span>IBATIONS
+            </li>
+          </ul>
+          
+          {/* <h3><span>S</span>WEET <span>S</span>AVORY <span>L</span>IBATIONS</h3> */}
+          <p className="intro">Welcome to The Foodie's Find! We are a community where foodies
+            can share some of their favorite recipes without having to sift through a long winded novel.
+            Meaning, we cut out the fat!</p>
         </div>
         <h3>Landing Page</h3>
         <div className="landing-img">

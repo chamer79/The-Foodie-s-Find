@@ -7,7 +7,7 @@ export default function Card(props) {
       <Link className="card" to={`/recipes/${props.id}`}>
         <img
           className="card-img"
-          src={props.img}
+          src={props.img_url}
           alt={props.name}
         />
         <div className="card-name-container">

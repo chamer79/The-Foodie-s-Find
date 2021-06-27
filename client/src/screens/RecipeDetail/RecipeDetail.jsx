@@ -45,7 +45,7 @@ export default function RecipeDetail(props) {
         <div className="img-container">
           <img
             className="recipe-img"
-            src={`/recieps/:id/${recipeItem?.img_url}`}
+            src={`${recipeItem?.img_url}`}
           />
         </div>
         <div className="recipe-content">

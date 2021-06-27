@@ -15303,3 +15303,672 @@ Processing by RecipesController#show as HTML
 Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.8ms | Allocations: 1470)
 
 
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (136.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "The_Foodies_Find_development"[0m
+  [1m[35m (131.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "The_Foodies_Find_test"[0m
+  [1m[35m (294.9ms)[0m  [1m[35mCREATE DATABASE "The_Foodies_Find_development" ENCODING = 'unicode'[0m
+  [1m[35m (290.3ms)[0m  [1m[35mCREATE DATABASE "The_Foodies_Find_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "prep_time" character varying, "baking_cooking_time" character varying, "servings" character varying, "directions" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "ingredients" character varying, "user_id" bigint, "img_url" character varying, "category_id" bigint)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_recipes_on_category_id" ON "recipes" ("category_id")[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE INDEX "index_recipes_on_user_id" ON "recipes" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "recipes" ADD CONSTRAINT "fk_rails_22f4e84158"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "recipes" ADD CONSTRAINT "fk_rails_9606fce865"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210626005427)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210622195329),
+(20210622195410),
+(20210622195450),
+(20210623000544),
+(20210623022542),
+(20210623141357),
+(20210623230810);
+
+[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-27 01:52:39.199289"], ["updated_at", "2021-06-27 01:52:39.199289"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "89c4a66b7861deb332c753cd1c1ca68345750a95"], ["created_at", "2021-06-27 01:52:39.206603"], ["updated_at", "2021-06-27 01:52:39.206603"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "prep_time" character varying, "baking_cooking_time" character varying, "servings" character varying, "directions" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "ingredients" character varying, "user_id" bigint, "img_url" character varying, "category_id" bigint)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE INDEX "index_recipes_on_category_id" ON "recipes" ("category_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE INDEX "index_recipes_on_user_id" ON "recipes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "recipes" ADD CONSTRAINT "fk_rails_22f4e84158"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "recipes" ADD CONSTRAINT "fk_rails_9606fce865"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210626005427)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210622195329),
+(20210622195410),
+(20210622195450),
+(20210623000544),
+(20210623022542),
+(20210623141357),
+(20210623230810);
+
+[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-27 01:52:39.275135"], ["updated_at", "2021-06-27 01:52:39.275135"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-06-27 01:52:39.280289"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "89c4a66b7861deb332c753cd1c1ca68345750a95"], ["created_at", "2021-06-27 01:52:39.285142"], ["updated_at", "2021-06-27 01:52:39.285142"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "meep"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "meep@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "meep"], ["email", "meep@email.com"], ["password_digest", "$2a$12$7anLj5rEBUSqW/EOGEMFaumEFZEt9Pyr013vqeUzX8DaY2Z1c8GPy"], ["created_at", "2021-06-27 01:52:39.518599"], ["updated_at", "2021-06-27 01:52:39.518599"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baking"], ["created_at", "2021-06-27 01:52:39.528014"], ["updated_at", "2021-06-27 01:52:39.528014"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Savory"], ["created_at", "2021-06-27 01:52:39.532122"], ["updated_at", "2021-06-27 01:52:39.532122"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cocktails"], ["created_at", "2021-06-27 01:52:39.535948"], ["updated_at", "2021-06-27 01:52:39.535948"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.6ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "English Muffins"], ["prep_time", "30 minutes + 1 day"], ["baking_cooking_time", "4 minutes per side of muffin"], ["servings", "12-16 English Muffins"], ["directions", "-In a mixing bowl, combine the yeast, sugar, and water; stir with a whisk.\n  -Let the mixture sit for 5 minutes to allow the yeast to bloom.\n  -Add, in order, flour, butter, and salt.\n  -With a hook attachment, mix on low speed till the ingredients are incorporated. Mix on medium speed for 3-5 minutes.\n  -Place dough in a lightly oiled covered bowl, and place in the fridge overnight.  This will make it easier to roll out and handle the dough.\n  -On a we floured counter, roll out the dough to ¼ in thick.\n  -With a 3-inch ring cutter, cut out the muffins and through away the scraps.\n  -Cook the muffins 4 minutes per side on a 350 degree electric griddle."], ["created_at", "2021-06-27 01:52:39.549760"], ["updated_at", "2021-06-27 01:52:39.549760"], ["ingredients", "1lb 12oz AP flour\n  1/2oz salt\n  1/4oz sugar\n  1/4oz butter, room temperature\n  1/4oz dry yeast\n  2 1/4c water, body temperature"], ["user_id", 1], ["img_url", "https://i.imgur.com/fbuKviG.jpg"], ["category_id", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.6ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Pork Soup Dumplings"], ["prep_time", "1 day + 3 hours"], ["baking_cooking_time", "8-10 minutes"], ["servings", "24 dumplings"], ["directions", "Pork Jelly: \n  -Bring a pot of water to a boil. Place pork skin in the boiling water and cook for 1 minute.\n  -Turn the heat off and allow contents to cool for 10-15 minutes.\n  -Remove the pork skin from the pot and dump the water. While still warm, scrap off excess fat and hair from the skin. Cut the skin into thin strips.\n  -Place 1 liter of water in the pot and bring to a boil. Place the pork skin, 2 scallions, sliced ginger, and Chinese cooking wine into the boiling water. Cover and allow to simmer for 20 minutes.\n  -Turn off heat and allow contents to cool for 10-15 minutes. Remove the scallions and ginger.\n  -In a blender, blend the pork skin and water for 2 minutes. Strain into a container.  Cover the container and place in the fridge overnight.\n  \n  Dumpling Dough:\n  -In a bowl, combine the flour and 100ml of water till the ingredients are combines.\n  -Transfer the dough to the counter and knead for 10-15 minutes.\n  -Cover the dough and set aside while making the filling.\n  \n  Pork Filling: \n  -In a blow, mix ground pork, ginger, scallions, oyster sauce, white pepper, salt, sugar, and sesame oil for 3 minutes or until all ingredients are fully combined.\n  -Add the pork jelly and stir until fully incorporated.\n  \n  Assembly:\n  -Roll the dough out into a 1-inch diameter strip.\n  -Cut the strip into about 1 ½ inch pieces. Cover the pieces with a clean kitchen towel to prevent the dough from drying out.\n  -Roll a piece of dough into a circle, about 1/8 thickness. Place filling into the wrapper and pinch shut.\n  -Set the dumpling aside in a lightly floured area while continuing to make dumplings.\n  -Cook the dumplings in a bamboo steamer for 8-10 minutes.\n  -Any uncooked dumplings can be frozen."], ["created_at", "2021-06-27 01:52:39.554460"], ["updated_at", "2021-06-27 01:52:39.554460"], ["ingredients", "250gr pork skin\n  1 liter water\n  1Tbsp Chinese cooking wine\n  5gr ginger, sliced\n  2 scallion, cut ends\n  200gr AP flour\n  100ml water\n  1lb ground pork \n  160gr pork jelly, small cubes\n  9gr scallions, sliced thin\n  9gr ginger, diced\n  1/8tsp white pepper\n  4 1/2tsp oyster sauce\n  1/2tsp salt\n  1tsp sugar\n  1tsp sesame oil"], ["user_id", 1], ["img_url", "https://i.imgur.com/AfDD4I1.jpg"], ["category_id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Kalamama Martini"], ["prep_time", "5 minutes"], ["baking_cooking_time", "N/A"], ["servings", "1"], ["directions", "-Add all ingredients into a mixing glass with ice. Stir until well-chilled.\n  -Strain contents into a chilled martini, Nick & Nora, or desired cocktail glass.\n  -Garnish with a 2-3 kalamata olives."], ["created_at", "2021-06-27 01:52:39.559357"], ["updated_at", "2021-06-27 01:52:39.559357"], ["ingredients", "2 1/2oz gin\n  1/2oz dry vermouth\n  1/2oz kalamata olive brine\n  1/4oz lemon juice"], ["user_id", 1], ["img_url", "https://i.imgur.com/5ilGh6j.jpg"], ["category_id", 3]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Mum’s Coffee Cake "], ["prep_time", "45 minutes"], ["baking_cooking_time", "1-1 1/2 hours"], ["servings", "1 loaf"], ["directions", "-Combine the flour, baking powder, baking soda, and salt together and set aside.\n  -Combine the light brown sugar and cinnamon together and set aside.\n  -In a bowl, mix the sugar and butter until light in color and fluffy.\n  -Add the eggs and vanilla extract. Mix till all ingredients are fully combined.\n  -Add the flour mixture and sour cream in parts to the egg mixture alternating between the two, starting with dry and ending with dry. Dry -> sour cream – > dry – > sour cream –> dry.  \n  -In a loaf pan, place ¾ of the batter and spread evenly. Add ½ of the light brown sugar mix evenly on top of the batter.  Add remaining batter and spread evenly.  Add remaining light brown sugar mix on top.\n  -Bake at a 375 degree oven for 1 1 ½ hours."], ["created_at", "2021-06-27 01:52:39.564583"], ["updated_at", "2021-06-27 01:52:39.564583"], ["ingredients", "3c AP flour\n  1 1/2tsp baking powder\n  1 1/2tsp baking soda\n  3/4tsp salt\n  6oz butter, room temperature\n  1 1/2tsp vanilla extract\n  3 eggs, room temperature\n  1 1/2c sour cream\n  1/2c light brown sugar\n  1Tbsp ground cinnamon"], ["user_id", 1], ["img_url", "https://i.imgur.com/3QYJ5Lw.jpg"], ["category_id", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Croque Madame"], ["prep_time", "30-40 minutes"], ["baking_cooking_time", "5 minutes"], ["servings", "2 sandwiches"], ["directions", "Bechamel: \n  -Add 2 Tbsp of butter to a pot and melt till it begins to bubble.\n  -Add the flour and, whit a whisk, combine the two ingredients together. Continue to whisk for 2 minutes, not allowing the flour mixture to turn brown.\n  -Slowly add the milk, while whisking, making sure that there are no lump. Add the herbs and spices. Cook for 10-15 minutes till mixture thickens and starts to bubble, while occasionally stirring.  \n  \n  -Preheat the oven to 425 degress.\n  -Spread the Dijon mustard to 2 slices of bread.  Add 3 slices of ham and 1 slice of Gruyere on top of the mustard. Place the bare slice of bread on top of the cheese.\n  -With the remaining butter, cook the sandwich as you would a grilled cheese sandwich.\n  -Place both grilled ham and cheese sandwiches on an aluminum lined sheet tray.  Generously spread the bechamel on top of each sandwich and place a slice of Gruyere over the bechamel.\n  -Place sheet tray in the oven for 5 minutes.\n  -While the sandwiches are in the oven, cook a sunny-up egg.\n  -Remove the sandwiches from the oven and place them on a plate. \n  -Very gingerly, place the sunny-up bird on top of the sandwich."], ["created_at", "2021-06-27 01:52:39.568848"], ["updated_at", "2021-06-27 01:52:39.568848"], ["ingredients", "1 1/2 cups milk\n  5 Tbsp unsalted butter, divided\n  2 Tbsp AP flour\n  1/2 tsp salt\n  1 pinch nutmeg\n  1 bay leaf\n  1 tsp thyme\n  ¼ tsp rosemary\n  ¼ tsp marjoram \n  1 Tbsp grated Parmesan cheese\n  4 slices sourdough bread\n  2 Tbsp Dijon mustard, divide\n  4 slices of Gruyere cheese, divide\n  6 thin slices of Black Forest ham, divide\n  2 eggs"], ["user_id", 1], ["img_url", "https://i.imgur.com/w7Wr7zk.jpg"], ["category_id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Ricotta"], ["prep_time", "5 minutes "], ["baking_cooking_time", "20-30 minutes"], ["servings", "1 1/2qt"], ["directions", "- Line a large colander or sieve with 4 layers of cheesecloth. Set aside.\n  - Heat milk, buttermilk, heavy cream, and salt in a large, heavy saucepan over medium-low heat. Stir occasionally for the first 10 minutes. Continue heating, without stirring, until the temperature reaches 190 degrees. Remove from heat and let stand for 1 hour. The mixture will be separated into white curds and clear whey.\n  -Using a slotted spoon, ladle approximately 1/4 of the curds into the cheesecloth-lined colander. Gather up the corners of the top cheesecloth and secure closed with a zip tie. Repeat the process till you there are no more curds remaining in the whey. (Save the whey for future cooking endeavors.) Suspend the cheeses over a large wooden spoon over a large bowl, place in the fridge, and let drain overnight."], ["created_at", "2021-06-27 01:52:39.573440"], ["updated_at", "2021-06-27 01:52:39.573440"], ["ingredients", "2qts whole milk\n  1pt buttermilk\n  1c heavy cream\n  1 1/2tsp salt"], ["user_id", 1], ["img_url", "https://i.imgur.com/hNQPuk8.jpg"], ["category_id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Honeydew-Basil G&T"], ["prep_time", "15 minutes"], ["baking_cooking_time", "30 minutes"], ["servings", "1 drink + 1 gallon of shrub"], ["directions", "\n  G&T\n  -Fill a rocks glass ¾ of the way with ice.\n  -Add all ingredients into the rocks glass. Stir. Sip.\n\n  Honeydew-Basil Shrub\n  -Blend honeydew and basil until smooth.\n  -Place all ingredients into a pot; cook on low heat until the sugar is fully dissolved.\n  -Strain and chill."], ["created_at", "2021-06-27 01:52:39.578206"], ["updated_at", "2021-06-27 01:52:39.578206"], ["ingredients", "2 1/2oz gin\n  1 1/2oz tonic\n  1 1/2oz honeydew-basil shrub\n  \n  Honeydew-Basil Shrub\n  1 honeydew\n  1c basil\n  4c sugar\n  4c water\n  3/4c apple cider vinegar\n  3/4c white vinegar"], ["user_id", 1], ["img_url", ""], ["category_id", 3]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Salty Chocolate Chippers"], ["prep_time", "30 minutes"], ["baking_cooking_time", "10-12 minutes"], ["servings", "4 dozen"], ["directions", "-In a large bowl, whisk together the flour, salt, and baking soda. Set aside.\n  -Beat together the butter and sugars until light in color and fluffy. Scrape down the bowl and add in the eggs and vanilla until completely incorporated. \n  -Add in half of the flour, mix for 15 seconds on high speed, then add in the rest of the flour gradually. Add the chocolate chips at the end. Cover the bowl and chill in the refrigerator for at least 6 hours.\n  -Pre-heat the oven to 375 degrees F. Line two baking sheets. Scoop out the cookie dough, or roll the dough into a ball the size of 2 tablespoons. Place them on the prepared baking sheets about 1 inch apart and press down just slightly with your palm. Bake for 10-12 minutes, rotating the pans halfway through baking, until the edges of the cookies are golden brown, and the tops just start to darken."], ["created_at", "2021-06-27 01:52:39.582226"], ["updated_at", "2021-06-27 01:52:39.582226"], ["ingredients", "2 1/4c AP flour\n  1Tbsp salt\n  1tsp baking soda\n  8oz butter\n  1c dark brown sugar\n  1/2c sugar\n  2 eggs\n  2tsp vanilla extract\n  1lb mini chocolate chips"], ["user_id", 1], ["img_url", "\n  https://i.imgur.com/TKaNnlA.jpg"], ["category_id", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "The Beatrix"], ["prep_time", "10 minutes"], ["baking_cooking_time", "2 hrs"], ["servings", "1 drink + 1qt candied kalamata olives with syrup"], ["directions", "-In a shaker, add the ice, tequila, orange liquor, lime juice, grapefruit juice, and kalamata syrup and shake.\n  -Strain contents into a Tom Collins glass.  Add ice and a splash of club soda.\n  -Garnish with 2 candied kalamata olives.\n  \n  Candied Kalamata Olive Syrup\n  -In a pot, bring the sugar and water to a simmer.\n  -Add the olives (with some brine) and turn the heat to low.  Let the contents simmer for 2 hours or until the olives become prune-like. Add more water if the liquid becomes too thick."], ["created_at", "2021-06-27 01:52:39.586458"], ["updated_at", "2021-06-27 01:52:39.586458"], ["ingredients", "2oz blanco tequila\n  1/2oz Pierre Ferrand Dry Curacao, or any smokey orange liquor\n  1oz lime juice\n  1/2oz grapefruit juice\n  3/4oz candied kalamata syrup\n  Splash club soda\n  \n  Candied Kalamata Olive Syrup\n  20oz sugar\n  20oz water\n  1 1/2c kalamata olives, pitted"], ["user_id", 1], ["img_url", ""], ["category_id", 3]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.4ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.2ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.2ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.2ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.2ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.2ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.2ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.2ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Destroy (0.2ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Destroy (0.6ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "meep"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "meep@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "meep"], ["email", "meep@email.com"], ["password_digest", "$2a$12$weHobijrkLGGuoSaO/0BkepquiP27OVmnlVDhvyy58xgEXz01/6ru"], ["created_at", "2021-06-27 01:53:04.882683"], ["updated_at", "2021-06-27 01:53:04.882683"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Baking"], ["created_at", "2021-06-27 01:53:04.886898"], ["updated_at", "2021-06-27 01:53:04.886898"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (1.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Savory"], ["created_at", "2021-06-27 01:53:04.891322"], ["updated_at", "2021-06-27 01:53:04.891322"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cocktails"], ["created_at", "2021-06-27 01:53:04.895983"], ["updated_at", "2021-06-27 01:53:04.895983"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "English Muffins"], ["prep_time", "30 minutes + 1 day"], ["baking_cooking_time", "4 minutes per side of muffin"], ["servings", "12-16 English Muffins"], ["directions", "-In a mixing bowl, combine the yeast, sugar, and water; stir with a whisk.\n  -Let the mixture sit for 5 minutes to allow the yeast to bloom.\n  -Add, in order, flour, butter, and salt.\n  -With a hook attachment, mix on low speed till the ingredients are incorporated. Mix on medium speed for 3-5 minutes.\n  -Place dough in a lightly oiled covered bowl, and place in the fridge overnight.  This will make it easier to roll out and handle the dough.\n  -On a we floured counter, roll out the dough to ¼ in thick.\n  -With a 3-inch ring cutter, cut out the muffins and through away the scraps.\n  -Cook the muffins 4 minutes per side on a 350 degree electric griddle."], ["created_at", "2021-06-27 01:53:04.901606"], ["updated_at", "2021-06-27 01:53:04.901606"], ["ingredients", "1lb 12oz AP flour\n  1/2oz salt\n  1/4oz sugar\n  1/4oz butter, room temperature\n  1/4oz dry yeast\n  2 1/4c water, body temperature"], ["user_id", 2], ["img_url", "https://i.imgur.com/fbuKviG.jpg"], ["category_id", 4]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Pork Soup Dumplings"], ["prep_time", "1 day + 3 hours"], ["baking_cooking_time", "8-10 minutes"], ["servings", "24 dumplings"], ["directions", "Pork Jelly: \n  -Bring a pot of water to a boil. Place pork skin in the boiling water and cook for 1 minute.\n  -Turn the heat off and allow contents to cool for 10-15 minutes.\n  -Remove the pork skin from the pot and dump the water. While still warm, scrap off excess fat and hair from the skin. Cut the skin into thin strips.\n  -Place 1 liter of water in the pot and bring to a boil. Place the pork skin, 2 scallions, sliced ginger, and Chinese cooking wine into the boiling water. Cover and allow to simmer for 20 minutes.\n  -Turn off heat and allow contents to cool for 10-15 minutes. Remove the scallions and ginger.\n  -In a blender, blend the pork skin and water for 2 minutes. Strain into a container.  Cover the container and place in the fridge overnight.\n  \n  Dumpling Dough:\n  -In a bowl, combine the flour and 100ml of water till the ingredients are combines.\n  -Transfer the dough to the counter and knead for 10-15 minutes.\n  -Cover the dough and set aside while making the filling.\n  \n  Pork Filling: \n  -In a blow, mix ground pork, ginger, scallions, oyster sauce, white pepper, salt, sugar, and sesame oil for 3 minutes or until all ingredients are fully combined.\n  -Add the pork jelly and stir until fully incorporated.\n  \n  Assembly:\n  -Roll the dough out into a 1-inch diameter strip.\n  -Cut the strip into about 1 ½ inch pieces. Cover the pieces with a clean kitchen towel to prevent the dough from drying out.\n  -Roll a piece of dough into a circle, about 1/8 thickness. Place filling into the wrapper and pinch shut.\n  -Set the dumpling aside in a lightly floured area while continuing to make dumplings.\n  -Cook the dumplings in a bamboo steamer for 8-10 minutes.\n  -Any uncooked dumplings can be frozen."], ["created_at", "2021-06-27 01:53:04.905876"], ["updated_at", "2021-06-27 01:53:04.905876"], ["ingredients", "250gr pork skin\n  1 liter water\n  1Tbsp Chinese cooking wine\n  5gr ginger, sliced\n  2 scallion, cut ends\n  200gr AP flour\n  100ml water\n  1lb ground pork \n  160gr pork jelly, small cubes\n  9gr scallions, sliced thin\n  9gr ginger, diced\n  1/8tsp white pepper\n  4 1/2tsp oyster sauce\n  1/2tsp salt\n  1tsp sugar\n  1tsp sesame oil"], ["user_id", 2], ["img_url", "https://i.imgur.com/AfDD4I1.jpg"], ["category_id", 5]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Kalamama Martini"], ["prep_time", "5 minutes"], ["baking_cooking_time", "N/A"], ["servings", "1"], ["directions", "-Add all ingredients into a mixing glass with ice. Stir until well-chilled.\n  -Strain contents into a chilled martini, Nick & Nora, or desired cocktail glass.\n  -Garnish with a 2-3 kalamata olives."], ["created_at", "2021-06-27 01:53:04.911080"], ["updated_at", "2021-06-27 01:53:04.911080"], ["ingredients", "2 1/2oz gin\n  1/2oz dry vermouth\n  1/2oz kalamata olive brine\n  1/4oz lemon juice"], ["user_id", 2], ["img_url", "https://i.imgur.com/5ilGh6j.jpg"], ["category_id", 6]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Mum’s Coffee Cake "], ["prep_time", "45 minutes"], ["baking_cooking_time", "1-1 1/2 hours"], ["servings", "1 loaf"], ["directions", "-Combine the flour, baking powder, baking soda, and salt together and set aside.\n  -Combine the light brown sugar and cinnamon together and set aside.\n  -In a bowl, mix the sugar and butter until light in color and fluffy.\n  -Add the eggs and vanilla extract. Mix till all ingredients are fully combined.\n  -Add the flour mixture and sour cream in parts to the egg mixture alternating between the two, starting with dry and ending with dry. Dry -> sour cream – > dry – > sour cream –> dry.  \n  -In a loaf pan, place ¾ of the batter and spread evenly. Add ½ of the light brown sugar mix evenly on top of the batter.  Add remaining batter and spread evenly.  Add remaining light brown sugar mix on top.\n  -Bake at a 375 degree oven for 1 1 ½ hours."], ["created_at", "2021-06-27 01:53:04.914925"], ["updated_at", "2021-06-27 01:53:04.914925"], ["ingredients", "3c AP flour\n  1 1/2tsp baking powder\n  1 1/2tsp baking soda\n  3/4tsp salt\n  6oz butter, room temperature\n  1 1/2tsp vanilla extract\n  3 eggs, room temperature\n  1 1/2c sour cream\n  1/2c light brown sugar\n  1Tbsp ground cinnamon"], ["user_id", 2], ["img_url", "https://i.imgur.com/3QYJ5Lw.jpg"], ["category_id", 4]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Croque Madame"], ["prep_time", "30-40 minutes"], ["baking_cooking_time", "5 minutes"], ["servings", "2 sandwiches"], ["directions", "Bechamel: \n  -Add 2 Tbsp of butter to a pot and melt till it begins to bubble.\n  -Add the flour and, whit a whisk, combine the two ingredients together. Continue to whisk for 2 minutes, not allowing the flour mixture to turn brown.\n  -Slowly add the milk, while whisking, making sure that there are no lump. Add the herbs and spices. Cook for 10-15 minutes till mixture thickens and starts to bubble, while occasionally stirring.  \n  \n  -Preheat the oven to 425 degress.\n  -Spread the Dijon mustard to 2 slices of bread.  Add 3 slices of ham and 1 slice of Gruyere on top of the mustard. Place the bare slice of bread on top of the cheese.\n  -With the remaining butter, cook the sandwich as you would a grilled cheese sandwich.\n  -Place both grilled ham and cheese sandwiches on an aluminum lined sheet tray.  Generously spread the bechamel on top of each sandwich and place a slice of Gruyere over the bechamel.\n  -Place sheet tray in the oven for 5 minutes.\n  -While the sandwiches are in the oven, cook a sunny-up egg.\n  -Remove the sandwiches from the oven and place them on a plate. \n  -Very gingerly, place the sunny-up bird on top of the sandwich."], ["created_at", "2021-06-27 01:53:04.918735"], ["updated_at", "2021-06-27 01:53:04.918735"], ["ingredients", "1 1/2 cups milk\n  5 Tbsp unsalted butter, divided\n  2 Tbsp AP flour\n  1/2 tsp salt\n  1 pinch nutmeg\n  1 bay leaf\n  1 tsp thyme\n  ¼ tsp rosemary\n  ¼ tsp marjoram \n  1 Tbsp grated Parmesan cheese\n  4 slices sourdough bread\n  2 Tbsp Dijon mustard, divide\n  4 slices of Gruyere cheese, divide\n  6 thin slices of Black Forest ham, divide\n  2 eggs"], ["user_id", 2], ["img_url", "https://i.imgur.com/w7Wr7zk.jpg"], ["category_id", 5]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Ricotta"], ["prep_time", "5 minutes "], ["baking_cooking_time", "20-30 minutes"], ["servings", "1 1/2qt"], ["directions", "- Line a large colander or sieve with 4 layers of cheesecloth. Set aside.\n  - Heat milk, buttermilk, heavy cream, and salt in a large, heavy saucepan over medium-low heat. Stir occasionally for the first 10 minutes. Continue heating, without stirring, until the temperature reaches 190 degrees. Remove from heat and let stand for 1 hour. The mixture will be separated into white curds and clear whey.\n  -Using a slotted spoon, ladle approximately 1/4 of the curds into the cheesecloth-lined colander. Gather up the corners of the top cheesecloth and secure closed with a zip tie. Repeat the process till you there are no more curds remaining in the whey. (Save the whey for future cooking endeavors.) Suspend the cheeses over a large wooden spoon over a large bowl, place in the fridge, and let drain overnight."], ["created_at", "2021-06-27 01:53:04.922879"], ["updated_at", "2021-06-27 01:53:04.922879"], ["ingredients", "2qts whole milk\n  1pt buttermilk\n  1c heavy cream\n  1 1/2tsp salt"], ["user_id", 2], ["img_url", "https://i.imgur.com/hNQPuk8.jpg"], ["category_id", 5]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Honeydew-Basil G&T"], ["prep_time", "15 minutes"], ["baking_cooking_time", "30 minutes"], ["servings", "1 drink + 1 gallon of shrub"], ["directions", "\n  G&T\n  -Fill a rocks glass ¾ of the way with ice.\n  -Add all ingredients into the rocks glass. Stir. Sip.\n\n  Honeydew-Basil Shrub\n  -Blend honeydew and basil until smooth.\n  -Place all ingredients into a pot; cook on low heat until the sugar is fully dissolved.\n  -Strain and chill."], ["created_at", "2021-06-27 01:53:04.927978"], ["updated_at", "2021-06-27 01:53:04.927978"], ["ingredients", "2 1/2oz gin\n  1 1/2oz tonic\n  1 1/2oz honeydew-basil shrub\n  \n  Honeydew-Basil Shrub\n  1 honeydew\n  1c basil\n  4c sugar\n  4c water\n  3/4c apple cider vinegar\n  3/4c white vinegar"], ["user_id", 2], ["img_url", ""], ["category_id", 6]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Salty Chocolate Chippers"], ["prep_time", "30 minutes"], ["baking_cooking_time", "10-12 minutes"], ["servings", "4 dozen"], ["directions", "-In a large bowl, whisk together the flour, salt, and baking soda. Set aside.\n  -Beat together the butter and sugars until light in color and fluffy. Scrape down the bowl and add in the eggs and vanilla until completely incorporated. \n  -Add in half of the flour, mix for 15 seconds on high speed, then add in the rest of the flour gradually. Add the chocolate chips at the end. Cover the bowl and chill in the refrigerator for at least 6 hours.\n  -Pre-heat the oven to 375 degrees F. Line two baking sheets. Scoop out the cookie dough, or roll the dough into a ball the size of 2 tablespoons. Place them on the prepared baking sheets about 1 inch apart and press down just slightly with your palm. Bake for 10-12 minutes, rotating the pans halfway through baking, until the edges of the cookies are golden brown, and the tops just start to darken."], ["created_at", "2021-06-27 01:53:04.933011"], ["updated_at", "2021-06-27 01:53:04.933011"], ["ingredients", "2 1/4c AP flour\n  1Tbsp salt\n  1tsp baking soda\n  8oz butter\n  1c dark brown sugar\n  1/2c sugar\n  2 eggs\n  2tsp vanilla extract\n  1lb mini chocolate chips"], ["user_id", 2], ["img_url", "\n  https://i.imgur.com/TKaNnlA.jpg"], ["category_id", 4]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "prep_time", "baking_cooking_time", "servings", "directions", "created_at", "updated_at", "ingredients", "user_id", "img_url", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "The Beatrix"], ["prep_time", "10 minutes"], ["baking_cooking_time", "2 hrs"], ["servings", "1 drink + 1qt candied kalamata olives with syrup"], ["directions", "-In a shaker, add the ice, tequila, orange liquor, lime juice, grapefruit juice, and kalamata syrup and shake.\n  -Strain contents into a Tom Collins glass.  Add ice and a splash of club soda.\n  -Garnish with 2 candied kalamata olives.\n  \n  Candied Kalamata Olive Syrup\n  -In a pot, bring the sugar and water to a simmer.\n  -Add the olives (with some brine) and turn the heat to low.  Let the contents simmer for 2 hours or until the olives become prune-like. Add more water if the liquid becomes too thick."], ["created_at", "2021-06-27 01:53:04.937769"], ["updated_at", "2021-06-27 01:53:04.937769"], ["ingredients", "2oz blanco tequila\n  1/2oz Pierre Ferrand Dry Curacao, or any smokey orange liquor\n  1oz lime juice\n  1/2oz grapefruit juice\n  3/4oz candied kalamata syrup\n  Splash club soda\n  \n  Candied Kalamata Olive Syrup\n  20oz sugar\n  20oz water\n  1 1/2c kalamata olives, pitted"], ["user_id", 2], ["img_url", ""], ["category_id", 6]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "recipes"[0m
+Started GET "/recipes" for ::1 at 2021-06-26 21:53:19 -0400
+Started GET "/categories" for ::1 at 2021-06-26 21:53:19 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mRecipe Load (2.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 21ms (Views: 8.2ms | ActiveRecord: 11.2ms | Allocations: 15096)
+
+
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 50ms (Views: 37.1ms | ActiveRecord: 8.5ms | Allocations: 27362)
+
+
+Started GET "/recipes/10" for ::1 at 2021-06-26 21:53:20 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14:in `show'
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 0.8ms | Allocations: 1647)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 21:54:00 -0400
+Processing by RecipesController#index as HTML
+Started GET "/recipes/10" for ::1 at 2021-06-26 21:54:00 -0400
+Started GET "/categories" for ::1 at 2021-06-26 21:54:00 -0400
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+Processing by RecipesController#show as HTML
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  Parameters: {"id"=>"10"}
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mRecipe Load (2.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (2.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/recipes_controller.rb:14:in `show'
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 28ms (Views: 8.1ms | ActiveRecord: 6.9ms | Allocations: 7378)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 13.8ms | ActiveRecord: 15.8ms | Allocations: 8566)
+
+
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 55ms (Views: 51.4ms | ActiveRecord: 3.5ms | Allocations: 14318)
+
+
+Started GET "/recipes/10" for ::1 at 2021-06-26 21:55:12 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14:in `show'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.9ms | Allocations: 1468)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 21:55:12 -0400
+Processing by RecipesController#index as HTML
+Started GET "/categories" for ::1 at 2021-06-26 21:55:12 -0400
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.5ms | Allocations: 1653)
+
+
+  [1m[36mCategory Load (5.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 73ms (Views: 63.1ms | ActiveRecord: 9.2ms | Allocations: 10446)
+
+
+Started GET "/categories" for ::1 at 2021-06-26 21:55:19 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 21:55:19 -0400
+Processing by CategoriesController#index as HTML
+Processing by RecipesController#index as HTML
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.9ms | Allocations: 1176)
+
+
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 2.7ms | Allocations: 9738)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 21:56:20 -0400
+Processing by RecipesController#index as HTML
+Started GET "/categories" for ::1 at 2021-06-26 21:56:20 -0400
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.6ms | Allocations: 2100)
+
+
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 45ms (Views: 40.1ms | ActiveRecord: 4.6ms | Allocations: 10397)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 21:56:26 -0400
+Processing by RecipesController#index as HTML
+Started GET "/categories" for ::1 at 2021-06-26 21:56:26 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.3ms | Allocations: 2140)
+
+
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 2.8ms | Allocations: 10198)
+
+
+Started GET "/categories" for ::1 at 2021-06-26 21:57:26 -0400
+Started GET "/recipes/undefined" for ::1 at 2021-06-26 21:57:26 -0400
+Processing by CategoriesController#index as HTML
+Started GET "/recipes" for ::1 at 2021-06-26 21:57:26 -0400
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by RecipesController#show as HTML
+Processing by RecipesController#index as HTML
+  Parameters: {"id"=>"undefined"}
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 1372)
+
+
+  [1m[36mRecipe Load (1.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.8ms | Allocations: 1961)
+
+
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=undefined):
+  
+app/controllers/recipes_controller.rb:52:in `set_recipe'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 4.3ms | Allocations: 10610)
+
+
+Started GET "/recipes/undefined" for ::1 at 2021-06-26 21:57:41 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms | Allocations: 522)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=undefined):
+  
+app/controllers/recipes_controller.rb:52:in `set_recipe'
+Started GET "/recipes/undefined" for ::1 at 2021-06-26 21:57:46 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms | Allocations: 522)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=undefined):
+  
+app/controllers/recipes_controller.rb:52:in `set_recipe'
+Started GET "/recipes/undefined" for ::1 at 2021-06-26 21:57:55 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 21:57:55 -0400
+Processing by RecipesController#show as HTML
+Processing by RecipesController#index as HTML
+  Parameters: {"id"=>"undefined"}
+Started GET "/categories" for ::1 at 2021-06-26 21:57:55 -0400
+  [1m[36mRecipe Load (1.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipe Load (1.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 404 Not Found in 7ms (ActiveRecord: 1.5ms | Allocations: 1746)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=undefined):
+  
+app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+Completed 200 OK in 105ms (Views: 103.7ms | ActiveRecord: 1.1ms | Allocations: 36201)
+
+
+  [1m[36mCategory Load (3.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 154ms (Views: 144.5ms | ActiveRecord: 9.4ms | Allocations: 49023)
+
+
+Started GET "/recipes/10" for ::1 at 2021-06-26 21:57:57 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14:in `show'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.9ms | Allocations: 1468)
+
+
+Started GET "/categories" for ::1 at 2021-06-26 21:58:39 -0400
+Started GET "/recipes" for ::1 at 2021-06-26 21:58:39 -0400
+Processing by CategoriesController#index as HTML
+Processing by RecipesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 1423)
+
+
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 2.7ms | Allocations: 9744)
+
+
+Started GET "/recipes" for ::1 at 2021-06-26 21:59:21 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Started GET "/categories" for ::1 at 2021-06-26 21:59:21 -0400
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `index'
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.4ms | Allocations: 2098)
+
+
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:9:in `index'
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 2.8ms | Allocations: 10401)
+
+
+Started GET "/recipes/13" for ::1 at 2021-06-26 22:00:10 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14:in `show'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 1474)
+
+
+Started GET "/recipes/13" for ::1 at 2021-06-26 22:00:57 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14:in `show'
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 1.4ms | Allocations: 1474)
+
+
+Started GET "/recipes/undefined" for ::1 at 2021-06-26 22:00:58 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:52:in `set_recipe'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.5ms | Allocations: 523)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=undefined):
+  
+app/controllers/recipes_controller.rb:52:in `set_recipe'

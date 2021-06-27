@@ -223,7 +223,7 @@ puts "#{Category.count} categories created"
   4c water
   3/4c apple cider vinegar
   3/4c white vinegar',
-  img_url: '',
+  img_url: 'https://images.unsplash.com/photo-1541807120430-f3f78c281225?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTU3fHxjb2NrdGFpbHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
   category: @cocktails,
   user: @user,
 )
@@ -273,7 +273,7 @@ puts "#{Category.count} categories created"
   20oz sugar
   20oz water
   1 1/2c kalamata olives, pitted',
-  img_url: '',
+  img_url: 'https://images.unsplash.com/photo-1598679253587-829c6cc6c6fc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI3fHxjb2NrdGFpbHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
   category: @cocktails,
   user: @user,
 )

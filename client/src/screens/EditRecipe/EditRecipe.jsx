@@ -27,7 +27,7 @@ export default function EditRecipe(props) {
     ingredients,
     directions,
     img_url,
-    category,
+    
   } = formData;
   
  
@@ -81,14 +81,14 @@ export default function EditRecipe(props) {
               </option>
             ))}
           </select>
-        {/* </form>
+         </form>
       <form
         className="post-edit-form"
-        onSumbit={(e) => {
+        onSubmit={(e) => {
           e.preventDefault();
           handleUpdate(id, formData);
         }}
-      > */}
+      > 
         
         <input className="recipe-name"
           type="text"

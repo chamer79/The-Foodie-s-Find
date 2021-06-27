@@ -1,4 +1,4 @@
-import { Switch, Route, Redirect, useHistory } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Recipes from "../screens/Recipes/Recipes.jsx";
@@ -37,7 +37,6 @@ export default function MainContainer(props) {
   }, [])
 
   const handleCreate = async (formData) => {
-    debugger
     const recipeItem = await postRecipe(formData);
     setRecipes((prevState) => [...prevState, recipeItem]);
     history.push("/recipes");

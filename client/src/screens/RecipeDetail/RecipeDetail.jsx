@@ -24,7 +24,7 @@ export default function RecipeDetail(props) {
   }
 
   return (
-    <>
+    <main>
           <div className="put-delete-buttons">
         {currentUser ? (
         <>
@@ -65,6 +65,6 @@ export default function RecipeDetail(props) {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

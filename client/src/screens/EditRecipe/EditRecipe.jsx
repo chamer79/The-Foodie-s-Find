@@ -1,13 +1,12 @@
-import "./EditRecipe.css"
+import "./EditRecipe.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { putRecipe } from "../../services/recipes";
 
-
 export default function EditRecipe(props) {
   const [recipeItem, setRecipeItem] = useState();
-	const [categoryId, setCategoryId] = useState('');
-  
+  const [categoryId, setCategoryId] = useState("");
+
   const [formData, setFormData] = useState({
     name: "",
     prep_time: "",
@@ -18,7 +17,7 @@ export default function EditRecipe(props) {
     img_url: "",
     category: "",
   });
-  
+
   const {
     name,
     prep_time,
@@ -27,13 +26,10 @@ export default function EditRecipe(props) {
     ingredients,
     directions,
     img_url,
-    
   } = formData;
-  
- 
+
   const { recipes, categories, handleUpdate } = props;
   const { id } = useParams();
-
 
   useEffect(() => {
     const prefilledFormData = () => {
@@ -46,7 +42,7 @@ export default function EditRecipe(props) {
         ingredients: singleRecipe?.ingredients,
         directions: singleRecipe?.directions,
         img_url: singleRecipe?.img_url,
-        category: singleRecipe?.category
+        category: singleRecipe?.category,
       });
     };
     if (recipes?.length) {
@@ -57,8 +53,8 @@ export default function EditRecipe(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const recipeItem = await putRecipe(id, categoryId);
-    setRecipeItem(recipeItem)
-}
+    setRecipeItem(recipeItem);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -69,7 +65,8 @@ export default function EditRecipe(props) {
   };
 
   return (
-    <div className="post-edit-container">
+    <main>
+      <div className="post-edit-container">
         <form className="drop-down" onSubmit={handleSubmit}>
           <select defaultValue="default" onChange={handleChange}>
             <option disabled value="default">
@@ -81,58 +78,66 @@ export default function EditRecipe(props) {
               </option>
             ))}
           </select>
-         </form>
-      <form
-        className="post-edit-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleUpdate(id, formData);
-        }}
-      > 
-        
-        <input className="recipe-name"
-          type="text"
-          name="name"
-          value={name}
-          onChange={handleChange} />
-        <input className="prep-time"
-          type="text"
-          name="prep_time"
-          value={prep_time}
-          onChange={handleChange}
-        />
-        <input className="bake-cook-time"
-          type="text"
-          name="baking_cooking_time"
-          value={baking_cooking_time}
-          onChange={handleChange}
-        />
-        <input clasName="servings"
-          type="text"
-          name="servings"
-          value={servings}
-          onChange={handleChange}
-        />
-        <input className="ingredients"
-          type="text"
-          name="ingredients"
-          value={ingredients}
-          onChange={handleChange}
-        />
-        <input className="directions"
-          type="text"
-          name="directions"
-          value={directions}
-          onChange={handleChange}
-        />
-        <input className="img_url"
-          type="text"
-          name="img_url"
-          value={img_url}
-          onChange={handleChange}
-        />
-        <button className="edit-post-button">Submit</button>
-      </form>
-    </div>
+        </form>
+        <form
+          className="post-edit-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleUpdate(id, formData);
+          }}
+        >
+          <input
+            className="recipe-name"
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
+          <input
+            className="prep-time"
+            type="text"
+            name="prep_time"
+            value={prep_time}
+            onChange={handleChange}
+          />
+          <input
+            className="bake-cook-time"
+            type="text"
+            name="baking_cooking_time"
+            value={baking_cooking_time}
+            onChange={handleChange}
+          />
+          <input
+            clasName="servings"
+            type="text"
+            name="servings"
+            value={servings}
+            onChange={handleChange}
+          />
+          <input
+            className="ingredients"
+            type="text"
+            name="ingredients"
+            value={ingredients}
+            onChange={handleChange}
+          />
+          <input
+            className="directions"
+            type="text"
+            name="directions"
+            value={directions}
+            onChange={handleChange}
+          />
+          <input
+            className="img_url"
+            type="text"
+            name="img_url"
+            value={img_url}
+            onChange={handleChange}
+          />
+          <button className="edit-post-button">Submit</button>
+        </form>
+      </div>
+    </main>
   );
 }

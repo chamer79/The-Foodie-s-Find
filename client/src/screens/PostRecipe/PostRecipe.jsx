@@ -1,11 +1,11 @@
 import "./PostRecipe.css";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { postRecipe } from "../../services/recipes"
+import { postRecipe } from "../../services/recipes";
 
 export default function PostRecipe(props) {
   const [recipeItem, setRecipeItem] = useState(null);
-	const [categoryId, setCategoryId] = useState('');
+  const [categoryId, setCategoryId] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -33,9 +33,9 @@ export default function PostRecipe(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const recipeItem = await postRecipe(id, categoryId)
-    setRecipeItem(recipeItem)
-  }
+    const recipeItem = await postRecipe(id, categoryId);
+    setRecipeItem(recipeItem);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -46,8 +46,7 @@ export default function PostRecipe(props) {
   };
 
   return (
-    <div>
-      <h3>Post Page</h3>
+    <main>
       <div className="post-edit-container">
         <form className="drop-down" onSubmit={handleSubmit}>
           <select defaultValue="default" onChange={handleChange}>
@@ -127,6 +126,6 @@ export default function PostRecipe(props) {
           <button className="edit-post-button">Submit</button>
         </form>
       </div>
-    </div>
+    </main>
   );
 }

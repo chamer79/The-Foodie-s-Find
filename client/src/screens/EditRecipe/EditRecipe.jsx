@@ -114,16 +114,18 @@ export default function EditRecipe(props) {
             value={servings}
             onChange={handleChange}
           />
-          <input
+          <textarea
             className="ingredients"
-            type="text"
+            rows={10}
+            columns={70}
             name="ingredients"
             value={ingredients}
             onChange={handleChange}
           />
-          <input
+          <textarea
             className="directions"
-            type="text"
+            rows={10}
+            columns={70}
             name="directions"
             value={directions}
             onChange={handleChange}

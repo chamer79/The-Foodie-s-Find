@@ -15,7 +15,7 @@ export default function PostRecipe(props) {
     ingredients: "",
     directions: "",
     img_url: "",
-    category: "",
+    category_id: "",
   });
 
   const {
@@ -49,13 +49,14 @@ export default function PostRecipe(props) {
     <main>
       <div className="post-edit-container">
         <form className="drop-down" onSubmit={handleSubmit}>
-          <select defaultValue="default" onChange={handleChange}>
+          <select
+            name="category_id" defaultValue="default" onChange={handleChange}>
             <option disabled value="default">
               -- Select a Category --
             </option>
             {categories?.map((category) => (
-              <option value={category?.id} key={category?.id}>
-                {category?.name}
+              <option value={category.id} key={category.id}>
+                {category.name}
               </option>
             ))}
           </select>

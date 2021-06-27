@@ -15,7 +15,7 @@ export default function EditRecipe(props) {
     ingredients: "",
     directions: "",
     img_url: "",
-    category: "",
+    category_id: "",
   });
 
   const {
@@ -26,6 +26,7 @@ export default function EditRecipe(props) {
     ingredients,
     directions,
     img_url,
+    category_id,
   } = formData;
 
   const { recipes, categories, handleUpdate } = props;
@@ -42,7 +43,7 @@ export default function EditRecipe(props) {
         ingredients: singleRecipe?.ingredients,
         directions: singleRecipe?.directions,
         img_url: singleRecipe?.img_url,
-        category: singleRecipe?.category,
+        category_id: singleRecipe?.category_id,
       });
     };
     if (recipes?.length) {
@@ -68,7 +69,9 @@ export default function EditRecipe(props) {
     <main>
       <div className="post-edit-container">
         <form className="drop-down" onSubmit={handleSubmit}>
-          <select defaultValue="default" onChange={handleChange}>
+          <select
+            name="category_id"
+            defaultValue={`${category_id}`} onChange={handleChange}>
             <option disabled value="default">
               -- Select a Category --
             </option>

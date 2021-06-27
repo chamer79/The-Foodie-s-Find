@@ -1,4 +1,4 @@
-import { Switch, Route, Redirect, useHistory } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Recipes from "../screens/Recipes/Recipes.jsx";
@@ -12,10 +12,11 @@ import {
   postRecipe,
   putRecipe,
 } from "../services/recipes";
+import { getAllCategories } from "../services/categories";
 
 export default function MainContainer(props) {
   const [recipes, setRecipes] = useState([]);
-
+  const [categories, setCategories] = useState([]);
   const { currentUser } = props;
   const history = useHistory();
 
@@ -26,6 +27,14 @@ export default function MainContainer(props) {
     };
     fetchRecipes();
   }, []);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const categoryList = await getAllCategories();
+      setCategories(categoryList);
+    }
+    fetchCategories();
+  }, [])
 
   const handleCreate = async (formData) => {
     const recipeItem = await postRecipe(formData);
@@ -39,8 +48,8 @@ export default function MainContainer(props) {
       prevState.map((recipe) => {
         return recipe.id === Number(id) ? recipeItem : recipe;
       })
-    );
-    history.push("/recipes");
+      );
+      history.push("/recipes");
   };
 
   const handleDelete = async (id) => {
@@ -53,15 +62,14 @@ export default function MainContainer(props) {
     <div>
       <Switch>
         <Route path="/post-recipe">
-          <PostRecipe user={currentUser} handleCreate={handleCreate} />
+          <PostRecipe currentUser={currentUser} recipes={recipes} categories={categories} handleCreate={handleCreate} />
         </Route>
         <Route path="/recipes/:id/update">
-          <EditRecipe user={currentUser} handleUpdate={handleUpdate} />
+          <EditRecipe currentUser={currentUser} recipes={recipes} categories={categories} handleUpdate={handleUpdate} />
         </Route>
         <Route path="/recipes/:id">
-          <RecipeDetail recipes={recipes} handleDelete={handleDelete} />
+          <RecipeDetail currentUser={currentUser} recipes={recipes} handleDelete={handleDelete} />
         </Route>
-
         <Route path="/recipes">
           <Recipes recipes={recipes} />
         </Route>

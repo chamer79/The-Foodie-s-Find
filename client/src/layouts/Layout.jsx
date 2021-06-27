@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Layout(props) {
   const { currentUser, handleLogout, children } = props;
@@ -6,22 +6,28 @@ export default function Layout(props) {
     <div>
       <header>
         {currentUser ? (
-          <>
+          <nav>
+            <NavLink to="/">
+              <img
+                src="http://i.imgur.com/aHMHpXc.png"
+              />
+            </NavLink>
             <p>Welcome {currentUser.username}</p>
+            <NavLink to="/post-recipe">New Post</NavLink>
             <button className="logout" onClick={handleLogout}>Logout</button>
-          </>
+          </nav>
         ) : (
-            <>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Sign up</Link>
-            </>
+            <nav>
+              <NavLink to="/">
+              <img
+                src="http://i.imgur.com/aHMHpXc.png"
+              />
+            </NavLink>
+            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/signup">Sign up</NavLink>
+            </nav>
         )}
-        {
-          currentUser &&
-          <>
-            <Link to="/post-recipe">New Post</Link>
-          </>
-        }
+       
       </header>
       {children}
     </div>

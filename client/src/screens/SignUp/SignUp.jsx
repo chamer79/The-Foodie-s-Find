@@ -1,3 +1,4 @@
+import "./SignUp.css"
 import { useState } from "react";
 
 export default function SignUp(props) {
@@ -19,8 +20,8 @@ export default function SignUp(props) {
   };
 
   return (
-    <div className="login-register-container">
-      <form
+    <main>
+      <form className="login-register-container"
         className="signup-form"
         onSubmit={(e) => {
           e.preventDefault();
@@ -57,6 +58,6 @@ export default function SignUp(props) {
         />
         <button className="login-submit">Submit</button>
       </form>
-    </div>
+    </main>
   );
 }

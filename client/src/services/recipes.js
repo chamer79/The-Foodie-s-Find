@@ -20,7 +20,7 @@ export const getOneRecipe = async (id) => {
 
 export const postRecipe = async (recipeData) => {
   try {
-    const resp = await api.post("/recipes/", { recipe: recipeData })
+    const resp = await api.post("/recipes", { recipe: recipeData })
     return resp.data;
   }catch (error) {
     throw error;
@@ -48,8 +48,8 @@ export const deleteRecipe = async (id) => {
 //==================
 //  Category Info 
 //==================
-// export const changeCategory = async (recipeId, categoryId) => {
-//   const resp = await api.put(`/categories/${categoryId}/recipes/${recipeId}`);
-//   return resp.data;
-// }
+export const addCategory = async (recipeId, categoryId) => {
+  const resp = await api.put(`/categories/${categoryId}/recipes/${recipeId}`);
+  return resp.data;
+}
 

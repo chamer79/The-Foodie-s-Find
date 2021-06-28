@@ -6,12 +6,12 @@ export default function Card(props) {
     <div className="recipe-card">
       <Link className="card" to={`/recipes/${props.id}`}>
         <img
-          className="card-img"
+          className="recipe-card-img"
           src={props.img_url}
           alt={props.name}
         />
         <div className="card-name-container">
-          <p className="card-name">{props.name}</p>
+          <p className="recipe-card-name">{props.name}</p>
         </div>
       </Link>
     </div>

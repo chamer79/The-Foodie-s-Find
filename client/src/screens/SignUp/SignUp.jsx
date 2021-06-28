@@ -21,14 +21,15 @@ export default function SignUp(props) {
 
   return (
     <main>
-      <form className="login-register-container"
-        className="signup-form"
+      <form className="login-signup-container"
+        className="login-signup-form"
         onSubmit={(e) => {
           e.preventDefault();
           handleSignUp(formData);
         }}
       >
         <input
+          className="username"
           type="text"
           name="username"
           value={username}
@@ -36,6 +37,7 @@ export default function SignUp(props) {
           onChange={handleChange}
         />
         <input
+          className="email"
           type="text"
           name="email"
           value={email}
@@ -43,6 +45,7 @@ export default function SignUp(props) {
           onChange={handleChange}
         />
         <input
+          className="password"
           type="password"
           name="password"
           value={password}
@@ -50,13 +53,14 @@ export default function SignUp(props) {
           onChange={handleChange}
         />
         <input
+          className="password-confirmation"
           type="password"
           name="passwordConfirmation"
           value={password}
           placeholder="Password Confirmation"
           onChange={handleChange}
         />
-        <button className="login-submit">Submit</button>
+        <button className="login-signup-button">Submit</button>
       </form>
     </main>
   );

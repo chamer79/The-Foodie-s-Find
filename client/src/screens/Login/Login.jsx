@@ -19,16 +19,16 @@ export default function Login(props) {
 
   return (
     <main>
-      <div className="login-register-container">
+      <div className="login-signup-container">
         <form
-          className="login-form"
+          className="login-signup-form"
           onSubmit={(e) => {
             e.preventDefault();
             handleLogin(formData);
           }}
         >
           <input
-            className="login-user"
+            className="username"
             type="text"
             name="username"
             value={username}
@@ -36,14 +36,14 @@ export default function Login(props) {
             onChange={handleChange}
           />
           <input
-            className="login-password"
+            className="password"
             type="password"
             name="password"
             value={password}
             placeholder="Password"
             onChange={handleChange}
           />
-          <button className="login-submit">Submit</button>
+          <button className="login-signup-button">Submit</button>
         </form>
       </div>
     </main>

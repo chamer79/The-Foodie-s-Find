@@ -42,6 +42,7 @@
 .directions{
   width: 650px;
   font-size: 20px;
+  letter-spacing: 1px;
 }
 .recipe-name::placeholder,
 .img-url::placeholder,

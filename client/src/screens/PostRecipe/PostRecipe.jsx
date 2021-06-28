@@ -48,11 +48,21 @@ export default function PostRecipe(props) {
   return (
     <main>
       <div className="post-edit-container">
-        <form className="drop-down" onSubmit={handleSubmit}>
-          <select
-            name="category_id" defaultValue="default" onChange={handleChange}>
+          <form
+            className="post-edit-form"
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleCreate(formData);
+            }}
+          >
+        <form  onSubmit={handleSubmit}>
+          <select className="drop-down"
+            name="category-id"
+            defaultValue="default"
+            onChange={handleChange}
+          >
             <option disabled value="default">
-              -- Select a Category --
+              Select a Category
             </option>
             {categories?.map((category) => (
               <option value={category.id} key={category.id}>
@@ -61,13 +71,6 @@ export default function PostRecipe(props) {
             ))}
           </select>
         </form>
-        <form
-          className="post-edit-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleCreate(formData);
-          }}
-        >
           <input
             className="recipe-name"
             type="text"
@@ -76,6 +79,14 @@ export default function PostRecipe(props) {
             placeholder="Recipe Name:"
             onChange={handleChange}
           />
+            <input
+              className="img-url"
+              type="text"
+              name="img_url"
+              value={img_url}
+              placeholder="Image URL:"
+              onChange={handleChange}
+            />
           <input
             className="prep-time"
             type="text"
@@ -118,15 +129,7 @@ export default function PostRecipe(props) {
             placeholder="Directions:"
             onChange={handleChange}
           />
-          <input
-            className="img_url"
-            type="text"
-            name="img_url"
-            value={img_url}
-            placeholder="Image URL:"
-            onChange={handleChange}
-          />
-          <button className="edit-post-button">Submit</button>
+          <button className="post-edit-button">Submit</button>
         </form>
       </div>
     </main>

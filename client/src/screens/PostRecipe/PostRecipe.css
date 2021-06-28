@@ -1,0 +1,73 @@
+.post-edit-container {
+  display: flex;
+  flex-flow: column wrap;
+  background:
+    url(https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 95vh;
+  margin: 10px 0;
+  align-content: space-evenly;
+}
+.drop-down,
+.post-edit-form {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+.drop-down,
+.recipe-name,
+.img-url,
+.prep-time,
+.bake-cook-time,
+.servings,
+.ingredients,
+.directions{
+  font-weight: bold;
+  color: #000000;
+  margin: 10px 0;
+  padding: 13px 0;
+  border: 1px solid #000000;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.65);
+}
+.drop-down,
+.category-id,
+.recipe-name,
+.img-url,
+.prep-time,
+.bake-cook-time,
+.servings,
+.ingredients,
+.directions{
+  width: 650px;
+  font-size: 20px;
+}
+.recipe-name::placeholder,
+.img-url::placeholder,
+.prep-time::placeholder,
+.bake-cook-time::placeholder,
+.servings::placeholder,
+.ingredients::placeholder,
+.directions::placeholder,
+.add-vendor-hours::placeholder {
+  color: #000000;
+}
+select.drop-down,
+input.recipe-name,
+input.img-url,
+input.prep-time,
+input.bake-cook-time,
+input.servings,
+textarea.ingredients,
+textarea.directions{
+  padding-left: 13px;
+}
+
+
+.post-edit-button {
+  background-color: transparent;
+  font-size: 23px;
+  text-align: center;
+  border: none;
+}

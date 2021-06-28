@@ -66,7 +66,7 @@ export default function EditRecipe(props) {
   };
 
   return (
-    <main>
+    <main className="post-edit-img">
       <div className="post-edit-container">
       <form
         className="post-edit-form"

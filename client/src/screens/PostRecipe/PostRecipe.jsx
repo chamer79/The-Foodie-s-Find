@@ -49,31 +49,31 @@ export default function PostRecipe(props) {
   return (
     // <Layout>
     <main className="post-edit-img">
-      <div></div>
       <div className="post-edit-container">
-          <form
-            className="post-edit-form"
-            onSubmit={(e) => {
-              e.preventDefault();
-              handleCreate(formData);
-            }}
-          >
-        <form  onSubmit={handleSubmit}>
-          <select className="drop-down"
-            name="category-id"
-            defaultValue="default"
-            onChange={handleChange}
-          >
-            <option disabled value="default">
-              Select a Category
-            </option>
-            {categories?.map((category) => (
-              <option value={category.id} key={category.id}>
-                {category.name}
+        <form
+          className="post-edit-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleCreate(formData);
+          }}
+        >
+          <form onSubmit={handleSubmit}>
+            <select
+              className="drop-down"
+              name="category-id"
+              defaultValue="default"
+              onChange={handleChange}
+            >
+              <option disabled value="default">
+                Select a Category
               </option>
-            ))}
-          </select>
-        </form>
+              {categories?.map((category) => (
+                <option value={category.id} key={category.id}>
+                  {category.name}
+                </option>
+              ))}
+            </select>
+          </form>
           <input
             className="recipe-name"
             type="text"
@@ -82,14 +82,14 @@ export default function PostRecipe(props) {
             placeholder="Recipe Name:"
             onChange={handleChange}
           />
-            <input
-              className="img-url"
-              type="text"
-              name="img_url"
-              value={img_url}
-              placeholder="Image URL:"
-              onChange={handleChange}
-            />
+          <input
+            className="img-url"
+            type="text"
+            name="img_url"
+            value={img_url}
+            placeholder="Image URL:"
+            onChange={handleChange}
+          />
           <input
             className="prep-time"
             type="text"
@@ -135,7 +135,7 @@ export default function PostRecipe(props) {
           <button className="post-edit-button">Submit</button>
         </form>
       </div>
-      </main>
-      // </Layout>
+    </main>
+    // </Layout>
   );
 }

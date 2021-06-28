@@ -16,7 +16,7 @@ export default function RecipeCards(props) {
 
   return (
     <div className="recipe-cards">
-      <div className="cards">{card} </div>
+      <div className="cards">{card}</div>
     </div>
   );
 }

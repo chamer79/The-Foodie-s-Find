@@ -1,3 +1,6 @@
+main {
+  display: flex;
+}
 .landing-content {
   display: flex;
   flex-flow: column wrap;
@@ -5,39 +8,14 @@
   margin: 10px 0;
   align-content: space-evenly;
 }
-.add-vendor-info,
-.add-vendor-form {
-  width: 450px;
-}
-.add-vendor-info,
-.add-vendor-form,
-.add-vendor-button-box {
-  font-family: "Montserrat", sans-serif;
-  flex-direction: column;
-  justify-content: center;
-}
-.add-vendor-info {
-  margin: 60px auto 0;
-  font-size: 28px;
-  text-align: center;
-  font-weight: bold;
-}
-.add-vendor-form {
-  margin: 60px 60px 0 0;
+
+.logo {
+  background: url(http://i.imgur.com/LaPp5S9.png);
 }
 
-
-.add-vendor-description,
-.add-vendor-image,
-.add-vendor-hours,
-.add-vendor-button {
-  font-size: 20px;
-  width: 450px;
+.landing-img {
+  background: url(https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80);
 }
-
-
-
-
 
 /*==========================
   Tablet Responsive Design

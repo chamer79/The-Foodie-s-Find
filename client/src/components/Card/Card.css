@@ -2,44 +2,27 @@
   display: flex;
 } */
 
-.recipe-card,
-.recipe-card a {
-  /* background-size: 150px; */
-  width: 240px;
-  height: 325px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.recipe-card {
-  margin: 20px 60px 35px;
-  box-shadow: 3px 3px 3px 1px;
-}
-
-.card {
+.recipe-card{
+  background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* width: 240px;
+  height: 325px; */
+  width: 80%;
+  height: 60%;
+  font-family: "Montserrat", sans-serif;
+  /* margin: 20px 60px 35px;
+  box-shadow: 3px 3px 3px 1px; */
 }
 
-.recipe-card-image {
- 
-  width: 240px;
-  height: 325px;
+/* .card-link {
+} */
+
+.card-image {
+ background-color: blue;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
   /* background-position: center; */
 }
-
-.vendor-card-name,
-.vendor-card-name a {
-  color: #000000;
-  font-size: 28px;
-  font-weight: 500;
-}
-
-p.vendor-card-name {
-  align-content: center;
-}
-
-a.card {
-  border: none;
-}
-

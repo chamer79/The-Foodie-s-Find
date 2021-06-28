@@ -1,0 +1,12 @@
+header {
+background-color: red;
+}
+
+.user-logged-out {
+  background-color: blue;
+}
+
+.user-logged-in {
+  background-color: yellow;
+}
+

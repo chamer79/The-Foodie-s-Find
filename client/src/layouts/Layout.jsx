@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 export default function Layout(props) {
   const { currentUser, handleLogout, children } = props;
   return (
-    <div>
+    <div className="background-img">
       <header>
         {currentUser ? (
-          <nav classNmae="user-logged-in">
+          <nav className="user-logged-in">
             <NavLink to="/">
               <img
                 src="http://i.imgur.com/aHMHpXc.png"
@@ -17,7 +17,7 @@ export default function Layout(props) {
             <button className="logout" onClick={handleLogout}>Logout</button>
           </nav>
         ) : (
-            <nav classname="user-logged-out">
+            <nav className="user-logged-out">
               <NavLink to="/">
               <img
                 src="http://i.imgur.com/aHMHpXc.png"

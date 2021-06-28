@@ -1,0 +1,114 @@
+.recipe-card-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.put-delete-buttons,
+.img-container {
+  display: flex;
+}
+
+.edit-delete-buttons {
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 350px;
+  margin: 0 0 0 400px;
+  padding: 0 20px 20px;
+}
+
+.edit-button, 
+.delete-button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding:0 40px 10px;
+  
+}
+
+.img-container,
+.recipe-img {
+  border-radius: 50%;
+  height: 250px;
+  width: 240px;
+  margin: 210px 0 0 45px;
+}
+
+.recipe-img {
+  border: 2px #000000;
+}
+
+.recipe-content {
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: column wrap;
+  width: 850px;
+  margin: auto;
+  padding: 50px 0 0 0;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.65);
+}
+
+.recipe-title,
+.recipe-info,
+.recipe-directions {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.recipe-title {
+  font-size: 26px;
+  margin: -70px 10px 0 0;
+}
+
+.recipe-info {
+  flex-flow: column wrap;
+  justify-items: center;
+  margin: -10px 0 0 290px;
+}
+
+.recipe-prompt {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.prep,
+.bake-cook,
+.serving-amount {
+  margin: 3px 0 0 0;
+}
+
+.recipe-ingredients {
+  width: 300px;
+  margin: 50px 0 0 15px;
+}
+
+.ingredient-tag,
+.direction-tag {
+  margin-bottom: 15px;
+}
+
+.ingredient-item {
+
+}
+
+.recipe-ingredients,
+.recipe-directions {
+  flex-flow: row wrap;
+ 
+}
+
+.recipe-directions {
+  width: 450px;
+  margin: -158px 0 0 268px;
+}
+
+.direction-list {
+
+}
+
+.direction-item {
+
+}

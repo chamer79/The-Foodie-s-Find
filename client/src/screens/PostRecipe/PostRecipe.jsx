@@ -48,7 +48,7 @@ export default function PostRecipe(props) {
 
   return (
     // <Layout>
-    <main className="post-edit-img">
+    <main className="background-img">
       <div className="post-edit-container">
         <form
           className="post-edit-form"

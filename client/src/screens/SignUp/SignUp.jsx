@@ -20,7 +20,7 @@ export default function SignUp(props) {
   };
 
   return (
-    <main>
+    <main className="login-signup-img">
       <div className="login-signup-container">
         <form
           className="login-signup-form"

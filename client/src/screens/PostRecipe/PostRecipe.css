@@ -1,8 +1,8 @@
-.post-edit-img{
-  background:
+.background-img{
+  /* background:
     url(https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80)
     no-repeat center fixed ;
-  background-size: cover;
+  background-size: cover; */
   display: flex;
   flex-flow: column wrap;
 }
@@ -12,8 +12,6 @@
   margin: 10px 0;
   padding: 70px 0;
   align-content: center;
-  
-
 }
 
 
@@ -89,6 +87,7 @@ textarea.directions{
   font-size: 23px;
   text-align: center;
   border: none;
+  cursor: pointer;
 }
 
 /*===========================

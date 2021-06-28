@@ -23,8 +23,12 @@ export default function RecipeDetail(props) {
   }
 
   return (
-    <main>
-      <div className="put-delete-buttons">
+    <main className="background-img">
+      <div className="receipe-card-container">
+        <div className="img-container">
+          <img className="recipe-img" src={`${recipeItem?.img_url}`} />
+        </div>
+      <div className="edit-delete-buttons">
         {currentUser ? (
           <>
             <Link to={`/recipes/${recipeItem?.id}/update`}>
@@ -41,22 +45,18 @@ export default function RecipeDetail(props) {
           <></>
         )}
       </div>
-      <section className="receipe-card-container">
-        <div className="img-container">
-          <img className="recipe-img" src={`${recipeItem?.img_url}`} />
-        </div>
         <div className="recipe-content">
           <div className="recipe-title">
-            <h3>{recipeItem?.name}</h3>
+            <h3 className="title">{recipeItem?.name}</h3>
           </div>
-          <div className="reciep-info">
-            <p><span clasName="recipe-props">Prep Time:</span> {`recipes.${recipeItem?.prep_time}`}</p>
-            <p><span clasName="recipe-props">Baking/Cooking Time:</span> {recipeItem?.baking_cooking_time}</p>
-            <p><span clasName="recipe-props">Servings:</span> {recipeItem?.servings}</p>
+          <div className="recipe-info">
+            <p className="prep"><span className="recipe-prompt">Prep Time:</span> {`${recipeItem?.prep_time}`}</p>
+            <p className="bake-cook"><span className="recipe-prompt">Baking/Cooking Time:</span> {recipeItem?.baking_cooking_time}</p>
+            <p className="serving-amount"><span className="recipe-prompt">Servings:</span> {recipeItem?.servings}</p>
           </div>
           <div className="recipe-ingredients">
             <ul className="ingredient-list">
-            <span clasName="recipe-props">Ingredients:</span>
+              <p className="ingredient-tag"><span className="recipe-prompt">Ingredients:</span></p>
               {recipeItem?.ingredients.split("\n").map((ingredient) => (
                 <li className="ingredient-item" key={recipeItem?.ingredient}>
                   {ingredient}
@@ -65,8 +65,8 @@ export default function RecipeDetail(props) {
             </ul>
           </div>
           <div className="recipe-directions">
+            <p className="direction-tag"><span className="recipe-prompt">Directions:</span></p>
             <ul className="direction-list">
-            <span clasName="recipe-props">Directions:</span>
               {recipeItem?.directions.split("\n").map((direction) => (
                 <li className="direction-item" key={recipeItem?.direction}>
                   {direction}
@@ -75,7 +75,7 @@ export default function RecipeDetail(props) {
             </ul>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }

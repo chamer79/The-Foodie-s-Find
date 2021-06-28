@@ -75,8 +75,8 @@ export default function EditRecipe(props) {
           handleUpdate(id, formData);
         }}
       >
-        <form className="drop-down" onSubmit={handleSubmit}>
-          <select
+        <form onSubmit={handleSubmit}>
+          <select className="drop-down"
             name="category-id"
             defaultValue={`${category_id}`} onChange={handleChange}>
             <option disabled value="default">
@@ -118,7 +118,7 @@ export default function EditRecipe(props) {
             onChange={handleChange}
           />
           <input
-            clasName="servings"
+            className="servings"
             type="text"
             name="servings"
             value={servings}

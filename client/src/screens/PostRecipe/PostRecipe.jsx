@@ -2,6 +2,7 @@ import "./PostRecipe.css";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { postRecipe } from "../../services/recipes";
+// import Layout from "../../layouts/Layout.jsx";
 
 export default function PostRecipe(props) {
   const [recipeItem, setRecipeItem] = useState(null);
@@ -46,7 +47,8 @@ export default function PostRecipe(props) {
   };
 
   return (
-    <main>
+    // <Layout>
+    <main className="post-edit-img">
       <div className="post-edit-container">
           <form
             className="post-edit-form"
@@ -104,7 +106,7 @@ export default function PostRecipe(props) {
             onChange={handleChange}
           />
           <input
-            clasName="servings"
+            className="servings"
             type="text"
             name="servings"
             value={servings}
@@ -132,6 +134,7 @@ export default function PostRecipe(props) {
           <button className="post-edit-button">Submit</button>
         </form>
       </div>
-    </main>
+      </main>
+      // </Layout>
   );
 }

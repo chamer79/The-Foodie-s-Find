@@ -1,1 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+.link,
+main {
+  font-family: "Montserrat", sans-serif;
+}

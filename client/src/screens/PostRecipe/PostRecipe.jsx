@@ -46,7 +46,7 @@ export default function PostRecipe(props) {
   };
 
   return (
-    <main>
+    <main className="post-edit-img">
       <div className="post-edit-container">
           <form
             className="post-edit-form"
@@ -104,7 +104,7 @@ export default function PostRecipe(props) {
             onChange={handleChange}
           />
           <input
-            clasName="servings"
+            className="servings"
             type="text"
             name="servings"
             value={servings}

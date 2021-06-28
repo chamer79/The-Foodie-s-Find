@@ -1,28 +1,42 @@
-/* main{
-  display: flex;
-} */
-
-.recipe-card{
-  background-color: red;
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 240px;
-  height: 325px; */
-  width: 80%;
-  height: 60%;
-  font-family: "Montserrat", sans-serif;
-  /* margin: 20px 60px 35px;
-  box-shadow: 3px 3px 3px 1px; */
 }
 
-/* .card-link {
-} */
+.recipe-card,
+.card-img {
+  width: 180px;
+  height: 240px;
+  border-radius: 10px;
+}
 
-.card-image {
- background-color: blue;
-  margin: 5px;
-  width: 100px;
-  height: 100px;
-  /* background-position: center; */
+.recipe-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 40px 30px 80px;
+  box-shadow: 3px 3px 3px 1px;
+}
+
+.card-img {
+  background-position: center;
+}
+
+.card-name-container {
+  /* margin: 0; */
+  /* width: 100%; */
+  text-align: center;
+  color: 000000;
+ 
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #000000;
 }

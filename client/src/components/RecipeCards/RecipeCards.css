@@ -1,5 +1,5 @@
-/* .recipe-cards {
-  margin: 40px 0 48px;
+.recipe-cards {
+  margin: 40px 0;
 }
 
 .cards {
@@ -7,10 +7,5 @@
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-content: space-around;
-} */
-
-.recipes {
-  background-color: yellow;
-  display: flex;
-  flex-flow: row wrap;
 }
+

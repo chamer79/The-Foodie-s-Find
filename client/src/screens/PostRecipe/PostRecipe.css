@@ -3,27 +3,27 @@
     url(https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80)
     no-repeat center fixed ;
   background-size: cover;
- 
-    /* background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: fixed; */
-  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
 }
-
 .post-edit-container {
   display: flex;
   flex-flow: column wrap;
   margin: 10px 0;
   padding: 70px 0;
   align-content: center;
+  
+
 }
+
+
 .drop-down,
 .post-edit-form {
   display: flex;
   justify-content: center;
   flex-flow: column;
 }
+
 .drop-down,
 .recipe-name,
 .img-url,
@@ -39,12 +39,12 @@
   border: 1px solid #000000;
   box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.65);
 }
+
 .drop-down {
   width: 665px;
   font-size: 20px;
   letter-spacing: 1px;
 }
-
 
 .category-id,
 .recipe-name,
@@ -58,6 +58,7 @@
   font-size: 20px;
   letter-spacing: 1px;
 }
+
 .recipe-name::placeholder,
 .img-url::placeholder,
 .prep-time::placeholder,
@@ -69,6 +70,7 @@
   color: #000000;
   font-family: "Montserrat", sans-serif;
 }
+
 select.drop-down,
 input.recipe-name,
 input.img-url,
@@ -98,3 +100,6 @@ textarea.directions{
 /*===========================
   Mobile Responsive Design
 ============================*/
+@media screen and (max-width: 500px) {
+ 
+}

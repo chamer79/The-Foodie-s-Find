@@ -8,13 +8,29 @@
 } */
 
 header {
-background-color: red;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+align-content: center;
+height: 200px;
+background-color: rgba(0, 0, 0, 0.3);
+
 }
 .user-logged-out {
-  background-color: blue;
+  display: flex;
+  font-size: 23px;
+  justify-content: center ;
+  width: 100vw;
+
+}
+
+.login-button a,
+.signup-button a {
+/* padding-top: 100px; */
+
 }
 .user-logged-in {
-  background-color: yellow;
+ 
 }
 
 

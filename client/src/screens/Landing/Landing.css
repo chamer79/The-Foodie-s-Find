@@ -56,7 +56,7 @@ a:link{
 @media screen and (min-width: 340px) and (max-width: 750px){
   .landing-page {
     display: grid;
-    grid-template-columns: 0;
+    grid-template-columns: none;
     grid-template-rows: auto auto;
     width: auto;
     margin-top: 47px;

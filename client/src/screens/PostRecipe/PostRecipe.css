@@ -93,12 +93,49 @@ textarea.directions{
 /*===========================
   Tablet Responsive Design
 ============================*/
-
+@media screen and (min-width: 670px) and (max-width: 720px) {
+  .post-edit-container {
+    display: flex;
+    flex-flow: column wrap;
+    /* margin: 10px 0;
+    padding: 70px 0; */
+    align-content: center;
+  }
+}
 
 
 /*===========================
   Mobile Responsive Design
 ============================*/
-@media screen and (max-width: 500px) {
- 
+@media screen and (max-width: 670px) {
+  .background-img {
+    background-image: none;
+    background-color:#EADDCA ;
+  }
+
+  .post-edit-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+  }
+
+  .drop-down,
+  .category-id,
+  .recipe-name,
+  .img-url,
+  .prep-time,
+  .bake-cook-time,
+  .servings,
+  .ingredients,
+  .directions{
+    width: auto;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .drop-down {
+    margin: 10px auto;
+  }
+
+
 }

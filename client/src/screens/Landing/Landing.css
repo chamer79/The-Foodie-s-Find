@@ -1,21 +1,51 @@
-main {
-  display: flex;
-}
-.landing-content {
-  display: flex;
-  flex-flow: column wrap;
-  height: 85vh;
-  margin: 10px 0;
-  align-content: space-evenly;
-}
-
-.logo {
-  background: url(http://i.imgur.com/LaPp5S9.png);
+.landing-page {
+  display: grid;
+  grid-template-areas: 
+    "landing-content landing-img";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  width: 100%;
 }
 
 .landing-img {
-  background: url(https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80);
+  width: 50vw;
+  height: auto;
+  overflow: hidden;
 }
+.bread {
+  transform: translate(-35%);
+  height: 100%;
+}
+
+.landing-content {
+ display: flex;
+ flex-flow: column wrap;
+ justify-items: center;
+}
+a:link{
+  margin: 0 auto;
+}
+
+.branding-slogan {
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.branding-word {
+  font-size: 24px;
+}
+
+.intro {
+  width: 80%;
+  text-align: center;
+  margin: 60px auto 0;
+}
+
+
+
+
+
+
 
 /*==========================
   Tablet Responsive Design

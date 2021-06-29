@@ -16,3 +16,14 @@ background-color: red;
 .user-logged-in {
   background-color: yellow;
 }
+
+
+/*===========================
+  Mobile Responsive Design
+============================*/
+@media screen and (max-width: 670px) {
+  .background-img {
+    background-image: none;
+    background-color:#EADDCA ;
+  }
+}

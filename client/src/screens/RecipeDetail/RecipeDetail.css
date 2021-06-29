@@ -27,14 +27,10 @@
 
 .recipe-img {
   position: absolute;
-}
-
-.recipe-img {
   height: 250px;
   width: 240px;
   border-radius: 50%;
   border: 2.5px solid #000000;
-  
 }
 
 .edit-button, 
@@ -96,4 +92,70 @@
 .recipe-directions{
   grid-area: recipe-directions;
   margin: 12px 0 30px 0;
+}
+
+
+/*===========================
+  Tablet Responsive Design
+============================*/
+@media screen and (min-width: 865px) and (max-width: 885px) {
+  .recipe-card-container {
+    display: grid;
+  }
+}
+
+/*===========================
+  Mobile Responsive Design
+============================*/
+@media screen and (min-width: 340px) and (max-width: 865px) {
+  .background-img {
+    background-image: none;
+    background-color:#EADDCA ;
+  }
+
+  .recipe-card-container {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 60px 0;
+    
+  }
+
+  .recipe-content {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-areas: 
+      "recipe-title" 
+      "recipe-ingredients" 
+      "recipe-directions";
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto auto;
+    width: auto;
+    margin: 0 auto 80px;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.65);
+   
+  }
+
+  .recipe-title {
+    grid-area: recipe-title;
+    font-size: 26px;
+    margin: 160px auto 0;
+  }
+  
+  .recipe-info {
+    grid-area: recipe-intro;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+  
+  .recipe-ingredients {
+    grid-area: recipe-ingredients;
+    margin-top: 0 0;
+  }
+  
+  .recipe-directions{
+    grid-area: recipe-directions;
+    margin: 0 0;
+    width: 100vw;
+  }
+  
 }

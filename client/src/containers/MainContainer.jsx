@@ -49,7 +49,7 @@ export default function MainContainer(props) {
         return recipe.id === Number(id) ? recipeItem : recipe;
       })
       );
-      history.push("/recipes");
+      history.push(`/recipes/${id}`);
   };
 
   const handleDelete = async (id) => {

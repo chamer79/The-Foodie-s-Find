@@ -8,21 +8,20 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 95vh;
+  height: 100vh;
   justify-content: center;
   align-content: center;
-
 }
 
 .login-signup-container {
   display: flex;
-  flex-flow: column wrap;
 }
 
 .login-signup-form {
   display: flex;
   justify-content: center;
   flex-flow: column;
+  margin: 80px auto 30px;
 }
 
 .username,
@@ -73,10 +72,35 @@ input.password-confirmation{
 /*===========================
   Tablet Responsive Design
 ============================*/
+@media screen and (min-width: 670px) and (max-width: 720px) {
+  /* .background-img {
+    background-image: none;
+    background-color:#EADDCA ;
+  } */
 
+  .login-signup-form {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+  }
 
+}
 
 /*===========================
- Mobile Responsive Design
+Mobile Responsive Design
 ============================*/
-
+@media screen and (max-width: 670px) {
+  .login-signup-img {
+    background-image: none;
+    background-color:#EADDCA ;
+  }
+  
+  .username,
+  .email,
+  .password,
+  .password-confirmation{
+    width: auto;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}

@@ -18,7 +18,7 @@ export default function Login(props) {
   };
 
   return (
-    <main>
+    <main className="login-signup-img">
       <div className="login-signup-container">
         <form
           className="login-signup-form"

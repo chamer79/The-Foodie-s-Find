@@ -6,30 +6,27 @@ export default function Layout(props) {
     <div>
       <header>
         {currentUser ? (
-          <nav classNmae="user-logged-in">
+          <nav className="user-logged-in">
             <NavLink to="/">
-              <img
-                src="http://i.imgur.com/aHMHpXc.png"
-              />
+              <img src="http://i.imgur.com/aHMHpXc.png" />
             </NavLink>
             <p>Welcome {currentUser.username}</p>
             <NavLink to="/post-recipe">New Post</NavLink>
-            <button className="logout" onClick={handleLogout}>Logout</button>
+            <button className="logout" onClick={handleLogout}>
+              Logout
+            </button>
           </nav>
         ) : (
-            <nav classname="user-logged-out">
-              <NavLink to="/">
-              <img
-                src="http://i.imgur.com/aHMHpXc.png"
-              />
+          <nav className="user-logged-out">
+            <NavLink to="/">
+              <img src="http://i.imgur.com/aHMHpXc.png" />
             </NavLink>
             <NavLink to="/login">Login</NavLink>
             <NavLink to="/signup">Sign up</NavLink>
-            </nav>
+          </nav>
         )}
-       
       </header>
       {children}
     </div>
-  )
+  );
 }

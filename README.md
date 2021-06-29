@@ -134,16 +134,16 @@ src
 | --------------------       | :------: | :------------: | :-----------: | :---------: |
 | Proposal Approval          |    H     |     1 hrs      |     2.5 hrs   |    2.5 hrs  |
 | Back-End Model Setup       |    H     |     3 hrs      |     2.5 hrs   |    2.5 hrs  |
-| Back-End Auth              |    H     |     4 hrs      |     3 hrs     |    3 hrs    |
+| Back-End Auth & Testing    |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
 | Set & Clean Up Controllers |    H     |     4 hrs      |     1 hrs     |    1 hrs    |
 | Seeding the Database       |    H     |     4 hrs      |    5.5 hrs    |   5.5 hrs   |
-| CORS Set Up                |    H     |    .15 hrs     |    .15 hrs    |   .15 hrs   |
+| CORS Set Up                |    H     |    .15 hrs     |    .05 hrs    |   .05 hrs   |
 | Front-End Inital Setup     |    H     |     1 hrs      |    .15 hrs    |   .15 hrs   |
-| Front-End Auth             |    H     |     6 hrs      |     3 hrs     |    3 hrs    |
-| Front-End CRUD             |    H     |     6 hrs      |    7.15 hrs   |      hrs    |
-| Build Remaining Components |    H     |     6 hrs      |      hrs      |      hrs    |
-| CSS                        |    H     |    11 hrs      |      hrs      |      hrs    |
-| TOTAL                      |          |   46.15 hrs    |     15 hrs    |    15 hrs   |
+| Front-End Auth & Testing   |    H     |     6 hrs      |     5 hrs     |    5 hrs    |
+| Front-End CRUD & Testing   |    H     |     6 hrs      |    10 hrs     |   10 hrs    |
+| Build Remaining Components |    H     |     6 hrs      |    10 hrs     |  10 hrs     |
+| CSS                        |    H     |    11 hrs      |   24 hrs      |   24 hrs    |
+| TOTAL                      |          |   46.15 hrs    |   64.7 hrs    |  64.7 hrs   |
 
 
 <br>
@@ -169,8 +169,34 @@ https://app.diagrams.net/#G1VURrbqvj8uF0fdaRHs-p5umrYV3bJc6w
 
 ## Code Showcase
 
-TBD
+I wanted to have both the ingredients and directions to render with bullit point to help differentiate a new ingredient and/or direction step.
+
+```
+ <div className="recipe-ingredients">
+            <ul>
+              <p className="ingredient-tag">Ingredients:</p>
+              {recipeItem?.ingredients.split("\n").map((ingredient) => (
+                <li key={recipeItem?.ingredient}>
+                  {ingredient}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="recipe-directions">
+            <p className="direction-tag">Directions:</p>
+            <ul>
+              {recipeItem?.directions.split("\n").map((direction) => (
+                <li key={recipeItem?.direction}>
+                  {direction}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+```
 
 ## Code Issues & Resolutions
 
-TBD
+- The MainContainer.jsx proved to be challenging for the mere fact that I am unfamiliar with the concept of raising state.  Throughout this project, I got a better understanding of raising state.  In saying that, I plan to incorporate raising state in my future projects to become more familiar and have a solid grasp on this particular concept.
+
+-Found that CSS this time around was a bit more challenging than past projects.  Will need to solidify my CSS skill.

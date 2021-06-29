@@ -4,7 +4,8 @@
     "landing-content landing-img";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  width: 100%;
+  /* width: 100%; */
+  width: 100vw;
 }
 
 .landing-img {
@@ -13,7 +14,8 @@
   overflow: hidden;
 }
 .bread {
-  transform: translate(-35%);
+  /* width: 50vw; */
+  /* transform: translate(-35%); */
   height: 100%;
 }
 
@@ -41,16 +43,25 @@ a:link{
   margin: 60px auto 0;
 }
 
-
-
-
-
-
-
-/*==========================
+/*===========================
   Tablet Responsive Design
-==========================*/
+============================*/
+@media screen and (min-width: 750px) {
+  
+}
 
-/*==========================
+/*===========================
   Mobile Responsive Design
-==========================*/
+============================*/
+@media screen and (max-width: 750px) {
+  .landing-page {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: auto;
+    margin-top: 47px;
+  }
+
+  .bread {
+    display: none;
+  }
+  }

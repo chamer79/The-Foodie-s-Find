@@ -21,8 +21,8 @@ export default function Layout(props) {
             <NavLink to="/">
               <img src="http://i.imgur.com/aHMHpXc.png" />
             </NavLink>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/signup">Sign up</NavLink>
+            <NavLink className="login-button" to="/login">Login</NavLink>
+            <NavLink className="signup-button" to="/signup">Sign up</NavLink>
           </nav>
         )}
       </header>

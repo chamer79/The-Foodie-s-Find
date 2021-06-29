@@ -9,3 +9,12 @@
   align-content: space-around;
 }
 
+
+/*===========================
+  Mobile Responsive Design
+============================*/
+@media screen and (max-width: 500px) {
+  .recipe-cards {
+    margin: 0 auto;
+  }
+}

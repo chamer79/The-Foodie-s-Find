@@ -8,6 +8,7 @@
 .img-button-container {
   width: 850px;
   margin: 0 auto;
+  padding-left: 80px;
 }
 
 .img-container {
@@ -23,6 +24,8 @@
   position: relative;
   width: 38%;
   margin: 0 auto;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .recipe-img {

@@ -73,17 +73,12 @@ input.password-confirmation{
   Tablet Responsive Design
 ============================*/
 @media screen and (min-width: 670px) and (max-width: 720px) {
-  /* .background-img {
-    background-image: none;
-    background-color:#EADDCA ;
-  } */
 
   .login-signup-form {
     display: flex;
     justify-content: center;
     flex-flow: column;
   }
-
 }
 
 /*===========================

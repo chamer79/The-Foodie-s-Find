@@ -25,8 +25,9 @@ export default function RecipeDetail(props) {
   return (
     <main className="background-img">
       <div className="receipe-card-container">
+       <div className="img-button-container">
         <div className="img-container">
-          <img className="recipe-img" src={`${recipeItem?.img_url}`} />
+          <img className="recipe-img" src={`${recipeItem?.img_url}`} alt={`${recipeItem?.name}`} />
         </div>
       <div className="edit-delete-buttons">
         {currentUser ? (
@@ -44,7 +45,8 @@ export default function RecipeDetail(props) {
         ) : (
           <></>
         )}
-      </div>
+          </div>
+          </div>
         <div className="recipe-content">
           <div className="recipe-title">
             <h3 className="title">{recipeItem?.name}</h3>

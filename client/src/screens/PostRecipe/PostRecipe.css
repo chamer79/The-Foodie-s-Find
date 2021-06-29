@@ -97,12 +97,9 @@ textarea.directions{
   .post-edit-container {
     display: flex;
     flex-flow: column wrap;
-    /* margin: 10px 0;
-    padding: 70px 0; */
     align-content: center;
   }
 }
-
 
 /*===========================
   Mobile Responsive Design
@@ -136,6 +133,4 @@ textarea.directions{
   .drop-down {
     margin: 10px auto;
   }
-
-
 }

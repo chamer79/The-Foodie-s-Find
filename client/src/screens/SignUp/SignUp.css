@@ -4,7 +4,6 @@ display: flex;
   align-content: center;
 }
 
-
 .login-signup-container {
   display: flex;
 }
@@ -65,7 +64,6 @@ input.password-confirmation{
   Tablet Responsive Design
 ============================*/
 @media screen and (min-width: 670px) and (max-width: 720px) {
-
   .login-signup-form {
     display: flex;
     justify-content: center;

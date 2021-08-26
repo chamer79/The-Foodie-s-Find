@@ -17695,3 +17695,10 @@ Completed 200 OK in 25ms (Views: 0.7ms | ActiveRecord: 10.6ms | Allocations: 321
 Completed 200 OK in 104ms (Views: 99.0ms | ActiveRecord: 4.0ms | Allocations: 12912)
 
 
+Started GET "/auth/verify" for ::1 at 2021-08-26 14:21:42 -0400
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 464)
+
+

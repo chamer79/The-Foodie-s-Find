@@ -1,54 +1,101 @@
 .landing-page {
-  display: grid;
-  grid-template-areas: 
-    "landing-content landing-img";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  /* width: 100%; */
+  padding: 0;
+  margin: 0;
   width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
-.landing-img {
-  width: 50vw;
-  height: auto;
+.landing-container {
+  position: relative;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
   overflow: hidden;
 }
-.bread {
-  /* width: 50vw; */
-  /* transform: translate(-35%); */
-  height: 100%;
+
+
+.split.landing-content {
+  left: 0;
 }
 
 .landing-content {
- display: flex;
- flex-flow: column wrap;
- justify-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
 }
-a:link{
-  margin: 0 auto;
+
+.landing-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  margin-top: -150px;
+}
+
+.landing-logo {
+  width: 430px;
 }
 
 .branding-slogan {
-  margin: 0 auto;
+  margin: -120px auto 90px;
   font-weight: 500;
+  font-size: 35px;
 }
 
 .branding-word {
-  font-size: 24px;
+  font-size: 55px;
+  font-weight: 400;
+}
+.word-divider{
+  font-size: 65px;
+  font-weight: 300;
 }
 
 .intro {
   width: 80%;
   text-align: center;
   margin: 60px auto 0;
+  font-size: 35px;
+  letter-spacing: .5px;
+  line-height: 48px;
 }
+
+.split.landing-img {
+  right: 0;
+}
+
+.bread {
+  height: 100vh;
+  transform: translate(-15%);
+ }
+
 
 /*===========================
   Tablet Responsive Design
 ============================*/
-/* @media screen and (min-width: 750px) and (max-width: 750px) {
-  
-} */
+@media screen and (min-width: 750px) and (max-width: 1025px) {
+  .branding-slogan {
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 35px;
+  }
+
+  .bread {
+    /* height: 100vh; */
+    transform: translate(-43%);
+   }
+}
+
 
 /*===========================
   Mobile Responsive Design

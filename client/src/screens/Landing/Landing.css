@@ -39,35 +39,35 @@
 .logo-box {
   display: flex;
   justify-content: center;
-  margin-top: -150px;
+  margin-top: -85px;
 }
 
 .landing-logo {
-  width: 430px;
+  width: 325px;
 }
 
 .branding-slogan {
-  margin: -120px auto 90px;
+  margin: -95px auto 90px;
   font-weight: 500;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .branding-word {
-  font-size: 55px;
+  font-size: 47px;
   font-weight: 400;
 }
 .word-divider{
-  font-size: 65px;
+  font-size: 55px;
   font-weight: 300;
 }
 
 .intro {
   width: 80%;
   text-align: center;
-  margin: 60px auto 0;
-  font-size: 35px;
+  margin: 0 auto;
+  font-size: 27px;
   letter-spacing: .5px;
-  line-height: 48px;
+  line-height: 40px;
 }
 
 .split.landing-img {

@@ -6,9 +6,9 @@ export default function Layout(props) {
     <div className="background-img">
       <header>
         {currentUser ? (
-          <nav className="user-logged-out">
+          <nav className="user-logout">
             <NavLink to="/recipes">
-              <img className="nav-logo" src="http://i.imgur.com/aHMHpXc.png" />
+              <img src="http://i.imgur.com/aHMHpXc.png" />
             </NavLink>
             <div className="logout-nav">
             <p>Welcome, {currentUser.username}</p>

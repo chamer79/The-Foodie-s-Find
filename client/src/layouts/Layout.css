@@ -1,3 +1,24 @@
+nav.user-logout {
+  margin: -15px 50px 0 170px;
+}
+
+div.logout-nav {
+  margin: -170px 75px 0 230px;
+  font-size: 23px;
+}
+div.logout-nav,
+a.new-post-button {
+  color: #ffffff;
+}
+
+a.logout {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 23px;
+  padding-left: 30px;
+}
+
 header {
 display: flex;
 flex-flow: row wrap;
@@ -13,28 +34,6 @@ a.login-signup-buttons {
   width: 100vw;
 }
 
-.user-logged-out {
-  margin: -15px 50px 0 170px;
-}
-
-.logout-nav {
-  margin: -170px 75px 0 230px;
-  font-size: 23px;
-}
-.logout-nav,
-a.new-post-button {
-  color: #ffffff;
-}
-
-
-
-a.logout {
-  background-color: transparent;
-  color: #ffffff;
-  border: none;
-  font-size: 23px;
-  padding-left: 30px;
-}
 
 
 

@@ -24,7 +24,7 @@ export default function RecipeDetail(props) {
 
   return (
     <div className="background-img">
-      <div className="receipe-card-container">
+      <div className="recipe-card-container">
         <div className="img-button-container">
           <div className="img-container">
             <img

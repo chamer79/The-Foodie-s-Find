@@ -6,12 +6,29 @@ align-content: center;
 height: 200px;
 background-color: rgba(0, 0, 0, 0.3);
 }
-a.login-signup-buttons,
-a.logout-header {
+a.login-signup-buttons {
   display: flex;
   font-size: 23px;
   justify-content: center ;
   width: 100vw;
+}
+
+nav.user-logged-out {
+  margin: -15px 50px 0 170px;
+}
+
+div.logout-nav {
+  color: #ffffff;
+  margin: -170px 75px 0 230px;
+  font-size: 23px;
+}
+
+a.logout {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 23px;
+  padding-left: 30px;
 }
 
 

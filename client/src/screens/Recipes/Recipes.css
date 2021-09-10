@@ -15,8 +15,18 @@ header {
  div.logout {
     font-size: 23px;
     margin-top: -50px;
+    padding: 0 15px;
   }
-  
+  a.login-button{
+    padding: 0 20px 0 8px;
+  }
+
+  a.login-button,
+  a.signup-button,
+  a.logout {
+    color: #ffffff;
+  }
+
 .background-img{
   background:
   url(https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80)

@@ -6,7 +6,7 @@ export default function Layout(props) {
     <div className="background-img">
       <header>
         {currentUser ? (
-          <nav className="user-logged-in">
+          <nav className="user-logged-out">
             <NavLink to="/recipes">
               <img src="http://i.imgur.com/aHMHpXc.png" />
             </NavLink>
@@ -17,7 +17,7 @@ export default function Layout(props) {
             </button>
           </nav>
         ) : (
-          <nav className="user-logged-out">
+          <nav className="user-logged-in">
             <NavLink to="/recipes">
               <img src="http://i.imgur.com/aHMHpXc.png" />
             </NavLink>

@@ -48,7 +48,7 @@ export default function PostRecipe(props) {
 
   return (
     // <Layout>
-    <main className="background-img">
+    <div className="background-img">
       <div className="post-edit-container">
         <form
           className="post-edit-form"
@@ -135,7 +135,7 @@ export default function PostRecipe(props) {
           <button className="post-edit-button">Submit</button>
         </form>
       </div>
-    </main>
+    </div>
     // </Layout>
   );
 }

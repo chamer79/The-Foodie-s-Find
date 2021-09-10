@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export default function Layout(props) {
   const { currentUser, handleLogout, children } = props;
   return (
-    <main className="background-img">
+    <div className="background-img">
       <header>
         {currentUser ? (
           <nav className="user-logged-in">
@@ -21,12 +21,14 @@ export default function Layout(props) {
             <NavLink to="/recipes">
               <img src="http://i.imgur.com/aHMHpXc.png" />
             </NavLink>
-            <NavLink className="login-button" to="/login">Login</NavLink>
-            <NavLink className="signup-button" to="/signup">Sign up</NavLink>
+            <div className="login-signup-buttons">
+              <NavLink className="login-button" to="/login">Login</NavLink>
+              <NavLink className="signup-button" to="/signup">Sign up</NavLink>
+           </div>
           </nav>
         )}
       </header>
       {children}
-    </main>
+    </div>
   );
 }

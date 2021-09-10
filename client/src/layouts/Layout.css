@@ -6,12 +6,13 @@ align-content: center;
 height: 200px;
 background-color: rgba(0, 0, 0, 0.3);
 }
-.user-logged-out {
+a.login-signup-buttons {
   display: flex;
   font-size: 23px;
   justify-content: center ;
   width: 100vw;
 }
+
 
 
 

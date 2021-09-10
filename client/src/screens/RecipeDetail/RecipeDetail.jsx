@@ -23,7 +23,7 @@ export default function RecipeDetail(props) {
   }
 
   return (
-    <main className="background-img">
+    <div className="background-img">
       <div className="receipe-card-container">
         <div className="img-button-container">
           <div className="img-container">
@@ -91,6 +91,6 @@ export default function RecipeDetail(props) {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

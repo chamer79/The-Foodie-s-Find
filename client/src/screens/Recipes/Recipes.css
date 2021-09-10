@@ -1,16 +1,14 @@
 header {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
-  height: 200px;
+  height: 175px;
   background-color: rgba(0, 0, 0, 0.3);
   }
-  a.login-signup-buttons {
-    display: flex;
+  div a.login-signup-buttons {
     font-size: 23px;
-    justify-content: center ;
-    width: 100vw;
+    margin-top: -115px;
   }
 .background-img{
   background:

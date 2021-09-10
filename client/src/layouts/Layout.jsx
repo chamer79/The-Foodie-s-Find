@@ -10,11 +10,13 @@ export default function Layout(props) {
             <NavLink to="/recipes">
               <img className="nav-logo" src="http://i.imgur.com/aHMHpXc.png" />
             </NavLink>
+            <div className="logout-header">
             <p>Welcome {currentUser.username}</p>
             <NavLink to="/post-recipe">New Post</NavLink>
             <button className="logout" onClick={handleLogout}>
               Logout
             </button>
+            </div>
           </nav>
         ) : (
           <nav className="user-logged-in">

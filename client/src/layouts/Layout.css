@@ -6,7 +6,8 @@ align-content: center;
 height: 200px;
 background-color: rgba(0, 0, 0, 0.3);
 }
-a.login-signup-buttons {
+a.login-signup-buttons,
+a.logout-header {
   display: flex;
   font-size: 23px;
   justify-content: center ;

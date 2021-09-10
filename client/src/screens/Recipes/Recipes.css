@@ -6,7 +6,7 @@ header {
   height: 175px;
   background-color: rgba(0, 0, 0, 0.3);
   }
-  div a.login-signup-buttons {
+ a.login-signup-buttons {
     display: flex;
     font-size: 23px;
     margin-top: -115px;

@@ -1,7 +1,8 @@
-.login-signup-img {
+div.login-signup-img {
 display: flex;
   justify-content: center;
   align-content: center;
+  background-image: none;
 }
 
 .login-signup-container {

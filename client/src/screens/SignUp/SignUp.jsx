@@ -20,7 +20,7 @@ export default function SignUp(props) {
   };
 
   return (
-    <main className="login-signup-img">
+    <div className="login-signup-img">
       <div className="login-signup-container">
         <form
           className="login-signup-form"
@@ -68,6 +68,6 @@ export default function SignUp(props) {
           <button className="login-signup-button">Submit</button>
         </form>
       </div>
-    </main>
+    </div>
   );
 }

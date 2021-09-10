@@ -8,7 +8,7 @@ header {
   }
   nav.user-logged-in,
   nav.user.logged-out {
-    margin: -40px 0 0 80px;
+    margin: -30px 0 0 80px;
     padding: 0 100px;
   }
  div.login-signup-buttons,

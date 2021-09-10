@@ -2,7 +2,7 @@ div.login-signup-img {
 display: flex;
   justify-content: center;
   align-content: center;
-  background-image: none;
+  height: 100vh;
 }
 
 .login-signup-container {

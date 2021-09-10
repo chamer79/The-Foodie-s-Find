@@ -13,15 +13,20 @@ a.login-signup-buttons {
   width: 100vw;
 }
 
-nav.user-logged-out {
+.user-logged-out {
   margin: -15px 50px 0 170px;
 }
 
-div.logout-nav {
-  color: #ffffff;
+.logout-nav {
   margin: -170px 75px 0 230px;
   font-size: 23px;
 }
+.logout-nav,
+a.new-post-button {
+  color: #ffffff;
+}
+
+
 
 a.logout {
   background-color: transparent;

@@ -11,8 +11,8 @@ export default function Layout(props) {
               <img className="nav-logo" src="http://i.imgur.com/aHMHpXc.png" />
             </NavLink>
             <div className="logout-nav">
-            <p>Welcome {currentUser.username}</p>
-            <NavLink to="/post-recipe">New Post</NavLink>
+            <p>Welcome, {currentUser.username}</p>
+            <NavLink className="new-post-button" to="/post-recipe">New Post</NavLink>
             <button className="logout" onClick={handleLogout}>
               Logout
             </button>
